@@ -1,5 +1,23 @@
 # Multi-Media-Carto-Project-2020
 
+## TODO List:clipboard:
+### Vue Component
+- [ ] Statement
+- [ ] Questions
+- [ ] Global Map 1
+- [ ] Global Map 2
+- [ ] Reason 1
+- [ ] Reason 2
+- [ ] Reason 3
+- [ ] Trend 1
+- [ ] Trend 2
+- [ ] Summary
+
+### UI Design
+- [] View: Home
+- [] View: Imprint
+- [] View: Others
+
 # education_atlas
 
 ## Project setup
