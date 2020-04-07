@@ -14,7 +14,9 @@
     <v-divider/>
 
     <!-- Reasons -->
-    <Reasons/>
+    <Reason1/>
+    <Reason2/>
+    <Reason3/>
     <v-divider/>
 
     <!-- Trend1 -->
@@ -38,7 +40,9 @@ import Statement1 from '../components/Statement1'
 import Questions from '../components/Questions'
 import GlobalMap1 from '../components/GlobalMap1'
 import GlobalMap2 from '../components/GlobalMap2'
-import Reasons from '../components/Reasons'
+import Reason1 from '../components/Reason1'
+import Reason2 from '../components/Reason2'
+import Reason3 from '../components/Reason3'
 import Trend1 from '../components/Trend1'
 import Trend2 from '../components/Trend2'
 import Summary from '../components/Summary'
@@ -56,7 +60,9 @@ export default {
     Questions,
     GlobalMap1,
     GlobalMap2,
-    Reasons,
+    Reason1,
+    Reason2,
+    Reason3,
     Trend1,
     Trend2,
     Summary

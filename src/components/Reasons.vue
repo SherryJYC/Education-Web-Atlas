@@ -6,7 +6,7 @@
                 align="center"
                 justify="center"
             >
-                <h1> Reason 1 Placeholder </h1>
+                <Reason1/>
             </v-row>
          </v-container>
     </v-carousel-item>
@@ -34,7 +34,11 @@
 </template>
 
 <script>
+import Reason1 from './Reason1'
 export default {
+    components:{
+        Reason1
+    }
 
 }
 </script>
