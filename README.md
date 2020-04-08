@@ -6,10 +6,10 @@
 - [ ] Questions
 - [ ] Global Map 1
 - [ ] Global Map 2
-- [ ] Reason 1
+- [x] Reason 1
 - [ ] Reason 2
 - [ ] Reason 3
-- [ ] Trend 1
+- [x] Trend 1
 - [ ] Trend 2
 - [ ] Summary
 
