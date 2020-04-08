@@ -24,6 +24,7 @@
 </div>
 </template>
 <script>
+
 export default {
   data: () => ({
       title: "Atlas of Equal Education"
