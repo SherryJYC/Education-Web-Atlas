@@ -39,8 +39,8 @@
 import 'leaflet/dist/leaflet.css';
 import {LMap} from 'vue2-leaflet';
 import { InfoControl, ReferenceChart, ChoroplethLayer } from 'vue-choropleth';
-import {geojson} from '../assets/countries';
-import {nationalInvestData} from '../assets/WEInvest';
+import {geojson} from '../../assets/countries';
+import {nationalInvestData} from '../../assets/WEInvest';
 import VueApexCharts from 'vue-apexcharts';
 
 export default {
