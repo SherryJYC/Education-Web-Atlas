@@ -1,17 +1,369 @@
 <template>
-  <v-container>
-      <v-row
-          align="center"
-          justify="center"
-        >
-      <h1> Trend 2 Placeholder </h1>
-      </v-row>
-  </v-container>
+  <div>
+    <b-card-group deck>
+      <b-card>
+        <!-- chart of global female enrollment 2017  -->
+        <apexchart type="line" height="350" :options="chartOptions1" :series="series1"></apexchart>
+      </b-card>
+    </b-card-group>
+    <b-card-group deck>
+      <b-card>
+        <!-- radar chart of China female enrollment 2017  -->
+        <apexchart type="radar" height="350" :options="chartOptions_china1" :series="series_china1"></apexchart>
+      </b-card> 
+      <b-card>
+        <!-- radar chart of Swiss female enrollment 2017  -->
+        <apexchart type="radar" height="350" :options="chartOptions_swiss1" :series="series_swiss1"></apexchart>
+      </b-card>
+    </b-card-group>
+    <b-card-group deck>
+      <b-card>
+        <!-- chart of China female enrollment 2013-2017 timeseris  -->
+        <apexchart type="line" height="350" :options="chartOptions_china2" :series="series_china2"></apexchart>
+      </b-card> 
+      <b-card>
+        <!-- chart of Swiss female enrollment 2013-2017 timeseris -->
+        <apexchart type="line" height="350" :options="chartOptions_swiss2" :series="series_swiss2"></apexchart>
+      </b-card>
+    </b-card-group>
+  </div>
 </template>
 
 <script>
+import VueApexCharts from 'vue-apexcharts';
+var levels = ['Primary', 'Secondary', 'Short-cycle Tertiary', 'Bachelor', 'Master', 'Phd'];
 export default {
+  components:{
+    apexchart: VueApexCharts
+  },
+  data() {
+    return {
+      // global
+      series1: [
+            {
+              name: "Global Average",
+              data: [48.48,48.63,50.87,53.15,52.91,44.70]
+            }
+          ],
+          chartOptions1: {
+            chart: {
+              height: 350,
+              type: 'line',
+              dropShadow: {
+                enabled: true,
+                color: '#000',
+                top: 18,
+                left: 7,
+                blur: 10,
+                opacity: 0.2
+              },
+              toolbar: {
+                show: false
+              }
+            },
+            colors: ['#77B6EA'],
+            dataLabels: {
+              enabled: true,
+            },
+            stroke: {
+              curve: 'smooth'
+            },
+            title: {
+              text: 'Global Average Femal Enrollment Percentage at Different Levels (2017)',
+              align: 'left'
+            },
+            grid: {
+              borderColor: '#e7e7e7',
+              row: {
+                colors: ['#f3f3f3', 'transparent'],
+                opacity: 0.5
+              },
+            },
+            markers: {
+              size: 1
+            },
+            xaxis: {
+              categories: levels,
+              title: {
+                text: 'Education Level'
+              }
+            },
+            yaxis: {
+              title: {
+                text: 'Percent (%)'
+              },
+              min: 40,
+              max: 60
+            },
 
+          },
+          // China radar chart
+          series_china1: [{
+            name: 'Global Average',
+            data: [48.48,48.63,50.87,53.15,52.91,44.70]
+          }, {
+            name: 'China',
+            data: [46.42,47.05,50.49,53.26,48.80,38.90],
+          }],
+          chartOptions_china1: {
+            chart: {
+              height: 350,
+              type: 'radar',
+              dropShadow: {
+                enabled: true,
+                blur: 1,
+                left: 1,
+                top: 1
+              }
+            },
+            title: {
+              text: 'Female Enrollment Rate in China'
+            },
+            stroke: {
+              width: 2
+            },
+            fill: {
+              opacity: 0.1
+            },
+            markers: {
+              size: 1
+            },
+            xaxis: {
+              categories: levels,
+            },
+            yaxis: {
+              min: 0,
+              max: 80,
+              labels: {
+                formatter: function(val, i) {
+                  if (i % 2 === 0) {
+                    return val
+                  } else {
+                    return ''
+                  }
+                }
+              }
+            }
+          },
+          // China Timeseris chart
+          series_china2: [{
+              name: "2013",
+              data: [45, 52, 38, 24, 33, 26, 21, 20, 6, 8, 15, 10]
+            },
+            {
+              name: "2014",
+              data: [35, 41, 62, 42, 13, 18, 29, 37, 36, 51, 32, 35]
+            },
+            {
+              name: '2015',
+              data: [87, 57, 74, 99, 75, 38, 62, 47, 82, 56, 45, 47]
+            },
+            { name: "2016",
+              data: [35, 41, 62, 42, 13, 18, 29, 37, 36, 51, 32, 35]
+            },
+            {
+              name: '2017',
+              data: [87, 57, 74, 99, 75, 38, 62, 47, 82, 56, 45, 47]
+            }
+          ],
+          chartOptions_china2: {
+            chart: {
+              height: 350,
+              type: 'line',
+              zoom: {
+                enabled: false
+              },
+            },
+            dataLabels: {
+              enabled: false
+            },
+            stroke: {
+              width: [5, 7, 5],
+              curve: 'straight',
+              dashArray: [0, 8, 5]
+            },
+            title: {
+              text: 'Female Enrollment Rate in China (2013-2017)',
+              align: 'left'
+            },
+            legend: {
+              tooltipHoverFormatter: function(val, opts) {
+                return val + ' - ' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + ''
+              }
+            },
+            markers: {
+              size: 0,
+              hover: {
+                sizeOffset: 6
+              }
+            },
+            xaxis: {
+              categories: levels
+            },
+            tooltip: {
+              y: [
+                {
+                  title: {
+                    formatter: function (val) {
+                      return val + " %"
+                    }
+                  }
+                },
+                {
+                  title: {
+                    formatter: function (val) {
+                      return val + " %"
+                    }
+                  }
+                },
+                {
+                  title: {
+                    formatter: function (val) {
+                      return val + " %"
+                    }
+                  }
+                }
+              ]
+            },
+            grid: {
+              borderColor: '#f1f1f1',
+            }
+          },
+          // Swiss radar chart
+          series_swiss1: [{
+            name: 'Global Average',
+            data: [48.48,48.63,50.87,53.15,52.91,44.70]
+          }, {
+            name: 'Switzerland',
+            data: [48.55,47.68,64.46,49.37,51.10,46.32],
+          }],
+          chartOptions_swiss1: {
+            chart: {
+              height: 350,
+              type: 'radar',
+              dropShadow: {
+                enabled: true,
+                blur: 1,
+                left: 1,
+                top: 1
+              }
+            },
+            title: {
+              text: 'Female Enrollment Rate in Switzerland'
+            },
+            stroke: {
+              width: 2
+            },
+            fill: {
+              opacity: 0.1
+            },
+            markers: {
+              size: 0
+            },
+            xaxis: {
+              categories: levels,
+            },
+            yaxis: {
+              min: 0,
+              max: 80,
+              labels: {
+                formatter: function(val, i) {
+                  if (i % 2 === 0) {
+                    return val
+                  } else {
+                    return ''
+                  }
+                }
+              }
+            }
+          },   
+          // Swiss Timeseris chart
+          series_swiss2: [{
+              name: "2013",
+              data: [45, 52, 38, 24, 33, 26, 21, 20, 6, 8, 15, 10]
+            },
+            {
+              name: "2014",
+              data: [35, 41, 62, 42, 13, 18, 29, 37, 36, 51, 32, 35]
+            },
+            {
+              name: '2015',
+              data: [87, 57, 74, 99, 75, 38, 62, 47, 82, 56, 45, 47]
+            },
+            { name: "2016",
+              data: [35, 41, 62, 42, 13, 18, 29, 37, 36, 51, 32, 35]
+            },
+            {
+              name: '2017',
+              data: [87, 57, 74, 99, 75, 38, 62, 47, 82, 56, 45, 47]
+            }
+          ],
+          chartOptions_swiss2: {
+            chart: {
+              height: 350,
+              type: 'line',
+              zoom: {
+                enabled: false
+              },
+            },
+            dataLabels: {
+              enabled: false
+            },
+            stroke: {
+              width: [5, 7, 5],
+              curve: 'straight',
+              dashArray: [0, 8, 5]
+            },
+            title: {
+              text: 'Female Enrollment Rate in China (2013-2017)',
+              align: 'left'
+            },
+            legend: {
+              tooltipHoverFormatter: function(val, opts) {
+                return val + ' - ' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + ''
+              }
+            },
+            markers: {
+              size: 0,
+              hover: {
+                sizeOffset: 6
+              }
+            },
+            xaxis: {
+              categories: levels
+            },
+            tooltip: {
+              y: [
+                {
+                  title: {
+                    formatter: function (val) {
+                      return val + " %"
+                    }
+                  }
+                },
+                {
+                  title: {
+                    formatter: function (val) {
+                      return val + " %"
+                    }
+                  }
+                },
+                {
+                  title: {
+                    formatter: function (val) {
+                      return val + " %"
+                    }
+                  }
+                }
+              ]
+            },
+            grid: {
+              borderColor: '#f1f1f1',
+            }
+          },      
+    }
+    
+  }
 }
 </script>
 
