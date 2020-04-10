@@ -10,7 +10,7 @@
 - [ ] Reason 2
 - [ ] Reason 3
 - [x] Trend 1
-- [ ] Trend 2
+- [x] Trend 2
 - [ ] Summary
 
 ### UI Design
