@@ -148,23 +148,24 @@ export default {
           // China Timeseris chart
           series_china2: [{
               name: "2013",
-              data: [45, 52, 38, 24, 33, 26, 21, 20, 6, 8, 15, 10]
+              data: [46.33, 47.34, 51.20, 50.96, 47.27, 36.65]
             },
             {
               name: "2014",
-              data: [35, 41, 62, 42, 13, 18, 29, 37, 36, 51, 32, 35]
+              data: [46.34, 47.35, 51.03, 51.85, 46.32, 37.12]
             },
             {
               name: '2015',
-              data: [87, 57, 74, 99, 75, 38, 62, 47, 82, 56, 45, 47]
+              data: [46.32, 47.34, 51.04, 52.43, 47.37, 37.18]
             },
             { name: "2016",
-              data: [35, 41, 62, 42, 13, 18, 29, 37, 36, 51, 32, 35]
+              data: [46.34, 47.11, 50.96, 52.97, 47.90, 38.10]
             },
             {
               name: '2017',
-              data: [87, 57, 74, 99, 75, 38, 62, 47, 82, 56, 45, 47]
+              data: [46.42, 47.05, 50.49, 53.26, 48.80, 38.90]
             }
+            
           ],
           chartOptions_china2: {
             chart: {
@@ -178,9 +179,9 @@ export default {
               enabled: false
             },
             stroke: {
-              width: [5, 7, 5],
+              width: [2, 3, 2, 3, 2],
               curve: 'straight',
-              dashArray: [0, 8, 5]
+              dashArray: [0, 5, 0, 5, 0]
             },
             title: {
               text: 'Female Enrollment Rate in China (2013-2017)',
@@ -188,7 +189,7 @@ export default {
             },
             legend: {
               tooltipHoverFormatter: function(val, opts) {
-                return val + ' - ' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + ''
+                return val + ' - ' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + '%'
               }
             },
             markers: {
@@ -196,6 +197,10 @@ export default {
               hover: {
                 sizeOffset: 6
               }
+            },
+            yaxis:{
+              min: 35,
+              max: 65
             },
             xaxis: {
               categories: levels
@@ -205,21 +210,21 @@ export default {
                 {
                   title: {
                     formatter: function (val) {
-                      return val + " %"
+                      return val
                     }
                   }
                 },
                 {
                   title: {
                     formatter: function (val) {
-                      return val + " %"
+                      return val 
                     }
                   }
                 },
                 {
                   title: {
                     formatter: function (val) {
-                      return val + " %"
+                      return val 
                     }
                   }
                 }
@@ -280,22 +285,22 @@ export default {
           // Swiss Timeseris chart
           series_swiss2: [{
               name: "2013",
-              data: [45, 52, 38, 24, 33, 26, 21, 20, 6, 8, 15, 10]
+              data: [48.53, 48.06, 58.23, 49.19,50.62, 44.90]
             },
             {
               name: "2014",
-              data: [35, 41, 62, 42, 13, 18, 29, 37, 36, 51, 32, 35]
+              data: [48.63, 47.83, 59.47, 49.11, 50.94, 45.20]
             },
             {
               name: '2015',
-              data: [87, 57, 74, 99, 75, 38, 62, 47, 82, 56, 45, 47]
+              data: [48.59, 47.83, 59.59, 49.19, 51.54, 45.83]
             },
             { name: "2016",
-              data: [35, 41, 62, 42, 13, 18, 29, 37, 36, 51, 32, 35]
+              data: [48.53, 47.77, 62.51, 49.28, 50.96, 46.17]
             },
             {
               name: '2017',
-              data: [87, 57, 74, 99, 75, 38, 62, 47, 82, 56, 45, 47]
+              data: [48.55, 47.68, 64.66, 49.37, 51.10, 46.32]
             }
           ],
           chartOptions_swiss2: {
@@ -310,12 +315,12 @@ export default {
               enabled: false
             },
             stroke: {
-              width: [5, 7, 5],
+              width: [2, 3, 2, 3, 2],
               curve: 'straight',
-              dashArray: [0, 8, 5]
+              dashArray: [0, 5, 0, 5, 0]
             },
             title: {
-              text: 'Female Enrollment Rate in China (2013-2017)',
+              text: 'Female Enrollment Rate in Switzerland (2013-2017)',
               align: 'left'
             },
             legend: {
@@ -328,6 +333,10 @@ export default {
               hover: {
                 sizeOffset: 6
               }
+            },
+            yaxis:{
+              min: 35,
+              max: 65
             },
             xaxis: {
               categories: levels
