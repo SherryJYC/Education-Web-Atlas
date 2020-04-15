@@ -7,7 +7,7 @@
 - [ ] Global Map 1
 - [ ] Global Map 2
 - [x] Reason 1
-- [ ] Reason 2
+- [x] Reason 2
 - [ ] Reason 3
 - [x] Trend 1
 - [x] Trend 2
