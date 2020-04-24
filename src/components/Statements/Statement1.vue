@@ -1,18 +1,25 @@
 <template>
   <div>
-  <b-carousel
-    id="carousel-no-animation"
-    style="text-shadow: 0px 0px 2px #000"
-    no-animation
-    indicators
-    img-width="1024"
-    img-height="480"
-  >
+    <v-divider/>
+    
   <!-- TODO: adjust statements and images -->
-    <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=10">
-        <h1>It's still a long way to go to achieve education equality worldwide.</h1>
-    </b-carousel-slide>
-  </b-carousel>
+<v-parallax
+    dark
+    src="../../assets/img/education_img.jpg"
+  >
+  <v-row/>
+    <v-row
+      align="center"
+      justify="center"
+    >
+      <v-col class="text-center" cols="12">
+        <h1 class="display-1 font-weight-thin mb-4">Equal Education</h1>
+        <h4 class="subheading"><b>It's still a long way to go to achieve education equality worldwide.</b></h4>
+      </v-col>
+    </v-row>
+  </v-parallax>
+
+  
 </div>
 </template>
 
@@ -20,3 +27,16 @@
   export default {
   }
 </script>
+
+<style scoped>
+img{
+  max-width: 100%;
+  height: auto;
+}
+h1,h4{
+ color: #A8322D;
+ text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -2px 2px 0 #000, 1px 1px 0 #000;
+}
+
+
+</style>

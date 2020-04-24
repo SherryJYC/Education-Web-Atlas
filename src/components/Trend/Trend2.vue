@@ -26,6 +26,9 @@
         <apexchart type="line" height="350" :options="chartOptions_swiss2" :series="series_swiss2"></apexchart>
       </b-card>
     </b-card-group>
+
+    <b-card>SUMMARY PLACEHOLDER</b-card>
+
   </div>
 </template>
 
@@ -46,6 +49,7 @@ export default {
             }
           ],
           chartOptions1: {
+            colors: ["#A8322D"],
             chart: {
               height: 350,
               type: 'line',
@@ -61,7 +65,6 @@ export default {
                 show: false
               }
             },
-            colors: ['#77B6EA'],
             dataLabels: {
               enabled: true,
             },
@@ -69,7 +72,7 @@ export default {
               curve: 'smooth'
             },
             title: {
-              text: 'Global Average Femal Enrollment Percentage at Different Levels (2017)',
+              text: 'Global Average Female Enrollment Percentage at Different Levels (2017)',
               align: 'left'
             },
             grid: {
@@ -106,6 +109,7 @@ export default {
             data: [46.42,47.05,50.49,53.26,48.80,38.90],
           }],
           chartOptions_china1: {
+            colors:["#FFC300","#A8322D"],
             chart: {
               height: 350,
               type: 'radar',
@@ -168,6 +172,7 @@ export default {
             
           ],
           chartOptions_china2: {
+            colors:["#956013","#3C5A0F", "#FFC300","#0069B4","#A8322D"],
             chart: {
               height: 350,
               type: 'line',
@@ -181,7 +186,7 @@ export default {
             stroke: {
               width: [2, 3, 2, 3, 2],
               curve: 'straight',
-              dashArray: [0, 5, 0, 5, 0]
+              dashArray: [5, 5, 5, 5, 0]
             },
             title: {
               text: 'Female Enrollment Rate in China (2013-2017)',
@@ -200,10 +205,12 @@ export default {
             },
             yaxis:{
               min: 35,
-              max: 65
+              max: 65,
+              title:{text: "Enrollment Rate"}
             },
             xaxis: {
-              categories: levels
+              categories: levels,
+              title:{text: "Education Level"}
             },
             tooltip: {
               y: [
@@ -243,6 +250,7 @@ export default {
             data: [48.55,47.68,64.46,49.37,51.10,46.32],
           }],
           chartOptions_swiss1: {
+            colors:["#FFC300","#A8322D"],
             chart: {
               height: 350,
               type: 'radar',
@@ -304,6 +312,7 @@ export default {
             }
           ],
           chartOptions_swiss2: {
+            colors:["#956013","#3C5A0F", "#FFC300","#0069B4","#A8322D"],
             chart: {
               height: 350,
               type: 'line',
@@ -317,7 +326,7 @@ export default {
             stroke: {
               width: [2, 3, 2, 3, 2],
               curve: 'straight',
-              dashArray: [0, 5, 0, 5, 0]
+              dashArray: [5, 5, 5, 5, 0]
             },
             title: {
               text: 'Female Enrollment Rate in Switzerland (2013-2017)',
@@ -336,10 +345,12 @@ export default {
             },
             yaxis:{
               min: 35,
-              max: 65
+              max: 65,
+              title:{text: "Enrollment Rate"}
             },
             xaxis: {
-              categories: levels
+              categories: levels,
+              title:{text: "Education Level"}
             },
             tooltip: {
               y: [

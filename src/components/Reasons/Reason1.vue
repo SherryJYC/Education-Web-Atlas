@@ -1,5 +1,15 @@
 <template>
 <div>
+  <!-- Title -->
+  <v-container>
+      <v-row
+          align="center"
+          justify="center"
+        >
+      <h4>National Investment in Education (% GDP) </h4>
+      </v-row>
+  </v-container>
+
 <!-- choropleth map of national investment in education (compare western europe and eastern asia)-->
   <l-map 
   :center="[50.8182, 40.2275]" 
@@ -8,6 +18,7 @@
   :options="mapOptions">
     <l-choropleth-layer 
       :data="nationalInvestData" 
+      :title="titleSetting"
       titleKey="time" 
       idKey="country_name" 
       :value="value" 
@@ -30,8 +41,13 @@
         </template>
     </l-choropleth-layer>
 </l-map>
+
+<b-card>SUMMARY PLACEHOLDER</b-card>
+
 <!-- chart of average salary VS family expenditure on education -->
 <apexchart type="bar" height="440" :options="chartOptions" :series="series"></apexchart>
+
+<b-card>SUMMARY PLACEHOLDER</b-card>
 </div>
 </template>
 
@@ -55,7 +71,10 @@ export default {
     return {
       geojson,
       nationalInvestData,
-      colorScale: ["e7d090", "e9ae7b", "de7062"],
+      titleSetting: {
+        text: 'Gender Parity Index in Primary Level'
+      },
+      colorScale: ["#900C3F","#C70039", "#FF5733", "#FFC300"],
       value: {
         key: "invest",
         metric: "% GDP"
@@ -89,7 +108,7 @@ export default {
               height: 440,
               stacked: true
             },
-            colors: ['#008FFB', '#FF4560'],
+            colors: ["#6F6F6E", "#FFC300"],
             plotOptions: {
               bar: {
                 horizontal: true,

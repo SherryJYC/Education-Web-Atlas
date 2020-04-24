@@ -1,12 +1,18 @@
 <template>
-  <v-container>
-      <v-row
-          align="center"
-          justify="center"
-        >
-      <h1> Summary Placeholder </h1>
-      </v-row>
-  </v-container>
+  <v-parallax
+    dark
+    src="../../assets/img/summary_img.jpg"
+  >
+  <v-row/>
+    <v-row
+      align="center"
+      justify="center"
+    >
+      <v-col class="text-center" cols="12">
+        <h4 class="subheading sum"><b>Summary Placeholder: It's still a long way to go to achieve education equality worldwide.</b></h4>
+      </v-col>
+    </v-row>
+  </v-parallax>
 </template>
 
 <script>
@@ -16,5 +22,7 @@ export default {
 </script>
 
 <style>
-
+.sum{
+ text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -2px 2px 0 #000, 1px 1px 0 #000;
+}
 </style>

@@ -1,17 +1,17 @@
 export var GERPrimary2014 = [
  {
    "Country": "Oman",
-   "Time": 2014,
+   "Time": "2014",
    "Value": 109.69539
  },
  {
    "Country": "Kenya",
-   "Time": 2014,
+   "Time": "2014",
    "Value": 105.75341
  },
  {
    "Country": "Australia",
-   "Time": 2014,
+   "Time": "2014",
    "Value": 105.45709
  },
  {

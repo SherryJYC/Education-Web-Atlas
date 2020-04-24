@@ -45,7 +45,6 @@
 </l-map>
 
 <!-- Pie chart  -->
-<b-card></b-card>
 <b-card-group deck>
   <b-card>
     <apexchart type="pie" width="500" :options="chartOptions" :series="series1"></apexchart>
@@ -86,7 +85,7 @@ export default {
     return {
       geojson,
       GPIPrimary2018,
-      colorScale: ["e7d090", "e9ae7b", "de7062"],
+      colorScale: ["#900C3F","#C70039", "#FF5733", "#FFC300"],
       titleSetting: {
         text: 'Gender Parity Index in Primary Level'
       },
@@ -109,6 +108,7 @@ export default {
         title: {
           text: "How many countries reach the gender parity in 2018"
         },
+        colors: ["#FFC300","#6F6F6E"],
         labels: ['Countries reach gender parity', 'Countries Not reach gender parity'],
         plotOptions: {
           pie: {

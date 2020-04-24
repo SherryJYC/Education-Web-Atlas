@@ -30,10 +30,15 @@
 
   <b-card-group deck>
     <b-card>
-      <img src='../../assets/reason3_countdown.png' style="width:600px;height:400px;"/>
-      <b-card-text>
-         <a href="https://www.bilibili.com/video/BV1MW411w7nn?p=7">College Entrance Examination in China</a>
-      </b-card-text>
+         <youtube :video-id="videoId" ref="youtube" @playing="playing"></youtube>
+    </b-card>
+    <b-card
+    title="Chinese College Entrance Exam"
+       class="text-left">
+       <b-card-text>
+      Chinese College Entrance Exam is balabala,
+      many students balaba, very competive
+    </b-card-text>
     </b-card>
   </b-card-group>
 
@@ -55,13 +60,21 @@
 <script>
 import VueApexCharts from 'vue-apexcharts';
 
+
+
 export default {
   components: {
-    apexchart: VueApexCharts
+    apexchart: VueApexCharts,
   },
+
+  
 
   data() {
     return {
+      videoId: 'z9RWgVbvklA',
+      playerVars: {
+        autoplay: 1
+      },
       series: [{
         name: 'Switzerland',
         data: [56.27, 57.23, 57.71, 58.05, 59.56]
@@ -77,7 +90,7 @@ export default {
         title: {
             text: '2013-2017 Tertinery Gross Enrollment Ratio Comparison between Switzerland and China'
         },
-        colors: ['rgb(215, 0, 38)', 'rgb(255, 217, 68)'],
+        colors: ["#e07b39", "#FFC300"],
         xaxis: {
             categories: ['2013','2014','2015','2016','2017'],
             crosshair: true
@@ -104,6 +117,16 @@ export default {
             }
         }
       }
+    }
+  },
+  methods: {
+    playing() {
+      console.log('we are watching!!!')
+    }
+  },
+  computed: {
+    player() {
+      return this.$refs.youtube.player
     }
   }
 }

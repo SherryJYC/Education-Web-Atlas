@@ -1,6 +1,5 @@
 <template>
 <div>
-    <b-card></b-card>
     <b-card-group deck>
       <b-card>
        <apexchart type="scatter" height="350" :options="chartOptions" :series="series"></apexchart>
@@ -32,6 +31,10 @@ export default {
     return {
       series: [
         {
+            name: "Bachelor",
+            data: pair_bachelor,
+          },
+        {
             name: "Post Secondary",
             data: pair_post,
           },{
@@ -45,13 +48,10 @@ export default {
           {
             name: "Primary",
             data: pair_primary
-          },
-          {
-            name: "Bachelor",
-            data: pair_bachelor,
           }
           ],
           chartOptions: {
+            colors:["#A8322D", "#FFC300","#0069B4","#72791C","#956013"],
             chart: {
               height: 350,
               type: 'scatter',
@@ -61,7 +61,7 @@ export default {
               }
             },
             xaxis: {
-              title: "Adolescent Birth Rate ",
+              title: {text: "Adolescent Birth Rate "},
               tickAmount: 10,
               labels: {
                 formatter: function(val) {
@@ -70,9 +70,12 @@ export default {
               }
             },
             yaxis: {
-              title: "Gender Parity Index",
+              title: {text:"Gender Parity Index"},
               tickAmount: 7
-            }
+            },
+            title: {
+              text: 'Adolescent Birth Rate VS Gender Parity Index'
+            },
           },
     }
   }

@@ -19,7 +19,7 @@
   style="height: 500px;" 
   :options="mapOptions">
     <l-choropleth-layer 
-      :data="GERPrimary2018" 
+      :data="GERPrimary2014" 
       :title="titleSetting"
       titleKey="Time" 
       idKey="Country" 
@@ -43,6 +43,7 @@
         </template>
     </l-choropleth-layer>
 </l-map>
+
 </div>
 </template>
 
@@ -51,7 +52,7 @@ import 'leaflet/dist/leaflet.css';
 import {LMap} from 'vue2-leaflet';
 import {InfoControl, ReferenceChart, ChoroplethLayer} from 'vue-choropleth';
 import {geojson} from '../../assets/countries_smallv';
-import {GERPrimary2018} from '../../assets/GER/GERPrimary2018';
+import {GERPrimary2014} from '../../assets/GER/GERPrimary2014';
 // import {Tabs, Tab} from 'vue-tabs-component';
 
 export default {
@@ -66,8 +67,8 @@ export default {
   data() {
     return {
       geojson,
-      GERPrimary2018,
-      colorScale: ["e7d090", "e9ae7b", "de7062"],
+      GERPrimary2014,
+      colorScale: ["#900C3F","#C70039", "#FF5733", "#FFC300"],
       titleSetting: {
         text: 'Gross Enrollment Ratio in Primary Level'
       },

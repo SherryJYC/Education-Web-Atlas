@@ -1,6 +1,5 @@
 <template>
   <div>
-    <b-card></b-card>
     <b-card-group deck>
       <b-card>
         <!-- chart of EdTech Funding  -->
@@ -11,6 +10,7 @@
         <apexchart type="donut" width="500" :options="chartOptions1" :series="series1"></apexchart>
       </b-card>
     </b-card-group>
+    <b-card>SUMMARY PLACEHOLDER</b-card>
   </div>
 </template>
 
@@ -33,6 +33,7 @@ export default {
             data: [162,561,450,800,1540,950]
           }],
           chartOptions: {
+            colors:["#A8322D","#e07b39","#FFC300"],
             chart: {
               type: 'bar',
               height: 350,
@@ -61,8 +62,13 @@ export default {
             },
             xaxis: {
               categories: ['2014','2015','2016','2017','2018','2019'],
-              position: 'bottom'
+              position: 'bottom',
+              title: {text: "Year"}
             },
+            yaxis: {
+              title: {text: "USD Millions"}
+            },
+            title:{text: "EdTech Unicorn Fundings"},
             legend: {
               position: 'right',
               offsetY: 40
@@ -71,9 +77,11 @@ export default {
               opacity: 1
             }
           },
+          // pie chart
           series1: [21,14,65],
           chartOptions1: {
             labels: ['USA', 'India', 'China'],
+            colors: ["#A8322D","#e07b39","#FFC300"],
             title: {
               text: "EdTechs in 2019"
             },
