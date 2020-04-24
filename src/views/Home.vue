@@ -11,7 +11,7 @@
     
     <b-card class="title-text">
       <b-card-header>
-        <h1><b> How is the global situation of education?</b></h1>
+        <h2><b> How is the global situation of education?</b></h2>
       </b-card-header>
     </b-card>
     <v-parallax
@@ -53,7 +53,7 @@
 
     <b-card class="title-text">
       <b-card-header>
-        <h1><b> What are the reasons behind inequality of education?</b></h1>
+        <h2><b> What are the reasons behind inequality of education?</b></h2>
       </b-card-header>
     </b-card>
 
@@ -99,7 +99,7 @@
 
    <b-card class="title-text">
       <b-card-header>
-        <h1><b> What is the current trend of education </b></h1>
+        <h2><b> What is the current trend of education </b></h2>
       </b-card-header>
     </b-card>
 
