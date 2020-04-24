@@ -2,8 +2,7 @@
 
 ## TODO List:clipboard:
 ### Vue Component
-- [ ] Statement
-- [ ] Questions
+- [x] Statement
 - [ ] Global Map 1
 - [ ] Global Map 2
 - [x] Reason 1
