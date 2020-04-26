@@ -70,7 +70,8 @@
     header-bg-variant="dark"
     >
     <b-card-group deck>
-      <b-card img-src="https://placekitten.com/1000/300" img-alt="Card image" img-top>
+      <b-card>
+      <v-img src="../assets/img/JYC.png" height="210" contain alt="person_img" />
         <b-card-text class="text">
           <b>Yuchang Jiang </b><br/> 
           a Master student in ETHz, majored in Geomatics <br/>
@@ -80,7 +81,8 @@
         <b-button class="btn_red" href="https://github.com/SherryJYC">Personal Homepage</b-button>
       </b-card>
 
-      <b-card img-src="https://placekitten.com/1000/300" img-alt="Card image" img-top>
+      <b-card>
+      <v-img src="../assets/img/JYC.png" height="210" contain alt="person_img" />
         <b-card-text class="text">
           <b> Haojun Cai </b><br/>
           a Master student in ETHz, majored in Geomatics <br/>
