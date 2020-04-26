@@ -14,8 +14,8 @@
 
 ### UI Design
 - [ ] View: Home
-- [ ] View: Imprint
-- [ ] View: Others
+- [x] View: Imprint
+- [ ] View: Welcome
 
 # education_atlas
 
