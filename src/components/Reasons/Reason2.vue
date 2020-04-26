@@ -22,7 +22,7 @@
 
 <script>
 import VueApexCharts from 'vue-apexcharts';
-import {pair_post,pair_lowersecond,pair_uppersecond, pair_primary, pair_bachelor} from '../../assets/reason2';
+import {pair_post,pair_lowersecond,pair_uppersecond, pair_primary, pair_bachelor} from '../../assets/json/reason2';
 export default {
   components: { 
     apexchart: VueApexCharts

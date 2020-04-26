@@ -66,7 +66,7 @@
 import 'leaflet/dist/leaflet.css';
 import {LMap} from 'vue2-leaflet';
 import {InfoControl, ReferenceChart, ChoroplethLayer} from 'vue-choropleth';
-import {geojson} from '../../assets/countries_smallv';
+import {geojson} from '../../assets/json/countries_smallv';
 import {GPIPrimary2018} from '../../assets/GPI/GPIPrimary2018';
 import VueApexCharts from 'vue-apexcharts';
 // import {Tabs, Tab} from 'vue-tabs-component';

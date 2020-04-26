@@ -51,7 +51,7 @@
 import 'leaflet/dist/leaflet.css';
 import {LMap} from 'vue2-leaflet';
 import {InfoControl, ReferenceChart, ChoroplethLayer} from 'vue-choropleth';
-import {geojson} from '../../assets/countries_smallv';
+import {geojson} from '../../assets/json/countries_smallv';
 import {GERPrimary2014} from '../../assets/GER/GERPrimary2014';
 // import {Tabs, Tab} from 'vue-tabs-component';
 

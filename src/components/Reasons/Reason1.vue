@@ -23,7 +23,7 @@
       idKey="country_name" 
       :value="value" 
       :extraValues="extraValues" 
-      geojsonIdKey="ADMIN" 
+      geojsonIdKey="name" 
       :geojson="geojson" 
       :colorScale="colorScale">
         <template slot-scope="props">
@@ -55,8 +55,8 @@
 import 'leaflet/dist/leaflet.css';
 import {LMap} from 'vue2-leaflet';
 import { InfoControl, ReferenceChart, ChoroplethLayer } from 'vue-choropleth';
-import {geojson} from '../../assets/countries';
-import {nationalInvestData} from '../../assets/WEInvest';
+import {geojson} from '../../assets/json/countries_smallv';
+import {nationalInvestData} from '../../assets/json/reason1';
 import VueApexCharts from 'vue-apexcharts';
 
 export default {
