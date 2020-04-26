@@ -37,13 +37,14 @@ export default {
         {
             name: "Post Secondary",
             data: pair_post,
-          },{
-            name: "Lower Secondary",
-            data: pair_lowersecond
           },
           {
             name: "Upper Secondary",
             data: pair_uppersecond
+          },
+          {
+            name: "Lower Secondary",
+            data: pair_lowersecond
           },
           {
             name: "Primary",

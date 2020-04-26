@@ -3,11 +3,11 @@
     <b-card-group deck>
       <b-card>
         <!-- chart of EdTech Funding  -->
-       <apexchart type="bar" height="350" width="600" :options="chartOptions" :series="series"></apexchart>
+       <apexchart type="bar" height="350" :options="chartOptions" :series="series"></apexchart>
       </b-card> 
       <b-card>
         <!-- chart of EdTech in 2019 -->
-        <apexchart type="donut" width="500" :options="chartOptions1" :series="series1"></apexchart>
+        <apexchart type="donut" height="350" :options="chartOptions1" :series="series1"></apexchart>
       </b-card>
     </b-card-group>
     <b-card>SUMMARY PLACEHOLDER</b-card>

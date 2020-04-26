@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-
     <!-- Statement1 -->
     <Statement1/>
     <!-- Questions -->
@@ -9,7 +8,7 @@
       In this atlas, we would explore the current situation of education from <b>global accessibility</b> and <b>gender</b> aspects
     </blockquote>
     
-    <b-card class="title-text">
+    <b-card class="title-text" id="p1">
       <b-card-header>
         <h2><b> How is the global situation of education?</b></h2>
       </b-card-header>
@@ -51,7 +50,7 @@
 
     <!-- Reasons -->
 
-    <b-card class="title-text">
+    <b-card class="title-text" id="p2">
       <b-card-header>
         <h2><b> What are the reasons behind inequality of education?</b></h2>
       </b-card-header>
@@ -97,7 +96,7 @@
     </div>
     </smart-widget>
 
-   <b-card class="title-text">
+   <b-card class="title-text" id="p3">
       <b-card-header>
         <h2><b> What is the current trend of education </b></h2>
       </b-card-header>
@@ -140,7 +139,71 @@
     <!-- Summary -->
     <Summary/>
 
+    <v-speed-dial
+      v-model="fab"
+      :top="top"
+      :bottom="bottom"
+      :right="right"
+      :left="left"
+      :direction="direction"
+      :open-on-hover="hover"
+      :transition="transition"
+      id="float_btn"
+    >
+      <template v-slot:activator>
+        <v-btn
+          v-model="fab"
+          class="float_btn_item"
+          dark
+          fab
+        >
+          <v-icon v-if="fab">mdi-close</v-icon>
+          <v-icon v-else>widgets</v-icon>
+        </v-btn>
+        <br/>
+      </template>
+      <v-btn
+        fab
+        dark
+        small
+        color="green"
+        v-scroll-to="'#p3'"
+      >
+        <v-icon>filter_3</v-icon>
+      </v-btn>
+      <v-btn
+        fab
+        dark
+        small
+        color="indigo"
+        v-scroll-to="'#p2'"
+      >
+        <v-icon>filter_2</v-icon>
+      </v-btn>
+      <v-btn
+        fab
+        dark
+        small
+        color="red"
+        v-scroll-to="'#p1'"
+      >
+        <v-icon>filter_1</v-icon>
+      </v-btn>
+      <v-btn
+        fab
+        dark
+        small
+        color="red"
+        @click="scrollToTop"
+      >
+        <v-icon>keyboard_arrow_up</v-icon>
+      </v-btn>
+
+    </v-speed-dial>
+    
   </div>
+
+  
 </template>
 
 <script>
@@ -164,6 +227,8 @@ Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
 
+// let p2 = document.body.getElementById("p2");
+
 
 export default {
   name: 'Home',
@@ -178,7 +243,48 @@ export default {
     Trend1,
     Trend2,
     Summary,
-  }
+  },
+  data: () => ({
+      direction: 'top',
+      fab: false,
+      fling: false,
+      hover: true,
+      tabs: null,
+      top: false,
+      right: true,
+      bottom: true,
+      left: false,
+      transition: 'slide-y-reverse-transition',
+    }),
+    computed: {
+      activeFab () {
+        switch (this.tabs) {
+          case 'one': return { class: 'purple', icon: 'account_circle' }
+          case 'two': return { class: 'red', icon: 'edit' }
+          case 'three': return { class: 'green', icon: 'keyboard_arrow_up' }
+          default: return {}
+        }
+      },
+    },
+    methods: { 
+      scrollToTop() {
+        window.scrollTo(0,0);
+      }
+    },
+    watch: {
+      top (val) {
+        this.bottom = !val
+      },
+      right (val) {
+        this.left = !val
+      },
+      bottom (val) {
+        this.top = !val
+      },
+      left (val) {
+        this.right = !val
+      },
+    },
 }
 </script>
 
@@ -197,5 +303,12 @@ text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -2px 2px 0 #000, 1px 1px 0 #000;
 }
 .block{
  margin: 10px;
+}
+#float_btn {
+  position: fixed;
+  margin-bottom: 3em;
+}
+.float_btn_item{
+  color:white;
 }
 </style>>

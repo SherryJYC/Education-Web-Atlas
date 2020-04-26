@@ -7,10 +7,11 @@ import '../node_modules/timeline-vuejs/dist/timeline-vuejs.css'
 import VueSmartWidget from "vue-smart-widget";
 import VueYoutube from 'vue-youtube';
 
+
 Vue.use(VueYoutube);
-
 Vue.use(VueSmartWidget);
-
+const VueScrollTo = require('vue-scrollto')
+Vue.use(VueScrollTo);
 Vue.config.productionTip = false
 
 new Vue({

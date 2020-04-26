@@ -62,7 +62,7 @@
 <script>
 import * as d3 from "d3";
 // import axios from "axios";
-import {geojson} from '../../assets/countries_smallv';
+import {geojson} from '../../assets/json/countries_smallv';
 import {GERPrimary2018} from '../../assets/GER/GERPrimary2018';
 
 // import {happiestCities} from '../../assets/happiestCities';
