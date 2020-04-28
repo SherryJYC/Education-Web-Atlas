@@ -86,7 +86,7 @@
         <b-card-text class="text">
           <b> Haojun Cai </b><br/>
           a Master student in ETHz, majored in Geomatics <br/>
-          I am interested in data science, include but limited to <br/>
+          I am interested in social data science, include but limited to <br/>
           education and physcology
         </b-card-text>
         <b-button class="btn_red" href="https://github.com/HaojunCai">Personal Homepage</b-button>
