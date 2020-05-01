@@ -16,21 +16,26 @@
 
 <script>
 import VueApexCharts from 'vue-apexcharts';
+import {china_years,india_years,usa_years,country3_2019} from "../../assets/json/trend1"
 export default {
   components: { 
     apexchart: VueApexCharts
   },
   data() {
     return {
+      china_years,
+      usa_years,
+      india_years,
+      country3_2019,
       series: [{
             name: 'USA',
-            data: [55,213,159,110,40,290]
+            data: usa_years
           }, {
             name: 'India',
-            data: [0,30,145,110,540,200]
-          }, {
+            data: india_years
+          },{
             name: 'China',
-            data: [162,561,450,800,1540,950]
+            data: china_years
           }],
           chartOptions: {
             colors:["#A8322D","#e07b39","#FFC300"],
@@ -68,7 +73,12 @@ export default {
             yaxis: {
               title: {text: "USD Millions"}
             },
-            title:{text: "EdTech Unicorn Fundings"},
+            title:{
+              text: "EdTech Unicorn Fundings",
+              style: {
+                  fontSize: '15px'
+                },
+            },
             legend: {
               position: 'right',
               offsetY: 40
@@ -83,7 +93,10 @@ export default {
             labels: ['USA', 'India', 'China'],
             colors: ["#A8322D","#e07b39","#FFC300"],
             title: {
-              text: "EdTechs in 2019"
+              text: "EdTechs in 2019",
+              style: {
+                fontSize: '15px'
+              },
             },
             tooltip: {
               y:{
@@ -103,6 +116,9 @@ export default {
             chart: {
               height: 350,
               type: 'donut',
+              toolbar: {
+                show: true 
+              }
             },
             plotOptions: {
               radialBar: {

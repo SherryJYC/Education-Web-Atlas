@@ -56,7 +56,7 @@ import 'leaflet/dist/leaflet.css';
 import {LMap} from 'vue2-leaflet';
 import { InfoControl, ReferenceChart, ChoroplethLayer } from 'vue-choropleth';
 import {geojson} from '../../assets/json/countries_smallv';
-import {nationalInvestData} from '../../assets/json/reason1';
+import {nationalInvestData,family_exp,avg_salary} from '../../assets/json/reason1';
 import VueApexCharts from 'vue-apexcharts';
 
 export default {
@@ -71,6 +71,8 @@ export default {
     return {
       geojson,
       nationalInvestData,
+      family_exp,
+      avg_salary,
       titleSetting: {
         text: 'Gender Parity Index in Primary Level'
       },
@@ -93,20 +95,22 @@ export default {
       dataFormat: "json",
       series: [{
             name: 'Family Expenditure',
-            data: [132161,99378,70939,58464,42892,36402,25479,24862,22812,22602,18909,18422,16863,16708
-            ]
+            data: family_exp
           },
           {
             name: 'Average Salary',
-            data: [-50300,-40880,-59770,-63080,-9460,-53230,-10590,-41770,-9180,-44940,-2020,-3840,-2800,-41080
-            ]
+            data: avg_salary
           }
           ],
           chartOptions: {
             chart: {
               type: 'bar',
               height: 440,
-              stacked: true
+              stacked: true,
+              toolbar: {
+                show: true
+
+              }
             },
             colors: ["#6F6F6E", "#FFC300"],
             plotOptions: {
@@ -152,7 +156,10 @@ export default {
               }
             },
             title: {
-              text: 'Family Expenditure on Education VS Average Salary'
+              text: 'Family Expenditure on Education VS Average Salary',
+              style: {
+                fontSize: '15px'
+              },
             },
             xaxis: {
               categories: ['HK', 'UAE','Singapore','USA','China','Australia','Malaysia','UK','Mexico','Canada','India',

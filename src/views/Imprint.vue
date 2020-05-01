@@ -71,7 +71,7 @@
     >
     <b-card-group deck>
       <b-card>
-      <v-img src="../assets/img/JYC.png" height="210" contain alt="person_img" />
+      <v-img src="../assets/img/person.png" height="210" contain alt="person_img" />
         <b-card-text class="text">
           <b>Yuchang Jiang </b><br/> 
           a Master student in ETHz, majored in Geomatics <br/>
@@ -82,7 +82,7 @@
       </b-card>
 
       <b-card>
-      <v-img src="../assets/img/JYC.png" height="210" contain alt="person_img" />
+      <v-img src="../assets/img/person.png" height="210" contain alt="person_img" />
         <b-card-text class="text">
           <b> Haojun Cai </b><br/>
           a Master student in ETHz, majored in Geomatics <br/>

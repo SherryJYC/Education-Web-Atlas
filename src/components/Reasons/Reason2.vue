@@ -56,9 +56,8 @@ export default {
             chart: {
               height: 350,
               type: 'scatter',
-              zoom: {
-                enabled: true,
-                type: 'xy'
+              toolbar: {
+                show: true             
               }
             },
             xaxis: {
@@ -75,7 +74,10 @@ export default {
               tickAmount: 7
             },
             title: {
-              text: 'Adolescent Birth Rate VS Gender Parity Index'
+              text: 'Adolescent Birth Rate VS Gender Parity Index',
+              style: {
+                fontSize: '15px'
+              },
             },
           },
     }

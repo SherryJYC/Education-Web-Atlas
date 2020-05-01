@@ -9,11 +9,11 @@
     <b-card-group deck>
       <b-card>
         <!-- radar chart of China female enrollment 2017  -->
-        <apexchart type="radar" height="350" :options="chartOptions_china1" :series="series_china1"></apexchart>
+        <apexchart type="radar" height="500" :options="chartOptions_china1" :series="series_china1"></apexchart>
       </b-card> 
       <b-card>
         <!-- radar chart of Swiss female enrollment 2017  -->
-        <apexchart type="radar" height="350" :options="chartOptions_swiss1" :series="series_swiss1"></apexchart>
+        <apexchart type="radar" height="500" :options="chartOptions_swiss1" :series="series_swiss1"></apexchart>
       </b-card>
     </b-card-group>
     <b-card-group deck>
@@ -34,6 +34,8 @@
 
 <script>
 import VueApexCharts from 'vue-apexcharts';
+import {global_avg, china_2017, china_2016,china_2015,china_2014,china_2013,
+swiss_2017,swiss_2016,swiss_2015,swiss_2014,swiss_2013} from '../../assets/json/trend2';
 var levels = ['Primary', 'Secondary', 'Short-cycle Tertiary', 'Bachelor', 'Master', 'Phd'];
 export default {
   components:{
@@ -41,11 +43,14 @@ export default {
   },
   data() {
     return {
+      global_avg,
+      china_2017,china_2016,china_2015,china_2014,china_2013,
+      swiss_2017,swiss_2016,swiss_2015,swiss_2014,swiss_2013,
       // global
       series1: [
             {
               name: "Global Average",
-              data: [48.48,48.63,50.87,53.15,52.91,44.70]
+              data: global_avg
             }
           ],
           chartOptions1: {
@@ -66,7 +71,7 @@ export default {
                 opacity: 0.2
               },
               toolbar: {
-                show: false
+                show: true
               }
             },
             dataLabels: {
@@ -77,6 +82,9 @@ export default {
             },
             title: {
               text: 'Global Average Female Enrollment Percentage at Different Levels (2017)',
+              style: {
+                fontSize: '15px'
+              },
               align: 'left'
             },
             grid: {
@@ -107,25 +115,31 @@ export default {
           // China radar chart
           series_china1: [{
             name: 'Global Average',
-            data: [48.48,48.63,50.87,53.15,52.91,44.70]
+            data: global_avg
           }, {
             name: 'China',
-            data: [46.42,47.05,50.49,53.26,48.80,38.90],
+            data: china_2017
           }],
           chartOptions_china1: {
             colors:["#FFC300","#A8322D"],
             chart: {
-              height: 350,
+              height: 500,
               type: 'radar',
               dropShadow: {
                 enabled: true,
                 blur: 1,
                 left: 1,
                 top: 1
+              },
+              toolbar: {
+                show: true 
               }
             },
             title: {
-              text: 'Female Enrollment Rate in China (2017)'
+              text: 'Female Enrollment Rate in China (2017)',
+              style: {
+                fontSize: '15px'
+              },
             },
             stroke: {
               width: 2
@@ -142,36 +156,30 @@ export default {
             yaxis: {
               min: 0,
               max: 80,
-              labels: {
-                formatter: function(val, i) {
-                  if (i % 2 === 0) {
-                    return val
-                  } else {
-                    return ''
-                  }
+              formatter: function(val) {
+                  return val
                 }
-              }
             }
           },
           // China Timeseris chart
           series_china2: [{
               name: "2013",
-              data: [46.33, 47.34, 51.20, 50.96, 47.27, 36.65]
+              data: china_2013
             },
             {
               name: "2014",
-              data: [46.34, 47.35, 51.03, 51.85, 46.32, 37.12]
+              data: china_2014
             },
             {
               name: '2015',
-              data: [46.32, 47.34, 51.04, 52.43, 47.37, 37.18]
+              data: china_2015
             },
             { name: "2016",
-              data: [46.34, 47.11, 50.96, 52.97, 47.90, 38.10]
+              data: china_2016
             },
             {
               name: '2017',
-              data: [46.42, 47.05, 50.49, 53.26, 48.80, 38.90]
+              data: china_2017
             }
             
           ],
@@ -181,8 +189,11 @@ export default {
               height: 350,
               type: 'line',
               zoom: {
-                enabled: false
+                enabled: true
               },
+              toolbar: {
+                show: true 
+              }
             },
             dataLabels: {
               enabled: false
@@ -194,6 +205,9 @@ export default {
             },
             title: {
               text: 'Female Enrollment Rate in China (2013-2017)',
+              style: {
+                fontSize: '15px'
+              },
               align: 'left'
             },
             legend: {
@@ -216,26 +230,24 @@ export default {
               categories: levels,
               title:{text: "Education Level"}
             },
+            annotations: {
+              xaxis: [
+                {
+                  x: 'Short-cycle Tertiary',
+                  x2: 'Phd',
+                  fillColor: "#A8322D",
+                  label: {
+                    text: 'Large Variation'
+                  }
+                }
+              ]
+            },
             tooltip: {
               y: [
                 {
                   title: {
                     formatter: function (val) {
                       return val
-                    }
-                  }
-                },
-                {
-                  title: {
-                    formatter: function (val) {
-                      return val 
-                    }
-                  }
-                },
-                {
-                  title: {
-                    formatter: function (val) {
-                      return val 
                     }
                   }
                 }
@@ -248,25 +260,31 @@ export default {
           // Swiss radar chart
           series_swiss1: [{
             name: 'Global Average',
-            data: [48.48,48.63,50.87,53.15,52.91,44.70]
+            data: global_avg
           }, {
             name: 'Switzerland',
-            data: [48.55,47.68,64.46,49.37,51.10,46.32],
+            data: swiss_2017
           }],
           chartOptions_swiss1: {
             colors:["#FFC300","#A8322D"],
             chart: {
-              height: 350,
+              height: 500,
               type: 'radar',
               dropShadow: {
                 enabled: true,
                 blur: 1,
                 left: 1,
                 top: 1
+              },
+              toolbar: {
+                show: true 
               }
             },
             title: {
-              text: 'Female Enrollment Rate in Switzerland (2017)'
+              text: 'Female Enrollment Rate in Switzerland (2017)',
+              style: {
+                fontSize: '15px'
+              },
             },
             stroke: {
               width: 2
@@ -275,7 +293,7 @@ export default {
               opacity: 0.1
             },
             markers: {
-              size: 0
+              size: 1
             },
             xaxis: {
               categories: levels,
@@ -283,36 +301,30 @@ export default {
             yaxis: {
               min: 0,
               max: 80,
-              labels: {
-                formatter: function(val, i) {
-                  if (i % 2 === 0) {
-                    return val
-                  } else {
-                    return ''
-                  }
+              formatter: function(val) {
+                  return val
                 }
-              }
             }
-          },   
+          },
           // Swiss Timeseris chart
           series_swiss2: [{
               name: "2013",
-              data: [48.53, 48.06, 58.23, 49.19,50.62, 44.90]
+              data: swiss_2013
             },
             {
               name: "2014",
-              data: [48.63, 47.83, 59.47, 49.11, 50.94, 45.20]
+              data: swiss_2014
             },
             {
               name: '2015',
-              data: [48.59, 47.83, 59.59, 49.19, 51.54, 45.83]
+              data: swiss_2015
             },
             { name: "2016",
-              data: [48.53, 47.77, 62.51, 49.28, 50.96, 46.17]
+              data: swiss_2016
             },
             {
               name: '2017',
-              data: [48.55, 47.68, 64.66, 49.37, 51.10, 46.32]
+              data: swiss_2017
             }
           ],
           chartOptions_swiss2: {
@@ -321,8 +333,11 @@ export default {
               height: 350,
               type: 'line',
               zoom: {
-                enabled: false
+                enabled: true
               },
+              toolbar: {
+                show: true 
+              }
             },
             dataLabels: {
               enabled: false
@@ -356,22 +371,20 @@ export default {
               categories: levels,
               title:{text: "Education Level"}
             },
+            annotations: {
+              xaxis: [
+                {
+                  x: 'Secondary',
+                  x2: 'Bachelor',
+                  fillColor: "#A8322D",
+                  label: {
+                    text: 'Large Variation'
+                  }
+                }
+              ]
+            },
             tooltip: {
               y: [
-                {
-                  title: {
-                    formatter: function (val) {
-                      return val + " %"
-                    }
-                  }
-                },
-                {
-                  title: {
-                    formatter: function (val) {
-                      return val + " %"
-                    }
-                  }
-                },
                 {
                   title: {
                     formatter: function (val) {

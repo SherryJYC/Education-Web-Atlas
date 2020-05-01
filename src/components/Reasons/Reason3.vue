@@ -59,6 +59,7 @@
 
 <script>
 import VueApexCharts from 'vue-apexcharts';
+import {swiss_ratio,china_ratio} from '../../assets/json/reason3';
 
 
 
@@ -72,15 +73,17 @@ export default {
   data() {
     return {
       videoId: 'z9RWgVbvklA',
+      swiss_ratio,
+      china_ratio,
       playerVars: {
         autoplay: 1
       },
       series: [{
         name: 'Switzerland',
-        data: [56.27, 57.23, 57.71, 58.05, 59.56]
+        data: swiss_ratio
         }, {
         name: 'China',
-        data: [32.43, 42.43, 46.04, 48.02, 49.07]
+        data: china_ratio
         }
       ],
       chartOptions: {
@@ -88,7 +91,10 @@ export default {
             type: 'bar'
         },
         title: {
-            text: '2013-2017 Tertinery Gross Enrollment Ratio Comparison between Switzerland and China'
+            text: '2013-2017 Tertinery Gross Enrollment Ratio Comparison between Switzerland and China',
+            style: {
+                fontSize: '15px'
+              },
         },
         colors: ["#e07b39", "#FFC300"],
         xaxis: {

@@ -49,17 +49,17 @@
       </b-card-text>
       </b-card>
 
-        <v-btn class="btn"
+        <b-btn class="btn"
         @click="e1 = 4"
         >
           Last Step
-        </v-btn>
-        <v-btn
+        </b-btn>
+        <b-btn
           class="btn"
           @click="e1 = 2"
         >
           Next Step
-        </v-btn>
+        </b-btn>
 
       </v-stepper-content>
       <v-stepper-content step="2">
@@ -72,17 +72,17 @@
         To assess the current situation of global education, global enrollment ratio and gender parity index are leverageed.
       </b-card-text>
       </b-card>
-        <v-btn class="btn"
+        <b-btn class="btn"
         @click="e1 = 1"
         >
           Last Step
-        </v-btn>
-        <v-btn
+        </b-btn>
+        <b-btn
           class="btn"
           @click="e1 = 3"
         >
           Next Step
-        </v-btn>
+        </b-btn>
 
       </v-stepper-content>
       <br/>
@@ -97,18 +97,18 @@
       </b-card-text>
       </b-card>
 
-       <v-btn class="btn"
+       <b-btn class="btn"
         @click="e1 = 2"
         >
           Last Step
-        </v-btn>
+        </b-btn>
 
-        <v-btn
+        <b-btn
           class="btn"
           @click="e1 = 4"
         >
           Next Step
-        </v-btn>
+        </b-btn>
 
       </v-stepper-content>
 
@@ -122,18 +122,13 @@
       </b-card-text>
       </b-card>
 
-      <v-btn class="btn"
+      <b-btn class="btn"
         @click="e1 = 3"
         >
           Last Step
-        </v-btn>
+        </b-btn>
 
-        <v-btn
-          class="btn"
-          @click="e1 = 1"
-        >
-          Next Step
-        </v-btn>
+        <b-btn @click="goContent">Go to Content</b-btn>
 
 
       </v-stepper-content>
@@ -151,6 +146,13 @@
         e1: 1,
       }
     },
+    methods:{
+      goContent: function () {
+        // go to content page
+        window.location.href = './Content';
+      
+      },
+    }
   }
 </script>
 <style>
