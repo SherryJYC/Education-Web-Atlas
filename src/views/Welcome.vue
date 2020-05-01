@@ -49,16 +49,11 @@
       </b-card-text>
       </b-card>
 
-        <b-btn class="btn"
-        @click="e1 = 4"
-        >
-          Last Step
-        </b-btn>
         <b-btn
           class="btn"
           @click="e1 = 2"
         >
-          Next Step
+          Detailed Menu
         </b-btn>
 
       </v-stepper-content>
@@ -169,6 +164,7 @@ h3 {
 }
 .btn{
   margin: 10px;
+  background-color: #A8322D;
+  color: white;
 }
-
 </style>
