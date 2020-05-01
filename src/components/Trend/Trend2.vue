@@ -53,6 +53,10 @@ export default {
             chart: {
               height: 350,
               type: 'line',
+              zoom: {
+                enabled: true,
+                type: 'xy'
+              },
               dropShadow: {
                 enabled: true,
                 color: '#000',
@@ -121,7 +125,7 @@ export default {
               }
             },
             title: {
-              text: 'Female Enrollment Rate in China'
+              text: 'Female Enrollment Rate in China (2017)'
             },
             stroke: {
               width: 2
@@ -262,7 +266,7 @@ export default {
               }
             },
             title: {
-              text: 'Female Enrollment Rate in Switzerland'
+              text: 'Female Enrollment Rate in Switzerland (2017)'
             },
             stroke: {
               width: 2

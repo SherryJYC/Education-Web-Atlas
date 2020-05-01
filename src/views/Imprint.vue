@@ -111,7 +111,7 @@
         </b-card-text>
         <v-row>
           <b-button class="btn_red" href="http://data.uis.unesco.org/" >
-          Database of Sustainable development goals</b-button>
+          Database of Sustainable Development Goals</b-button>
         </v-row>
         <v-row>
           <b-button class="btn_red" href="http://www.gov.cn/xinwen/2017-10/26/content_5234507.htm" >
@@ -127,7 +127,7 @@
         </v-row>
         <v-row>
           <b-button class="btn_red" href="https://data.unicef.org/resources/data_explorer/unicef_f/" >
-          Database of Childern and Women Situation</b-button>
+          Database of Children and Women Situation</b-button>
         </v-row>
       </b-card>
 
