@@ -12,7 +12,8 @@ Vue.use(VueYoutube);
 Vue.use(VueSmartWidget);
 const VueScrollTo = require('vue-scrollto')
 Vue.use(VueScrollTo);
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+
 
 new Vue({
   vuetify,

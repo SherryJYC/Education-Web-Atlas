@@ -34,9 +34,9 @@
     
 
     <!-- Global Map1 -->
-    <smart-widget title="Global Gross Enrollment Ratio">
+    <smart-widget title="Global Gross Enrollment Ratio" id="sw">
     <div class="layout-center">
-      <GlobalMap1/>
+      <GlobalMap/>
     </div>
     </smart-widget>
 
@@ -213,7 +213,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import Statement1 from '../components/Statements/Statement1'
 //import Questions from '../components/Statements/Questions'
-import GlobalMap1 from '../components/GlobalMap/GlobalMap1'
+import GlobalMap from '../components/GlobalMap/GlobalMap'
 import GlobalMap2 from '../components/GlobalMap/GlobalMap2'
 import Reason1 from '../components/Reasons/Reason1'
 import Reason2 from '../components/Reasons/Reason2'
@@ -235,7 +235,7 @@ export default {
   components: {
     Statement1,
     // Questions,
-    GlobalMap1,
+    GlobalMap,
     GlobalMap2,
     Reason1,
     Reason2,
@@ -289,6 +289,9 @@ export default {
 </script>
 
 <style scoped>
+#sw{
+  height: 500px;
+}
 .normal-text {
   text-align: left;
   padding-left: 5em;

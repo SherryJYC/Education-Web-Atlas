@@ -53,7 +53,7 @@
           class="btn"
           @click="e1 = 2"
         >
-          Detailed Menu
+          Continue for Menu
         </b-btn>
 
       </v-stepper-content>
