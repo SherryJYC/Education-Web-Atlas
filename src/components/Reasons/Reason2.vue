@@ -96,7 +96,7 @@ export default {
                 fontSize: '15px'
               },
         },
-        colors: ["#e07b39", "#FFC300"],
+        colors: ["#A8322D", "#FFC300"],
         xaxis: {
             categories: ['2013','2014','2015','2016','2017'],
             crosshair: true

@@ -1,154 +1,492 @@
 <template>
 <div id="app">
 
-  <!-- Tabs control -->
-  <v-app id="inspire">
-    <v-card>
-      <v-tabs
-        v-model="tab"
-        background-color="primary"
-        fixed-tabs
-        dark
-      >
-        <v-tab
-          v-for="item in items"
-          :key="item.tab"
-        >
-          {{ item.tab }}
-        </v-tab>
-      </v-tabs>
-  
-      <v-tabs-items v-model="tab">
-        <v-tab-item
-          v-for="item in items"
-          :key="item.tab"
-        >
-          <v-card>
-            <v-card-text>{{ item.content }}</v-card-text>
-          </v-card>
-        </v-tab-item>
-      </v-tabs-items>
-    </v-card>
-  </v-app>
+<!-- Tabs control -->
+<!-- <v-card>
+  <v-tabs
+    background-color="white"
+    color="deep-purple accent-4"
+    left
+  >
+    <v-tab>Primary</v-tab>
+    <v-tab>Lower Secondary</v-tab>
+    <v-tab>Upper Scondary</v-tab>
+    <v-tab>Tertinary</v-tab>
+    <v-tab-item :key="1"><v-stepper v-model="e1"></v-stepper></v-tab-item>
+    <v-tab-item :key="2"><v-stepper v-model="e2"></v-stepper></v-tab-item>
+  </v-tabs>
+</v-card> -->
 
-  <!-- Chropleth map -->
-  <svg ref="svg" height="300" width="500">
-    <path
-      v-for="state in stateData"
-      :key="state.feature.id"
-      :d="pathGenerator(state.feature)"
-      :style="{
-        fill: state.color,
-        stroke: 'darkslategray'
-      }"
-    />
-    <circle
-      v-for="city in cityData"
-      :key="city.city"
-      :cx="city.x"
-      :cy="city.y"
-      :r="city.size"
-      :style="{
-        fill: city.color,
-        stroke: 'darkslategray',
-        opacity: 0.8
-      }"
-    ></circle>
-  </svg>
+<!-- Stepper to switch between different years -->
+<v-stepper v-model="e1">
+  <v-stepper-header>
+    <v-stepper-step :complete="e1" step="1">2014</v-stepper-step>
+    <v-divider></v-divider>
+    <v-stepper-step :complete="e1" step="2">2015</v-stepper-step>
+    <v-divider></v-divider>
+    <v-stepper-step :complete="e1" step="3">2016</v-stepper-step>
+    <v-divider></v-divider>
+    <v-stepper-step :complete="e1" step="4">2017</v-stepper-step>
+    <v-divider></v-divider>
+    <v-stepper-step :complete="e1" step="5">2018</v-stepper-step>
+  </v-stepper-header>
+
+  <v-stepper-items>
+    <v-stepper-content step="1">
+      <v-btn class="btn" @click="e1 = 2">Next Year</v-btn>        
+      <!-- choropleth map -->
+      <b-card>
+        <l-map ref="mymap1"
+        :center="[50, 10]" 
+        :zoom="1.5" 
+        style="height: 500px;" 
+        :options="mapOptions">
+          <l-choropleth-layer 
+            :data="GERPrimary2014" 
+            titleKey="Time" 
+            idKey="Country" 
+            :value="value" 
+            :extraValues="extraValues" 
+            geojsonIdKey="name" 
+            :geojson="geojson" 
+            :colorScale="colorScale">
+              <template slot-scope="props">
+                <l-info-control 
+                  :item="props.currentItem" 
+                  :unit="props.unit" 
+                  title="Gross Enrollment Ratio" 
+                  placeholder="Hover over a country"/>
+                <l-reference-chart 
+                  title="Gross Enrollment Ratio" 
+                  :colorScale="colorScale" 
+                  :min="props.min" 
+                  :max="props.max" 
+                  position="topright"/>
+              </template>
+            </l-choropleth-layer>
+        </l-map>
+      </b-card>
+
+    </v-stepper-content>
+
+    <v-stepper-content step="2">
+      <v-btn class="btn" @click="e1 = 1">Last Year</v-btn>
+      <v-btn class="btn" @click="e1 = 3">Next Yaer</v-btn>        
+      <!-- choropleth map -->
+      <b-card>
+        <l-map ref="mymap2"
+        :center="[50, 10]" 
+        :zoom="1.5" 
+        style="height: 500px;" 
+        :options="mapOptions">
+          <l-choropleth-layer 
+            :data="GERPrimary2015" 
+            titleKey="Time" 
+            idKey="Country" 
+            :value="value" 
+            :extraValues="extraValues" 
+            geojsonIdKey="name" 
+            :geojson="geojson" 
+            :colorScale="colorScale">
+              <template slot-scope="props">
+                <l-info-control 
+                  :item="props.currentItem" 
+                  :unit="props.unit" 
+                  title="Gross Enrollment Ratio" 
+                  placeholder="Hover over a country"/>
+                <l-reference-chart 
+                  title="Gross Enrollment Ratio" 
+                  :colorScale="colorScale" 
+                  :min="props.min" 
+                  :max="props.max" 
+                  position="topright"/>
+              </template>
+            </l-choropleth-layer>
+        </l-map>
+      </b-card>
+
+    </v-stepper-content>
+
+    <v-stepper-content step="3">
+      <v-btn class="btn" @click="e1 = 2">Last Year</v-btn>
+      <v-btn class="btn" @click="e1 = 4">Next Year</v-btn>       
+      <!-- choropleth map -->
+      <b-card>
+        <l-map ref="mymap3"
+        :center="[50, 10]" 
+        :zoom="1.5" 
+        style="height: 500px;" 
+        :options="mapOptions">
+          <l-choropleth-layer 
+            :data="GERPrimary2016" 
+            titleKey="Time" 
+            idKey="Country" 
+            :value="value" 
+            :extraValues="extraValues" 
+            geojsonIdKey="name" 
+            :geojson="geojson" 
+            :colorScale="colorScale">
+              <template slot-scope="props">
+                <l-info-control 
+                  :item="props.currentItem" 
+                  :unit="props.unit" 
+                  title="Gross Enrollment Ratio" 
+                  placeholder="Hover over a country"/>
+                <l-reference-chart 
+                  title="Gross Enrollment Ratio" 
+                  :colorScale="colorScale" 
+                  :min="props.min" 
+                  :max="props.max" 
+                  position="topright"/>
+              </template>
+            </l-choropleth-layer>
+        </l-map>
+      </b-card>
+
+    </v-stepper-content>
+
+    <v-stepper-content step="4">
+      <v-btn class="btn" @click="e1 = 3">Last Year</v-btn>
+      <v-btn class="btn" @click="e1 = 5">Next Year</v-btn>        
+      <!-- choropleth map -->
+      <b-card>
+        <l-map ref="mymap4"
+        :center="[50, 10]" 
+        :zoom="1.5" 
+        style="height: 500px;" 
+        :options="mapOptions">
+          <l-choropleth-layer 
+            :data="GERPrimary2017" 
+            titleKey="Time" 
+            idKey="Country" 
+            :value="value" 
+            :extraValues="extraValues" 
+            geojsonIdKey="name" 
+            :geojson="geojson" 
+            :colorScale="colorScale">
+              <template slot-scope="props">
+                <l-info-control 
+                  :item="props.currentItem" 
+                  :unit="props.unit" 
+                  title="Gross Enrollment Ratio" 
+                  placeholder="Hover over a country"/>
+                <l-reference-chart 
+                  title="Gross Enrollment Ratio" 
+                  :colorScale="colorScale" 
+                  :min="props.min" 
+                  :max="props.max" 
+                  position="topright"/>
+              </template>
+            </l-choropleth-layer>
+        </l-map>
+      </b-card>
+
+    </v-stepper-content>
+
+    <v-stepper-content step="5">
+      <v-btn class="btn" @click="e1 = 4">Last Year</v-btn>        
+      <!-- choropleth map -->
+      <b-card>
+        <l-map ref="mymap5"
+        :center="[50, 10]" 
+        :zoom="1.5" 
+        style="height: 500px;" 
+        :options="mapOptions">
+          <l-choropleth-layer 
+            :data="GERPrimary2018" 
+            titleKey="Time" 
+            idKey="Country" 
+            :value="value" 
+            :extraValues="extraValues" 
+            geojsonIdKey="name" 
+            :geojson="geojson" 
+            :colorScale="colorScale">
+              <template slot-scope="props">
+                <l-info-control 
+                  :item="props.currentItem" 
+                  :unit="props.unit" 
+                  title="Gross Enrollment Ratio" 
+                  placeholder="Hover over a country"/>
+                <l-reference-chart 
+                  title="Gross Enrollment Ratio" 
+                  :colorScale="colorScale" 
+                  :min="props.min" 
+                  :max="props.max" 
+                  position="topright"/>
+              </template>
+            </l-choropleth-layer>
+        </l-map>
+      </b-card>
+
+    </v-stepper-content>    
+
+  </v-stepper-items>
+</v-stepper>
+
+<!-- <v-stepper v-model="e2">
+  <v-stepper-header>
+    <v-stepper-step :complete="e1" step="1">2014</v-stepper-step>
+    <v-divider></v-divider>
+    <v-stepper-step :complete="e1" step="2">2015</v-stepper-step>
+    <v-divider></v-divider>
+    <v-stepper-step :complete="e1" step="3">2016</v-stepper-step>
+    <v-divider></v-divider>
+    <v-stepper-step :complete="e1" step="4">2017</v-stepper-step>
+    <v-divider></v-divider>
+    <v-stepper-step :complete="e1" step="5">2018</v-stepper-step>
+  </v-stepper-header>
+
+  <v-stepper-items>
+    <v-stepper-content step="1">
+      <v-btn class="btn" @click="e1 = 2">Next Year</v-btn>        
+      <b-card>
+        <l-map ref="mymap1"
+        :center="[50, 10]" 
+        :zoom="1.5" 
+        style="height: 500px;" 
+        :options="mapOptions">
+          <l-choropleth-layer 
+            :data="GERLowersecondary2014" 
+            titleKey="Time" 
+            idKey="Country" 
+            :value="value" 
+            :extraValues="extraValues" 
+            geojsonIdKey="name" 
+            :geojson="geojson" 
+            :colorScale="colorScale">
+              <template slot-scope="props">
+                <l-info-control 
+                  :item="props.currentItem" 
+                  :unit="props.unit" 
+                  title="Gross Enrollment Ratio" 
+                  placeholder="Hover over a country"/>
+                <l-reference-chart 
+                  title="Gross Enrollment Ratio" 
+                  :colorScale="colorScale" 
+                  :min="props.min" 
+                  :max="props.max" 
+                  position="topright"/>
+              </template>
+            </l-choropleth-layer>
+        </l-map>
+      </b-card>
+
+    </v-stepper-content>
+
+    <v-stepper-content step="2">
+      <v-btn class="btn" @click="e1 = 1">Last Year</v-btn>
+      <v-btn class="btn" @click="e1 = 3">Next Yaer</v-btn>        
+      <b-card>
+        <l-map ref="mymap2"
+        :center="[50, 10]" 
+        :zoom="1.5" 
+        style="height: 500px;" 
+        :options="mapOptions">
+          <l-choropleth-layer 
+            :data="GERLowersecondary2015" 
+            titleKey="Time" 
+            idKey="Country" 
+            :value="value" 
+            :extraValues="extraValues" 
+            geojsonIdKey="name" 
+            :geojson="geojson" 
+            :colorScale="colorScale">
+              <template slot-scope="props">
+                <l-info-control 
+                  :item="props.currentItem" 
+                  :unit="props.unit" 
+                  title="Gross Enrollment Ratio" 
+                  placeholder="Hover over a country"/>
+                <l-reference-chart 
+                  title="Gross Enrollment Ratio" 
+                  :colorScale="colorScale" 
+                  :min="props.min" 
+                  :max="props.max" 
+                  position="topright"/>
+              </template>
+            </l-choropleth-layer>
+        </l-map>
+      </b-card>
+
+    </v-stepper-content>
+
+    <v-stepper-content step="3">
+      <v-btn class="btn" @click="e1 = 2">Last Year</v-btn>
+      <v-btn class="btn" @click="e1 = 4">Next Year</v-btn>       
+      <b-card>
+        <l-map ref="mymap3"
+        :center="[50, 10]" 
+        :zoom="1.5" 
+        style="height: 500px;" 
+        :options="mapOptions">
+          <l-choropleth-layer 
+            :data="GERLowersecondary2016" 
+            titleKey="Time" 
+            idKey="Country" 
+            :value="value" 
+            :extraValues="extraValues" 
+            geojsonIdKey="name" 
+            :geojson="geojson" 
+            :colorScale="colorScale">
+              <template slot-scope="props">
+                <l-info-control 
+                  :item="props.currentItem" 
+                  :unit="props.unit" 
+                  title="Gross Enrollment Ratio" 
+                  placeholder="Hover over a country"/>
+                <l-reference-chart 
+                  title="Gross Enrollment Ratio" 
+                  :colorScale="colorScale" 
+                  :min="props.min" 
+                  :max="props.max" 
+                  position="topright"/>
+              </template>
+            </l-choropleth-layer>
+        </l-map>
+      </b-card>
+
+    </v-stepper-content>
+
+    <v-stepper-content step="4">
+      <v-btn class="btn" @click="e1 = 3">Last Year</v-btn>
+      <v-btn class="btn" @click="e1 = 5">Next Year</v-btn>        
+      <b-card>
+        <l-map ref="mymap4"
+        :center="[50, 10]" 
+        :zoom="1.5" 
+        style="height: 500px;" 
+        :options="mapOptions">
+          <l-choropleth-layer 
+            :data="GERLowersecondary2017" 
+            titleKey="Time" 
+            idKey="Country" 
+            :value="value" 
+            :extraValues="extraValues" 
+            geojsonIdKey="name" 
+            :geojson="geojson" 
+            :colorScale="colorScale">
+              <template slot-scope="props">
+                <l-info-control 
+                  :item="props.currentItem" 
+                  :unit="props.unit" 
+                  title="Gross Enrollment Ratio" 
+                  placeholder="Hover over a country"/>
+                <l-reference-chart 
+                  title="Gross Enrollment Ratio" 
+                  :colorScale="colorScale" 
+                  :min="props.min" 
+                  :max="props.max" 
+                  position="topright"/>
+              </template>
+            </l-choropleth-layer>
+        </l-map>
+      </b-card>
+
+    </v-stepper-content>
+
+    <v-stepper-content step="5">
+      <v-btn class="btn" @click="e1 = 4">Last Year</v-btn>        
+      <b-card>
+        <l-map ref="mymap5"
+        :center="[50, 10]" 
+        :zoom="1.5" 
+        style="height: 500px;" 
+        :options="mapOptions">
+          <l-choropleth-layer 
+            :data="GERLowersecondary2018" 
+            titleKey="Time" 
+            idKey="Country" 
+            :value="value" 
+            :extraValues="extraValues" 
+            geojsonIdKey="name" 
+            :geojson="geojson" 
+            :colorScale="colorScale">
+              <template slot-scope="props">
+                <l-info-control 
+                  :item="props.currentItem" 
+                  :unit="props.unit" 
+                  title="Gross Enrollment Ratio" 
+                  placeholder="Hover over a country"/>
+                <l-reference-chart 
+                  title="Gross Enrollment Ratio" 
+                  :colorScale="colorScale" 
+                  :min="props.min" 
+                  :max="props.max" 
+                  position="topright"/>
+              </template>
+            </l-choropleth-layer>
+        </l-map>
+      </b-card>
+
+    </v-stepper-content>    
+
+  </v-stepper-items>
+</v-stepper> -->
 
 </div>
 </template>
 
 <script>
-import * as d3 from "d3";
-// import axios from "axios";
+import 'leaflet/dist/leaflet.css';
+import {LMap} from 'vue2-leaflet';
+import {InfoControl, ReferenceChart, ChoroplethLayer} from 'vue-choropleth';
 import {geojson} from '../../assets/json/countries_smallv';
-import {GERPrimary2018} from '../../assets/GER/GERPrimary2018';
-
-// import {happiestCities} from '../../assets/happiestCities';
-// import {happiestStates} from '../../assets/happiestStates';
+import {GERLowersecondary2014,GERLowersecondary2015,GERLowersecondary2016,GERLowersecondary2017,GERLowersecondary2018,
+GERPrimary2014,GERPrimary2015,GERPrimary2016,GERPrimary2017,GERPrimary2018} from '../../assets/json/global1';
 
 export default {
+  components: { 
+    'l-map': LMap,
+    'l-info-control': InfoControl, 
+    'l-reference-chart': ReferenceChart, 
+    'l-choropleth-layer': ChoroplethLayer,
+  },
+
+  mounted() {  
+    var map = null;
+
+    switch (this.e1) {     
+      case 1: map = this.$refs.mymap1;
+        break;
+      case 2: map = this.$refs.mymap2;
+        break;
+      case 3: map = this.$refs.mymap3;
+        break;
+      case 4: map = this.$refs.mymap4;
+        break;
+      case 5: map = this.$refs.mymap5;
+        break;
+    }
+
+    this.$nextTick(() => map.mapObject._onResize());
+  },
+
   data(){
     return{
+      e1: 1,
+      // e2: 1,
+      // mymaps: ["mymap1","mymap2","mymap3","mymap4","mymap5"],
       geojson,
-      GERPrimary2018,
-      // statesJson: null,
-      // happiestCities, // Shown above and in JSFiddle
-      // happiestStates, // Shown above and in JSFiddle
-
-      tab: null,
-      items: [
-        { tab: 'Primary', content: "Tab 2" },
-        { tab: 'Lower secondary', content: 'Tab 2 Content' },
-        { tab: 'Upper secondary', content: 'Tab 3 Content' },
-        { tab: 'Tertinary', content: 'Tab 4 Content' },
-      ],
+      GERPrimary2014,GERPrimary2015,GERPrimary2016,GERPrimary2017,GERPrimary2018,
+      GERLowersecondary2014,GERLowersecondary2015,GERLowersecondary2016,GERLowersecondary2017,GERLowersecondary2018,
+      colorScale: ["e7d090", "e9ae7b", "de7062"],
+      value: {
+        key: "Value",
+        metric: ""
+      },
+      extraValues: [{
+        key: "Country",
+        metric: ""
+      }],
+      mapOptions: {
+        attributionControl: false
+      },   
     }
   },
 
-  computed: {
-    // Typical projection for showing all states scaled and positioned appropriately
-    projection () {
-      return d3.geoMercator().scale(600).translate([250, 150])
-    },
 
-    // Function for converting GPS coordinates into path coordinates
-    pathGenerator () {
-      return d3.geoPath().projection(this.projection)
-    },
-
-    // Combine the states GeoJSON with a rank-based gradient
-    stateData () {
-      return this.geojson ? this.geojson.features.map(feature => {
-        let state = this.GERPrimary2018.find(state => state.Country === feature.properties.name)
-        return {
-          feature,
-          color: this.stateColor(state.Value)
-        }
-      }) : []
-    },
-
-    // Construct the city data to be used by the circle elements
-    // cityData () {
-    //   return this.happiestCities.map(city => {
-    //     return {
-    //       city: city.city,
-    //       x: this.projection([city.lng, city.lat])[0],
-    //       y: this.projection([city.lng, city.lat])[1],
-    //       color: this.cityColor(city.rank),
-    //       size: this.citySize(city.rank)
-    //     }
-    //   })
-    // },
-
-    // Interpolate from red to green in the domain 50 to 1 (our ranking)
-    stateColor () {
-      return d3.scaleSequential().domain([Math.max(GERPrimary2018.Value), Math.min(GERPrimary2018.Value)]).interpolator(d3.interpolateRdYlGn);
-    },
-
-    // Interpolate between two green colors for the happiest cities
-    // cityColor () {
-    //   return d3.scaleLinear().domain([20, 1]).range(['#32a852', '#10732b'])
-    // },
-
-    // Interpolate between two sizes for the happiest cities
-    // citySize () {
-    //   return d3.scaleLinear().domain([20, 1]).range([5, 15])
-    // }
-  },
-
-  // On creation, get the GeoJSON
-  // created: function () {
-  //   axios.get('https://api.github.com/gists/e0d1b7950ced31369c903bed0cead7b1')
-  //     .then(response => {
-  //     this.statesJson = JSON.parse(response.data.files['us_features.json'].content)
-  //   })
-  //     .catch(error => {
-  //     console.log(error)
-  //   })
-  // }
 }
+
 </script>
 
 <style>
