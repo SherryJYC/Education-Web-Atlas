@@ -8,23 +8,23 @@
     </b-card-group>
     <b-card-group deck>
       <b-card>
-        <!-- radar chart of China female enrollment 2017  -->
-        <apexchart type="radar" height="500" :options="chartOptions_china1" :series="series_china1"></apexchart>
-      </b-card> 
-      <b-card>
         <!-- radar chart of Swiss female enrollment 2017  -->
         <apexchart type="radar" height="500" :options="chartOptions_swiss1" :series="series_swiss1"></apexchart>
       </b-card>
+      <b-card>
+        <!-- radar chart of China female enrollment 2017  -->
+        <apexchart type="radar" height="500" :options="chartOptions_china1" :series="series_china1"></apexchart>
+      </b-card> 
     </b-card-group>
     <b-card-group deck>
-      <b-card>
-        <!-- chart of China female enrollment 2013-2017 timeseris  -->
-        <apexchart type="line" height="350" :options="chartOptions_china2" :series="series_china2"></apexchart>
-      </b-card> 
       <b-card>
         <!-- chart of Swiss female enrollment 2013-2017 timeseris -->
         <apexchart type="line" height="350" :options="chartOptions_swiss2" :series="series_swiss2"></apexchart>
       </b-card>
+      <b-card>
+        <!-- chart of China female enrollment 2013-2017 timeseris  -->
+        <apexchart type="line" height="350" :options="chartOptions_china2" :series="series_china2"></apexchart>
+      </b-card> 
     </b-card-group>
 
     <b-card>SUMMARY PLACEHOLDER</b-card>

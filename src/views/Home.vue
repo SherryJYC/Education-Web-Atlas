@@ -34,14 +34,16 @@
     
 
     <!-- Global Map1 -->
-    <smart-widget title="Global Gross Enrollment Ratio" id="sw">
+    <h2 class="subheader-text"><b>Global Gross Enrollment Ratio</b></h2>
+    <smart-widget id="sw">
     <div class="layout-center">
       <GlobalMap/>
     </div>
     </smart-widget>
 
     <!-- Global Map2 -->
-    <smart-widget title="Global Gender Parity Index">
+    <h2 class="subheader-text"><b>Global Gender Parity Index</b></h2>
+    <smart-widget>
     <div class="layout-center">
       <GlobalMap2/>
     </div>
@@ -76,21 +78,23 @@
     </v-row>
   </v-parallax>
 
-    
-
-    <smart-widget title="Expensive education">
+ 
+    <h2 class="subheader-text"><b>Expensive Education</b></h2>
+    <smart-widget>
     <div class="layout-center">
       <Reason1/>
     </div>
     </smart-widget>
 
-    <smart-widget title="Gender inequality of education">
+    <h2 class="subheader-text"><b>Imbalanced Education Resources</b></h2>
+    <smart-widget>
     <div class="layout-center">
       <Reason2/>
     </div>
     </smart-widget>
 
-    <smart-widget title="Imbalanced education resources">
+    <h2 class="subheader-text"><b>Gender Inequality</b></h2>
+    <smart-widget>
     <div class="layout-center">
       <Reason3/>
     </div>
@@ -122,14 +126,16 @@
   </v-parallax>
 
     <!-- Trend1 -->
-    <smart-widget title="Education becomes the focus of market">
+    <h2 class="subheader-text"><b>Education: the Focus of Market</b></h2>
+    <smart-widget>
     <div class="layout-center">
       <Trend1/>
     </div>
     </smart-widget>
+
     <!-- Trend2 -->
-    <!-- Trend1 -->
-    <smart-widget title="Increasing trend for female enrollment">
+    <h2 class="subheader-text"><b>Increasing Female Enrollment</b></h2>
+    <smart-widget>
     <div class="layout-center">
       <Trend2/>
     </div>
@@ -303,6 +309,14 @@ export default {
 }
 .subtitle-text{
 text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -2px 2px 0 #000, 1px 1px 0 #000;
+}
+.subheader-text{
+text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -2px 2px 0 #000, 1px 1px 0 #000;
+color:white;
+background-color: lightgrey;
+padding: 10px;
+margin-top:5px;
+border-radius: 25px;
 }
 .block{
  margin: 10px;

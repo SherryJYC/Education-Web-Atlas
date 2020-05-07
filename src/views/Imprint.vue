@@ -14,7 +14,7 @@
     >
       <v-col class="text-center" cols="12">
         <h1 class="display-1 font-weight-thin mb-4">About Us</h1>
-        <h4 class="subheading sub-h4"><b>Introduction of Our Project</b></h4>
+        <h4 class="subheading sub-h4"><b>Introduction to Our Project</b></h4>
       </v-col>
     </v-row>
   </v-parallax>
@@ -34,7 +34,7 @@
         This is a course project for Multimedia Cartography in Master program of Geomatics in ETHz 2020.
       </b-card-text>
       <template v-slot:footer>
-        <small class="text-muted">Last updated in April 2020</small>
+        <small class="text-muted">{{last_update}}</small>
       </template>
     </b-card>
 
@@ -44,16 +44,17 @@
         provide visualization of statistics for users and help user understand the current inequality of education.
       </b-card-text>
       <template v-slot:footer>
-        <small class="text-muted">Last updated in April 2020</small>
+        <small class="text-muted">{{last_update}}</small>
       </template>
     </b-card>
 
     <b-card title="Software Dependency">
       <b-card-text  class="text">
-        This project is developed based on Vue.js.
+        This project is developed based on Vue.js framework. <br/><br/>
+        Packages used include Vuetify, Mapbox, Apex and Bootstrap.
       </b-card-text>
       <template v-slot:footer>
-        <small class="text-muted">Last updated in April 2020</small>
+        <small class="text-muted">{{last_update}}</small>
       </template>
     </b-card>
   </b-card-group>
@@ -145,6 +146,13 @@
    
 </div>
 </template>
+<script>
+export default {
+  data: () => ({
+      last_update: "Last Update in May 2020"
+    }),
+}
+</script>
 <style scoped>
 .btn_red{
   background-color: #A8322D;

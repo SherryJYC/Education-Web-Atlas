@@ -19,7 +19,7 @@
 
 <!-- Footer -->
 <v-footer app id="footer">
-  <span>Education Atlas &copy; Yuchang Jiang, Haojun Cai, 2020 ETHz</span>
+  <span>Education Atlas &copy; Yuchang Jiang, Haojun Cai, 2020 ETH Zurich</span>
 </v-footer>
 
 </div>
