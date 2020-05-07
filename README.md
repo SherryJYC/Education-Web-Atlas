@@ -13,9 +13,14 @@
 - [ ] Summary
 
 ### UI Design
-- [ ] View: Home
+- [x] View: Home (Content)
 - [x] View: Imprint
-- [ ] View: Welcome
+- [x] View: Welcome
+
+## Text Fillin
+- [ ] Text in Home (Content)
+- [x] Text in Imprint
+- [ ] Text in Welcome
 
 # education_atlas
 
