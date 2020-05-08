@@ -37,7 +37,7 @@
     <h2 class="subheader-text"><b>Global Gross Enrollment Ratio</b></h2>
     <smart-widget id="sw">
     <div class="layout-center">
-      <GlobalMap/>
+      <GlobalMap3/>
     </div>
     </smart-widget>
 
@@ -219,7 +219,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import Statement1 from '../components/Statements/Statement1'
 //import Questions from '../components/Statements/Questions'
-import GlobalMap from '../components/GlobalMap/GlobalMap'
+import GlobalMap3 from '../components/GlobalMap/GlobalMap3'
 import GlobalMap2 from '../components/GlobalMap/GlobalMap2'
 import Reason1 from '../components/Reasons/Reason1'
 import Reason2 from '../components/Reasons/Reason2'
@@ -241,7 +241,7 @@ export default {
   components: {
     Statement1,
     // Questions,
-    GlobalMap,
+    GlobalMap3,
     GlobalMap2,
     Reason1,
     Reason2,

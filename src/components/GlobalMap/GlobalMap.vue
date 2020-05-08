@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div id="map"></div>
+  <div id="mymap"></div>
 
     <!-- Bottom left: Timeslider container -->
     <div id='console'>
@@ -93,8 +93,8 @@ export default {
                             ['>150%'],
         ];	
 
-        var map = new mapboxgl.Map({
-            container: 'map',
+        let map = new mapboxgl.Map({
+            container: 'mymap',
             style: 'mapbox://styles/mapbox/light-v10',
             center: [50, 10],
             zoom: 1.5
@@ -112,30 +112,52 @@ export default {
         map.on('load', function() {
             var legend = document.getElementById('cd-legend'); 
             
-            map.addSource('mapbox-ger-primary', {
-                type: 'vector',
-                url: 'mapbox://haojun9612.8xb9cce3'
-            });
+            // map.addSource('mapbox-ger-primary', {
+            //     type: 'vector',
+            //     url: 'mapbox://haojun9612.8xb9cce3'
+            // });
 
-            map.addLayer({
-                'id': 'ger-primary',
-                'type': 'fill',
-                'source': 'mapbox-ger-primary',
-                'source-layer': 'GERPrimary-778yem',
+            // map.addLayer({
+            //     'id': 'ger-primary',
+            //     'type': 'fill',
+            //     'source': {
+            //         type: 'vector',
+            //         url: 'mapbox://haojun9612.8xb9cce3'
+            //     },
+            //     'source-layer': 'GERPrimary-778yem',
 
-                // Default year is 2014 to be displayed
-                'filter': ['==', 'Time', 2014], 
-                'paint': {
-                    'fill-color': {
-                        // Set polygon fill color based on attribute for population density CDPOPDENS
-                        property: 'Value',
-                        type : 'interval',
-                        // Loading array declared in the breaks variable 
-                        stops: breaks,
-                        },
-                    'fill-opacity': 1
-                }            
-            });
+            //     // Default year is 2014 to be displayed
+            //     'filter': ['==', 'Time', 2014], 
+            //     'paint': {
+            //         'fill-color': {
+            //             // Set polygon fill color based on attribute for population density CDPOPDENS
+            //             property: 'Value',
+            //             type : 'interval',
+            //             // Loading array declared in the breaks variable 
+            //             stops: breaks,
+            //             },
+            //         'fill-opacity': 1
+            //     }            
+            // });
+
+            map.addSource('mapbox-terrain', {
+type: 'vector',
+url: 'mapbox://mapbox.mapbox-terrain-v2'
+});
+map.addLayer({
+'id': 'terrain-data',
+'type': 'line',
+'source': 'mapbox-terrain',
+'source-layer': 'contour',
+'layout': {
+'line-join': 'round',
+'line-cap': 'round'
+},
+'paint': {
+'line-color': '#ff69b4',
+'line-width': 1
+}
+});
 
             // Create legend and style the key/color
             // Using Javascript for each method. The forEach() method calls a provided function once for each element in an array, in order.
@@ -170,6 +192,8 @@ export default {
                 //as we iterate through the arrays get the correct row, and add the appropriate text 
                 document.getElementById('legend-value-' + i).textContent = layer[0];             
             });  
+
+        });
 
             //jQuery Slider Widget http://api.jqueryui.com/slider/
             $( "#slider" ).change(function(e) {
@@ -229,13 +253,13 @@ export default {
             var length = 100 / (items.length - 1);
             $.each(items, function(key,value){
             
-            var spacing = length;
-            if(key === 0 || key === items.length-1)
-            spacing = length/2;
-            
-            // Updates sliderLegend div below the slider using spacing variable to set calculated label spacing width and include label value for the label
-            // Do not change when updating the items variable
-            $("#sliderLegend").append("<label_scale style='width: "+spacing+"%'>"+value+"</label_scale>");
+                var spacing = length;
+                if(key === 0 || key === items.length-1)
+                spacing = length/2;
+                
+                // Updates sliderLegend div below the slider using spacing variable to set calculated label spacing width and include label value for the label
+                // Do not change when updating the items variable
+                $("#sliderLegend").append("<label_scale style='width: "+spacing+"%'>"+value+"</label_scale>");
             });
 
             // $.getJSON(
@@ -323,7 +347,6 @@ export default {
 
             //     }
             // );
-        });
 
     },
 }
@@ -332,11 +355,11 @@ export default {
 <style>
     body { margin: 0; padding: 0; }
 
-    h2 {
+    /* h2 {
         font-size: 14px;
-    }
+    } */
 
-	#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+	#mymap { position: absolute; top: 0; bottom: 0; width: 100%; }
 
     .map-overlay {
         font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
