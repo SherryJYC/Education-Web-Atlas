@@ -35,7 +35,7 @@
 
     <!-- Global Map1 -->
     <h2 class="subheader-text"><b>Global Gross Enrollment Ratio</b></h2>
-    <smart-widget id="sw">
+    <smart-widget id="globalmap">
     <div class="layout-center">
       <GlobalMap3/>
     </div>
@@ -295,8 +295,8 @@ export default {
 </script>
 
 <style scoped>
-#sw{
-  height: 500px;
+#globalmap{
+  height: 600px;
 }
 .normal-text {
   text-align: left;
