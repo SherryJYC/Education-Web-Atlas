@@ -1,24 +1,27 @@
 <template>
 <div>
-    <div>
-        <b-tabs
-            active-nav-item-class="font-weight-bold text-dark"        
-        >
-            <b-tab title-link-class="text-dark" title="Primary" active @click="showNewMap(0)">Global Enrollment Ratio in Primary Education</b-tab>
-            <b-tab title-link-class="text-dark" title="Secondary" @click="showNewMap(1)">Global Enrollment Ratio in Secondary Education</b-tab>
-        </b-tabs>
-    </div>
 
 <div>
-  <div id="map"></div>
-  <div id='console'>
+    <b-tabs
+        active-nav-item-class="font-weight-bold text-dark"        
+    >
+        <b-tab title-link-class="text-dark" title="Primary" active @click="showNewMap(0)">Global Enrollment Ratio in Primary Education</b-tab>
+        <b-tab title-link-class="text-dark" title="Lower Secondary" @click="showNewMap(1)">Global Enrollment Ratio in Lower Secondary Education</b-tab>
+        <b-tab title-link-class="text-dark" title="Upper Secondary" @click="showNewMap(2)">Global Enrollment Ratio in Upper secondary Education</b-tab>
+        <b-tab title-link-class="text-dark" title="Tertinary" @click="showNewMap(3)">Global Enrollment Ratio in Tertinary Education</b-tab>
+    </b-tabs>
+</div>
+
+<div>
+    <div id="map"></div>
+    <div id='console'>
         <br>
         <!-- Counter that updates as slider is changed to declare selected value -->
         <label class="control-label">Year&nbsp; :&nbsp; </label>
         <input type="text"  id="yearCount" readonly>
         <br>
-         <input id="slider" type="range" min="0" max="4" step="1" value="0" />
-    </div>
+        <input id="slider" type="range" min="0" max="4" step="1" value="0" />
+</div>
 
 <div class='legend-container'>
         <div class='legend' id='legend' >
@@ -48,9 +51,9 @@ export default {
     data: () => ({
       accessToken: 'pk.eyJ1Ijoic2hlcnJ5anljIiwiYSI6ImNqb2pteTAzdjA2YmszdXBqanZ2YmNlM2wifQ.2_9XWJxI8fDvh4d_hLlrWA',
       // store url of sources of differnet education level (GER)
-      ger_source_url: ['mapbox://haojun9612.5zc5r3h7','mapbox://haojun9612.8xb9cce3'],
+      ger_source_url: ['mapbox://haojun9612.5zc5r3h7','mapbox://haojun9612.9hm4n9hg','mapbox://haojun9612.b9hhpxl2','mapbox://haojun9612.9odobryy'],
       // store names of source layer of differnet education level (GER)
-      ger_sourcelayer: ['GERPrimarySmallV3-cmb00f','GERPrimary-778yem'],
+      ger_sourcelayer: ['GERPrimarySmallV3-cmb00f','GERLowersecondarySmallV-8fxl1b','GERUpperSecondarySmallV-c5e7v4','GERTertinarySmallV-6g4tmq'],
     }),
     created(){
         this.map = null;
