@@ -89,10 +89,10 @@ export default {
                      'type': 'fill',
                     'source': {
                          'type': 'vector',
-                         'url': 'mapbox://haojun9612.8xb9cce3',
-                        'minzoom': 0,
+                         'url': 'mapbox://haojun9612.5zc5r3h7',//'mapbox://haojun9612.8xb9cce3',
+                         'minzoom': 0,
                      },
-                    'source-layer': 'GERPrimary-778yem',
+                    'source-layer': 'GERPrimarySmallV3-cmb00f',//'GERPrimary-778yem',
                     'filter': ['==', 'Time', 2014], 
                     'paint': {
                         'fill-color': {
