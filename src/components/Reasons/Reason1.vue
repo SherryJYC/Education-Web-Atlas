@@ -1,5 +1,11 @@
 <template>
 <div>
+  <b-card class="text-left">
+      The proportion of Gross Dometic Product (GDP) devoted to education in 2016 is used to create the choropleth map for chosen countries.
+       The benchmark is suggested by the UN to allocate 4% to 6% of GDP to education. Further, the family expenditure on education from 
+       pre-primary to tertiary education (对吗 with respect to the yearly (对吗 average salary is plotted.
+  </b-card>
+
   <!-- Title -->
   <v-container>
       <v-row
@@ -42,12 +48,21 @@
     </l-choropleth-layer>
 </l-map>
 
-<b-card>SUMMARY PLACEHOLDER</b-card>
+<b-card  class="text-left">
+  According to the suggested benchmark, most of the chosen countries reach the given educational commitment. Besides, countries in 
+  North Europe performs quite well with around 7% GDP's devotion or even higher. 
+</b-card>
+        
 
 <!-- chart of average salary VS family expenditure on education -->
 <apexchart type="bar" height="440" :options="chartOptions" :series="series"></apexchart>
 
-<b-card>SUMMARY PLACEHOLDER</b-card>
+<b-card class="text-left">
+  From the plot, the education is quite costly in some chosen countries/regions, especially when compared with the average salary. 
+  工资是年平均工资吗 再总结一下哪些国家对教育的投入是年平均工资的几倍 To conclude, the nation has devoted the expenditure as suggested, while the family still affords or even 
+  suffers a lot since high-quality education is expensive in some regions.
+</b-card>
+
 </div>
 </template>
 

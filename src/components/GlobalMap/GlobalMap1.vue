@@ -1,14 +1,24 @@
 <template>
 <div>
 
+<b-card-group deck>
+    <b-card class="text-left">
+        <b-card-text>
+        Gross Enrollment Ratio (GER) is chosen to assess global accessibility. It is defined as the total enrollment within a country in a specific level of education, regardless of age, 
+        expressed as a percentage of the population in the official age group corresponding to this level of education. The choropleth maps from 2014 to 2018 at four educational
+        levels, primary, lower secondary, upper secondary and tertiary are created to show the situation of global accessibility.
+        </b-card-text>
+    </b-card>
+</b-card-group>
+
 <div>
     <b-tabs
-        active-nav-item-class="font-weight-bold text-dark"        
+        active-nav-item-class="font-weight-bold text-dark" justified        
     >
         <b-tab title-link-class="text-dark" title="Primary" active @click="showNewMap(0)">Global Enrollment Ratio in Primary Education</b-tab>
         <b-tab title-link-class="text-dark" title="Lower Secondary" @click="showNewMap(1)">Global Enrollment Ratio in Lower Secondary Education</b-tab>
         <b-tab title-link-class="text-dark" title="Upper Secondary" @click="showNewMap(2)">Global Enrollment Ratio in Upper secondary Education</b-tab>
-        <b-tab title-link-class="text-dark" title="Tertinary" @click="showNewMap(3)">Global Enrollment Ratio in Tertinary Education</b-tab>
+        <b-tab title-link-class="text-dark" title="Tertiary" @click="showNewMap(3)">Global Enrollment Ratio in Tertiary Education</b-tab>
     </b-tabs>
 </div>
 
@@ -35,6 +45,19 @@
         </div>
     </div>
 </div>
+
+<b-card-group deck>
+    <b-card class="text-left">
+        <b-card-text>
+        <p>We consider GER around 100% (95% - 105%) to be the optimal cases. A low GER means inadequate opportunities to be enrolled in school education. GER can be over 100% 
+        as it includes students who exceed the official age group. For instance, students repeating a grade will be enrolled late and students who advance quickly will be younger than their classmates.
+        Since the latter case is a low-possibility event. We consider a high GER happens when students are enrolled late. </p>
+        <p>As shown in the map, in specific regions of South America and Africa, GER is either much lower than 95% or much higher than 105%. It shows that 
+            educational opportunities are low there, further proves the unequal education worldwide. Also, it is found that the performance is quite different among different levels. The enrollment ratio at the tertiary level is obviously lower than 
+            the other three levels almost for all countries.</p>
+        </b-card-text>
+    </b-card>
+</b-card-group>
 
 </div>
 </template>
@@ -76,23 +99,21 @@ export default {
             var breaks = [
                         // stop domain values must appear in ascending order
                         // Pop Dens threshold [0] Color [1]  
-                                [0.0001, 'rgb(204,204,204)'],
-                                [50.0, 'rgb(255,255,102)'],					
-                                [75.0, 'rgb(255,204,102)'],
-                                [100.0, 'rgb(204,153,48)'],
-                                [125.0, 'rgb(204,0,0)'],
-                                [150.0, 'rgb(153,51,51)'],
+                                [0.0001, 'rgb(255,255,102)'],					
+                                [80.0, 'rgb(255,204,102)'],
+                                [95.0, 'rgb(204,153,48)'],
+                                [105.0, 'rgb(204,0,0)'],
+                                [120.0, 'rgb(153,51,51)'],
             ];
             
             // arrays that will be used to populate the legend 
             var legendLabels = [
                         // Label text that will appear in the legend [0]
-                                ['<50%'],
-                                ['50% - 75%'],
-                                ['75% - 100%'],
-                                ['100% - 125%'],
-                                ['125% - 150%'],
-                                ['>150%'],
+                                ['< 80%'],
+                                ['80% - 95%'],
+                                ['95% - 105%'],
+                                ['105% - 120%'],
+                                ['> 120%'],
             ];	
             var breaksRev = breaks.slice().reverse();
             var legendLabelsRev = legendLabels.slice().reverse();

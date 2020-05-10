@@ -13,8 +13,8 @@
       justify="center"
     >
       <v-col class="text-center" cols="12">
-        <h1 class="display-1 font-weight-thin mb-4">Equal Education</h1>
-        <h4 class="subheading"><b>It's still a long way to go to achieve education equality worldwide.</b></h4>
+        <h1 class="display-1 font-weight-thin mb-4">Equality Education</h1>
+        <h4 class="subheading"><b>There is still a long way to reach education equality worldwide.</b></h4>
       </v-col>
     </v-row>
   </v-parallax>

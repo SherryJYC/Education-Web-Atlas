@@ -14,7 +14,7 @@
       justify="center"
     >
       <v-col class="text-center" cols="12">
-        <h1 class="display-1 font-weight-thin mb-4">Equal Education</h1>
+        <h1 class="display-1 font-weight-thin mb-4">Quality Education</h1>
         <h4 class="subheading sub-h4"><b>Welcome to this Atlas of Education</b></h4>
       </v-col>
     </v-row>
@@ -45,7 +45,10 @@
       >
       <br/>
       <b-card-text>
-        This is the menu for our atlas
+        Quality education is Goal 4 of the Sustainable Development Goals, adopted by all United Nations Member States in 2015 
+        as a universal call to action to end poverty, protect the planet and ensure that all people enjoy peace and prosperity by 2030. 
+        In this atlas, we focus on the equality of education. Briefly speaking, we aim to give an overview of the current situation of 
+        global education from the equality aspect, and then explore the possible reasons behind, and finally take a look at future trends.
       </b-card-text>
       </b-card>
 
@@ -53,7 +56,7 @@
           class="btn"
           @click="e1 = 2"
         >
-          Continue for Menu
+          1st Part
         </b-btn>
 
       </v-stepper-content>
@@ -64,19 +67,19 @@
        class="text-left"
       >
       <b-card-text>
-        To assess the current situation of global education, global enrollment ratio and gender parity index are leverageed.
+        To present the current situation of global education, the Global Enrollment Ratio (GER) and Gender Parity Index (GPI) are leveraged to generate the global maps from 2014 to 2018 in four education levels. It helps to learn the overall performance and performance by gender, which proves that the education is unequally distributed worldwide.
       </b-card-text>
       </b-card>
         <b-btn class="btn"
         @click="e1 = 1"
         >
-          Last Step
+          Overview
         </b-btn>
         <b-btn
           class="btn"
           @click="e1 = 3"
         >
-          Next Step
+          2nd Part
         </b-btn>
 
       </v-stepper-content>
@@ -84,43 +87,43 @@
 
       <v-stepper-content step="3">
          <b-card
-       title="The Reasons behind Inequal Education"
+       title="Possible Reasons behind Unequal Education"
        class="text-left"
       >
       <b-card-text>
-     Three possible reasons are ...
+     To explore the possible reasons behind unequal education, firstly, the national investment and family expenditure of chosen countries are used to create the map and the chart. It shows different levels of commitment from the national side and the family side by country. Secondly, the admission rate and the gross enrollment rate to the tertiary level in Switzerland and China are presented to show the unequal distribution of educational resources between the two countries. Thirdly, the scatter plot between Adolescent Birth Rate and Gender Parity Index is made to show the possible reason behind low female performance in education.
       </b-card-text>
       </b-card>
 
        <b-btn class="btn"
         @click="e1 = 2"
         >
-          Last Step
+          1st Part
         </b-btn>
 
         <b-btn
           class="btn"
           @click="e1 = 4"
         >
-          Next Step
+          3rd Part
         </b-btn>
 
       </v-stepper-content>
 
       <v-stepper-content step="4">
          <b-card
-       title="Possible Trend of Education"
+       title="Possible Trend of Futrue Education"
        class="text-left"
       >
-      <b-card-text>
-      Possible trends are ...
+      <b-card-text>      
+        Two aspects, development of the education method and the female performance, are chosen to show the future trends of education. First, unicorns in the EdTech fields are plotted. It tells that online education is increasingly popular these days. Second, female enrollment worldwide, and in Switzerland and China in 2017 are plotted to learn the performance at different levels. The female enrollment from 2013 to 2017 in Switzerland and China are further created to show the changes in these two countries.
       </b-card-text>
       </b-card>
 
       <b-btn class="btn"
         @click="e1 = 3"
         >
-          Last Step
+          2nd Part
         </b-btn>
 
         <b-btn @click="goContent">Go to Content</b-btn>

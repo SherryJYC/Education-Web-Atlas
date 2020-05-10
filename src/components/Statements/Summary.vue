@@ -9,7 +9,7 @@
       justify="center"
     >
       <v-col class="text-center" cols="12">
-        <h4 class="subheading sum"><b>Summary Placeholder: It's still a long way to go to achieve education equality worldwide.</b></h4>
+        <h4 class="subheading sum"><b>There is still a long way to reach education equality worldwide.</b></h4>
       </v-col>
     </v-row>
   </v-parallax>

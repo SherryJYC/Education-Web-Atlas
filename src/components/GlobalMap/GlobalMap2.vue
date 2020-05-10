@@ -1,55 +1,62 @@
 <template>
-<div> 
+<div>
+
+<b-card-group deck>
+    <b-card class="text-left">
+        <b-card-text>
+            Gender Parity Index (GPI) is used to evaluate gender accessibility. It is calculated as the quotient of the number 
+            of females by the number of males enrolled in a given stage of education. A GPI equal to 1 indicates parity between females and males. 
+            GPI value &lt; 1 indicates a disparity in favor of males and a value &gt; 1 in favor of females. Similarly, the choropleth maps from 2014 to 2018 
+            at four educational levels are created to show the situation of gender accessibility.
+        </b-card-text>
+    </b-card>
+</b-card-group>
 
 <div>
     <b-tabs
-        active-nav-item-class="font-weight-bold text-dark"        
+        active-nav-item-class="font-weight-bold text-dark" justified        
     >
-        <b-tab title-link-class="text-dark" title="Primary" active @click="showNewMap(0)">Global Enrollment Ratio in Primary Education</b-tab>
-        <b-tab title-link-class="text-dark" title="Lower Secondary" @click="showNewMap(1)">Global Enrollment Ratio in Lower Secondary Education</b-tab>
-        <b-tab title-link-class="text-dark" title="Upper Secondary" @click="showNewMap(2)">Global Enrollment Ratio in Upper secondary Education</b-tab>
-        <b-tab title-link-class="text-dark" title="Tertinary" @click="showNewMap(3)">Global Enrollment Ratio in Tertinary Education</b-tab>
+        <b-tab title-link-class="text-dark" title="Primary" active @click="showNewMap(0)">Global Parity Index in Primary Education</b-tab>
+        <b-tab title-link-class="text-dark" title="Lower Secondary" @click="showNewMap(1)">Global Parity Index in Lower Secondary Education</b-tab>
+        <b-tab title-link-class="text-dark" title="Upper Secondary" @click="showNewMap(2)">Global Parity Index in Upper secondary Education</b-tab>
+        <b-tab title-link-class="text-dark" title="Tertiary" @click="showNewMap(3)">Global Parity Index in Tertiary Education</b-tab>
     </b-tabs>
 </div>
 
 <div>
-    <div id="map"></div>
-    <div id='console'>
+    <div id="map2"></div>
+    <div id='console2'>
         <br>
         <!-- Counter that updates as slider is changed to declare selected value -->
-        <label class="control-label">Year&nbsp; :&nbsp; </label>
-        <input type="text"  id="yearCount" readonly>
+        <label class="control-label2">Year&nbsp; :&nbsp; </label>
+        <input type="text"  id="yearCount2" readonly>
         <br>
-        <input id="slider" type="range" min="0" max="4" step="1" value="0" />
+        <input id="slider2" type="range" min="0" max="4" step="1" value="0" />
 </div>
 
-<div class='legend-container'>
-        <div class='legend' id='legend' >
-            <h2 class="legend">Gross Enrollment Ratio (%)</h2> 
+<div class='legend-container2'>
+        <div class='legend2' id='legend2' >
+            <h2 class="legend2">Gross Enrollment Ratio (%)</h2> 
             <hr/>
             
             <!-- Div where the dynamic legend is created  -->	
-            <div class='legend' id='cd-legend' >
+            <div class='legend2' id='cd-legend2' >
             </div>
         
         </div>
     </div>
 </div>
 
-<!-- Pie chart  -->
 <b-card-group deck>
-  <b-card>
-    <apexchart type="pie" width="500" :options="chartOptions" :series="series1"></apexchart>
-  </b-card> 
-  <b-card
-    title="Definition"
-    class="text-left"
-  >
-  <b-card-text> The gender parity index (GPI) is the ratio of the female to male net enrolment ratio for primary, secondary and tertiary education levels. It is calculated by dividing the female
-    value for the indicator by the male value for the indicator. A GPI equal to 1 indicates parity between females and males. In general, a value &lt; 1 indicates disparity in favor of
-    males and a value &gt; 1 in favor of females. Gender parity is defined as a GPI between 0.97 and 1.03.
-  </b-card-text>
-  </b-card>
+    <b-card class="text-left">
+        <b-card-text>
+            <p>A GPI between 0.97 and 1.03 indicates parity between the genders by UNESCO. A GPI below 0.97 indicates a disparity in favor of males. 
+            A GPI above 1.03 indicates a disparity in favor of females.</p>
+            <p>From the overviews at four levels, we can see most countries reach gender parity at the primary level while least countries reach
+            equality at the tertiary level. Although primary level performs best worldwide, some countries in Arica still do not reach gender parity. 
+            Plus, at the tertiary level, most countries are in favor of females.</p>
+        </b-card-text>
+    </b-card>
 </b-card-group>
 
 </div>
@@ -58,218 +65,183 @@
 <script>
 import mapboxgl from "mapbox-gl";
 import JQuery from 'jquery';
-import VueApexCharts from 'vue-apexcharts';
 
 let $ = JQuery;
 let years = [2014,2015,2016,2017,2018];
 let add_legend = 1;
 
 export default {
-  components: { 
-    apexchart: VueApexCharts
-  },
-  data: () => ({
+    data: () => ({
       accessToken: 'pk.eyJ1Ijoic2hlcnJ5anljIiwiYSI6ImNqb2pteTAzdjA2YmszdXBqanZ2YmNlM2wifQ.2_9XWJxI8fDvh4d_hLlrWA',
       // store url of sources of differnet education level (GER)
-      ger_source_url: ['mapbox://haojun9612.5zc5r3h7','mapbox://haojun9612.9hm4n9hg','mapbox://haojun9612.b9hhpxl2','mapbox://haojun9612.9odobryy'],
+      ger_source_url: ['mapbox://haojun9612.100riih2','mapbox://haojun9612.9w8thqa7','mapbox://haojun9612.45tr0mwb','mapbox://haojun9612.02nt1p5j'],
       // store names of source layer of differnet education level (GER)
-      ger_sourcelayer: ['GERPrimarySmallV3-cmb00f','GERLowersecondarySmallV-8fxl1b','GERUpperSecondarySmallV-c5e7v4','GERTertinarySmallV-6g4tmq'],
+      ger_sourcelayer: ['GPIPrimarySmallV-d86rx5','GPILowersecondarySmallV-6ltjez','GPIUppersecondarySmallV-5co3dz','GPITertinarySmallV-3t8be0'],
+    }),
+    created(){
+        this.map = null;
+    },
+    methods:{
+        showNewMap(idx){
+            this.addContent(this.map,idx);
+        },
+        addContent(map,idx){
+            var data_url = this.ger_source_url[idx];
+            var sourcelayer = this.ger_sourcelayer[idx];
+            map = new mapboxgl.Map({
+                container: 'map2',
+                style: 'mapbox://styles/mapbox/light-v10',
+                zoom: 2,
+                center: [60, 15],
+            });
+        
+            // arrays that will be used to style the layer division 
+            var breaks = [
+                        // stop domain values must appear in ascending order
+                        // Pop Dens threshold [0] Color [1]
+                                [0.00001, 'rgb(255,255,102)'],
+                                [0.97, 'rgb(204,153,48)'],
+                                [1.03, 'rgb(204,0,0)'],
+            ];
+            
+            // arrays that will be used to populate the legend 
+            var legendLabels2 = [
+                        // Label text that will appear in the legend [0]
+                                ['< 0.97'],
+                                ['0.97 - 1.03'],
+                                ['> 1.03'],                        
+            ];	
+            var breaksRev = breaks.slice().reverse();
+            var legendLabelsRev2 = legendLabels2.slice().reverse();
+            var legend2 = document.getElementById('cd-legend2'); 
     
-      series1: [70,53],
-      chartOptions: {
-        chart: {
-          type: 'pie'
+            map.on('load', function() {
+
+                    map.addSource('GERprimary', {
+                        'type': 'vector',
+                        'url': data_url,//'mapbox://haojun9612.8xb9cce3',
+                        'minzoom': 0,
+                    });
+
+                    map.addLayer({
+                        'id': 'ger-primary',
+                        'minzoom': 0,
+                        'maxzoom': 10,
+                        'type': 'fill',
+                        'source': 'GERprimary',
+                        'source-layer': sourcelayer,
+                        'filter': ['==', 'Time', 2014], 
+                        'paint': {
+                            'fill-color': {
+                                // Set polygon fill color based on attribute for population density CDPOPDENS
+                                property: 'Value',
+                                type : 'interval',
+                                // Loading array declared in the breaks variable 
+                                stops: breaks,
+                                },
+                            'fill-opacity': [
+                                'case',
+                                ['boolean', ['feature-state', 'hover'], false],
+                                1,
+                                0.5
+                            ]
+                        }    
+                    });            
+
+                    var popup = new mapboxgl.Popup({
+                        closeButton: false,
+                        closeOnClick: false
+                    });
+
+                    // When the user moves their mouse over the layer, show information of country
+                    map.on('mousemove', 'ger-primary', function(e) {
+                        if (e.features.length > 0) {
+                            var propObj = e.features[0].properties;
+                            var line1 = '<strong>'+propObj.CNTRY_NAME+'</strong><br/>';
+                            var line2 = '<p>'+propObj.Value+' % </p>';
+                            popup.remove();
+                            // show popup
+                            popup
+                            .setLngLat(e.lngLat)
+                            .setHTML(line1+line2)
+                            .addTo(map);
+                        }
+                        
+                    });
+                            
+                    map.on('mouseleave', 'ger-primary', function() {
+                        map.getCanvas().style.cursor = '';
+
+                    });
+                    // Change the cursor to a pointer when the mouse is over a country
+                    map.on('mouseenter', 'ger-primary', function() {
+                        map.getCanvas().style.cursor = 'pointer';
+                    });
+                    // add legends during initial stage
+                    if (add_legend == 1){
+                        breaksRev.forEach(function(layer, i){
+                    
+                            // Creating elements to fill the legend div with id = 'cd-legend' 
+                            // each stop gets a 'row' 
+                            var item = document.createElement('div');
+                            //add a 'key' to the row. A key will be the color key
+                            var key = document.createElement('span');
+                            //add a value variable to the 'row' in the legend
+                            var value = document.createElement('span');
+                            
+                            //the key will take on the shape and style properties defined here, in the HTML
+                            key.className = 'legend-key2'; 
+                            // the background color is retreived from the breaks array
+                            key.style.backgroundColor = layer[1]; 
+
+                            // give the value variable a placeholder id that we can access and update with custom labels
+                            value.id = 'legend-value2-' + i;
+                            
+                            //add the key (color key) to the legend row
+                            item.appendChild(key); 
+                            //add the placeholder value to the legend row
+                            item.appendChild(value);
+                            // Add row to the legend
+                            legend2.appendChild(item);        
+                        });
+                
+                        legendLabelsRev2.forEach(function(layer, i){
+                            //as we iterate through the arrays get the correct row, and add the appropriate text 
+                            document.getElementById('legend-value2-' + i).textContent = layer[0];             
+                        });  
+                        add_legend = 0;
+                    }
+            }); 
+            // set year 2014 as default
+            $( "#yearCount2" ).val(years[0]);
+            $( "#slider2" ).val(0);
+
+            $( "#slider2" ).change(function(e) {
+                    var year = parseInt(e.target.value, 5);
+                    var filters = ['==', 'Time', years[year]];
+                    // runs filter query on Mapbox layer based on the location/value of the handle on the slider
+                    map.setFilter('ger-primary', filters);
+                    // update the year counter based on the location/value of the handle on the slider
+                    $( "#yearCount2" ).val(years[year]);
+                });
+
+            var items =['2014','2015','2016','2017','2018'];
+
+                // Calculate the legth of the legend based on number of items declared to identify spacing required
+                // Do not change when updating the items variable
+            var length = 100 / (items.length - 1);
+            $.each(items, function(key,value){
+                
+                var spacing = length;
+                if(key === 0 || key === items.length-1)
+                spacing = length/2;
+                    
+                    // Updates sliderLegend div below the slider using spacing variable to set calculated label spacing width and include label value for the label
+                    // Do not change when updating the items variable
+                $("#sliderLegend").append("<label_scale style='width: "+spacing+"%'>"+value+"</label_scale>");
+            });
+
         },
-        title: {
-          text: "How many countries reach the gender parity in 2018"
-        },
-        colors: ["#FFC300","#6F6F6E"],
-        labels: ['Countries reach gender parity', 'Countries Not reach gender parity'],
-        plotOptions: {
-          pie: {
-            allowPointSelect: true,
-            cursor: 'pointer',
-            dataLabels: {
-                enabled: false
-            },
-            showInLegend: true,
-          },
-          legend: {
-            verticalAlign: 'center',
-          }
-        }
-      }
-  }),
-  created(){
-      this.map = null;
-  },
-  methods:{
-      showNewMap(idx){
-          this.addContent(this.map,idx);
-      },
-      addContent(map,idx){
-          var data_url = this.ger_source_url[idx];
-          var sourcelayer = this.ger_sourcelayer[idx];
-          map = new mapboxgl.Map({
-              container: 'map',
-              style: 'mapbox://styles/mapbox/light-v10',
-              zoom: 2,
-              center: [60, 15],
-          });
-      
-          // arrays that will be used to style the layer division 
-          var breaks = [
-                      // stop domain values must appear in ascending order
-                      // Pop Dens threshold [0] Color [1]  
-                              [0.0001, 'rgb(204,204,204)'],
-                              [50.0, 'rgb(255,255,102)'],					
-                              [75.0, 'rgb(255,204,102)'],
-                              [100.0, 'rgb(204,153,48)'],
-                              [125.0, 'rgb(204,0,0)'],
-                              [150.0, 'rgb(153,51,51)'],
-          ];
-          
-          // arrays that will be used to populate the legend 
-          var legendLabels = [
-                      // Label text that will appear in the legend [0]
-                              ['<50%'],
-                              ['50% - 75%'],
-                              ['75% - 100%'],
-                              ['100% - 125%'],
-                              ['125% - 150%'],
-                              ['>150%'],
-          ];	
-          var breaksRev = breaks.slice().reverse();
-          var legendLabelsRev = legendLabels.slice().reverse();
-          var legend = document.getElementById('cd-legend'); 
-  
-          map.on('load', function() {
-
-                  map.addSource('GERprimary', {
-                      'type': 'vector',
-                      'url': data_url,//'mapbox://haojun9612.8xb9cce3',
-                      'minzoom': 0,
-                  });
-
-                  map.addLayer({
-                      'id': 'ger-primary',
-                      'minzoom': 0,
-                      'maxzoom': 10,
-                      'type': 'fill',
-                      'source': 'GERprimary',
-                      'source-layer': sourcelayer,
-                      'filter': ['==', 'Time', 2014], 
-                      'paint': {
-                          'fill-color': {
-                              // Set polygon fill color based on attribute for population density CDPOPDENS
-                              property: 'Value',
-                              type : 'interval',
-                              // Loading array declared in the breaks variable 
-                              stops: breaks,
-                              },
-                          'fill-opacity': [
-                              'case',
-                              ['boolean', ['feature-state', 'hover'], false],
-                              1,
-                              0.5
-                          ]
-                      }    
-                  });            
-
-                  var popup = new mapboxgl.Popup({
-                      closeButton: false,
-                      closeOnClick: false
-                  });
-
-                  // When the user moves their mouse over the layer, show information of country
-                  map.on('mousemove', 'ger-primary', function(e) {
-                      if (e.features.length > 0) {
-                          var propObj = e.features[0].properties;
-                          var line1 = '<strong>'+propObj.CNTRY_NAME+'</strong><br/>';
-                          var line2 = '<p>'+propObj.Value+' % </p>';
-                          popup.remove();
-                          // show popup
-                          popup
-                          .setLngLat(e.lngLat)
-                          .setHTML(line1+line2)
-                          .addTo(map);
-                      }
-                      
-                  });
-                          
-                  map.on('mouseleave', 'ger-primary', function() {
-                      map.getCanvas().style.cursor = '';
-
-                  });
-                  // Change the cursor to a pointer when the mouse is over a country
-                  map.on('mouseenter', 'ger-primary', function() {
-                      map.getCanvas().style.cursor = 'pointer';
-                  });
-                  // add legends during initial stage
-                  if (add_legend == 1){
-                      breaksRev.forEach(function(layer, i){
-                  
-                          // Creating elements to fill the legend div with id = 'cd-legend' 
-                          // each stop gets a 'row' 
-                          var item = document.createElement('div');
-                          //add a 'key' to the row. A key will be the color key
-                          var key = document.createElement('span');
-                          //add a value variable to the 'row' in the legend
-                          var value = document.createElement('span');
-                          
-                          //the key will take on the shape and style properties defined here, in the HTML
-                          key.className = 'legend-key'; 
-                          // the background color is retreived from the breaks array
-                          key.style.backgroundColor = layer[1]; 
-
-                          // give the value variable a placeholder id that we can access and update with custom labels
-                          value.id = 'legend-value-' + i;
-                          
-                          //add the key (color key) to the legend row
-                          item.appendChild(key); 
-                          //add the placeholder value to the legend row
-                          item.appendChild(value);
-                          // Add row to the legend
-                          legend.appendChild(item);        
-                      });
-              
-                      legendLabelsRev.forEach(function(layer, i){
-                          //as we iterate through the arrays get the correct row, and add the appropriate text 
-                          document.getElementById('legend-value-' + i).textContent = layer[0];             
-                      });  
-                      add_legend = 0;
-                  }
-          }); 
-          // set year 2014 as default
-          $( "#yearCount" ).val(years[0]);
-          $( "#slider" ).val(0);
-
-          $( "#slider" ).change(function(e) {
-                  var year = parseInt(e.target.value, 5);
-                  var filters = ['==', 'Time', years[year]];
-                  // runs filter query on Mapbox layer based on the location/value of the handle on the slider
-                  map.setFilter('ger-primary', filters);
-                  // update the year counter based on the location/value of the handle on the slider
-                  $( "#yearCount" ).val(years[year]);
-              });
-
-          var items =['2014','2015','2016','2017','2018'];
-
-              // Calculate the legth of the legend based on number of items declared to identify spacing required
-              // Do not change when updating the items variable
-          var length = 100 / (items.length - 1);
-          $.each(items, function(key,value){
-              
-              var spacing = length;
-              if(key === 0 || key === items.length-1)
-              spacing = length/2;
-                  
-                  // Updates sliderLegend div below the slider using spacing variable to set calculated label spacing width and include label value for the label
-                  // Do not change when updating the items variable
-              $("#sliderLegend").append("<label_scale style='width: "+spacing+"%'>"+value+"</label_scale>");
-          });
-
-      },
 
     },
 
@@ -282,10 +254,11 @@ export default {
         
     }
 }
+        
 </script>
 
 <style>
-#map { position: absolute; top: 100px; bottom: 0; width: 100%; height:100%;}
+#map2 { position: absolute; top: 100px; bottom: 0; width: 100%; height:100%;}
 
     .map-overlay {
         font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -310,7 +283,7 @@ export default {
         margin: 0 0 10px;
     }
 
-    .map-overlay .legend .bar {
+    .map-overlay .legend2 .bar {
         height: 10px;
         width: 100%;
         background: linear-gradient(to right, #fca107, #7f3121);
@@ -326,7 +299,7 @@ export default {
     }
     
     /*Container bottom left*/
-    #console {
+    #console2 {
         position: absolute;
         width: 420px;
         margin: 10px;
@@ -336,7 +309,7 @@ export default {
         z-index:10000;
     }
 
-    #console hr {
+    #console2 hr {
         margin-left:-20px; 
         margin-right:-20px;  
         color: #123455; 
@@ -347,18 +320,18 @@ export default {
     }
 
     /*Mapbox Legend */
-    .legend {
+    .legend2 {
         font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
         background-color: white; 
         padding: 10px;
     }
 
-    #cd-legend {
+    #cd-legend2 {
         text-align: left;
     }
     
     /* legend test */
-    .legend-container {
+    .legend-container2 {
         position: absolute;
         margin: 10px;
         top: 100px;
@@ -370,13 +343,13 @@ export default {
     }
     
     /* Legend title */
-    .legend h2 {
+    .legend2 h2 {
         padding-top: 8px;
         margin:0;
         text-align: center;
     }
 
-    .legend hr {
+    .legend2 hr {
         color: #123455; 
         border: 0; 
         border-top: 1px solid #ccc; 
@@ -385,7 +358,7 @@ export default {
         margin-bottom:5px
     }
         
-    .legend-key {
+    .legend-key2 {
         display: inline-block;
         /*size of color key*/
         width: 30px; 
@@ -416,7 +389,7 @@ export default {
     }
 
     /* Style the counter*/
-    #yearCount{
+    #yearCount2{
         border:0; 
         color:#f6931f; 
         font-weight:bold; 
@@ -424,7 +397,7 @@ export default {
         width:50px
     }
 
-    #console > label {
+    #console2 > label {
         font-weight:bold; 
         font-size:14px;
     }
