@@ -40,7 +40,7 @@
 
     <b-card title="Porject Objective" >
       <b-card-text  class="text">
-        This project is based on Atlas of Sustaianble Development Goal of United States. Its objective is to 
+        This project is based on Atlas of Sustaianble Development Goal of United Nation. Its objective is to 
         provide visualization of statistics for users and help user understand the current inequality of education.
       </b-card-text>
       <template v-slot:footer>
@@ -51,7 +51,7 @@
     <b-card title="Software Dependency">
       <b-card-text  class="text">
         This project is developed based on Vue.js framework. <br/><br/>
-        Packages used include Vuetify, Mapbox, Apex and Bootstrap.
+        Main packages used include Vuetify, Mapbox, Apex and Bootstrap.
       </b-card-text>
       <template v-slot:footer>
         <small class="text-muted">{{last_update}}</small>
@@ -77,7 +77,7 @@
           <b>Yuchang Jiang </b><br/> 
           a Master student in ETHz, majored in Geomatics <br/>
           I am interested in front-end design, include but not limited to <br/>
-          web page design, data visualization, 3D drawing and movie editing
+          web page design, data visualization and movie editing
         </b-card-text>
         <b-button class="btn_red" href="https://github.com/SherryJYC">Personal Homepage</b-button>
       </b-card>

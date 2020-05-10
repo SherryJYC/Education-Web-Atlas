@@ -22,7 +22,7 @@
 
 <v-stepper v-model="e1">
     <v-stepper-header>
-      <v-stepper-step :complete="e1 > 1" step="1">Welcome</v-stepper-step>
+      <v-stepper-step :complete="e1 > 1" step="1">Overview</v-stepper-step>
 
       <v-divider></v-divider>
 
@@ -56,18 +56,22 @@
           class="btn"
           @click="e1 = 2"
         >
-          1st Part
+          Continue
         </b-btn>
 
       </v-stepper-content>
       <v-stepper-content step="2">
         <br/>
         <b-card
-       title="Current Situation of Global Education"
+       title="Part 1 - Current Situation of Global Education"
        class="text-left"
       >
       <b-card-text>
-        To present the current situation of global education, the Global Enrollment Ratio (GER) and Gender Parity Index (GPI) are leveraged to generate the global maps from 2014 to 2018 in four education levels. It helps to learn the overall performance and performance by gender, which proves that the education is unequally distributed worldwide.
+        To present the current situation of global education, the Global Enrollment Ratio (GER) and Gender Parity Index (GPI) 
+        are leveraged to generate the global maps from 2014 to 2018 in four education levels. 
+        It helps to learn the overall performance and performance by gender, which proves that 
+        the education is unequally distributed worldwide.
+        <br/><br/>
       </b-card-text>
       </b-card>
         <b-btn class="btn"
@@ -79,7 +83,7 @@
           class="btn"
           @click="e1 = 3"
         >
-          2nd Part
+          Part 2
         </b-btn>
 
       </v-stepper-content>
@@ -87,7 +91,7 @@
 
       <v-stepper-content step="3">
          <b-card
-       title="Possible Reasons behind Unequal Education"
+       title="Part 2 - Possible Reasons behind Unequal Education"
        class="text-left"
       >
       <b-card-text>
@@ -98,21 +102,21 @@
        <b-btn class="btn"
         @click="e1 = 2"
         >
-          1st Part
+          Part 1
         </b-btn>
 
         <b-btn
           class="btn"
           @click="e1 = 4"
         >
-          3rd Part
+          Part 3
         </b-btn>
 
       </v-stepper-content>
 
       <v-stepper-content step="4">
          <b-card
-       title="Possible Trend of Futrue Education"
+       title="Part 3 - Possible Trend of Futrue Education"
        class="text-left"
       >
       <b-card-text>      
@@ -123,7 +127,7 @@
       <b-btn class="btn"
         @click="e1 = 3"
         >
-          2nd Part
+          Part 2
         </b-btn>
 
         <b-btn @click="goContent">Go to Content</b-btn>

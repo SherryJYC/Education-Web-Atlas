@@ -1,11 +1,5 @@
 <template>
 <div>
-  <b-card class="text-left">
-      The proportion of Gross Dometic Product (GDP) devoted to education in 2016 is used to create the choropleth map for chosen countries.
-       The benchmark is suggested by the UN to allocate 4% to 6% of GDP to education. Further, the family expenditure on education from 
-       pre-primary to tertiary education (对吗 with respect to the yearly (对吗 average salary is plotted.
-  </b-card>
-
   <!-- Title -->
   <v-container>
       <v-row
@@ -56,13 +50,7 @@
 
 <!-- chart of average salary VS family expenditure on education -->
 <apexchart type="bar" height="440" :options="chartOptions" :series="series"></apexchart>
-
-<b-card class="text-left">
-  From the plot, the education is quite costly in some chosen countries/regions, especially when compared with the average salary. 
-  工资是年平均工资吗 再总结一下哪些国家对教育的投入是年平均工资的几倍 To conclude, the nation has devoted the expenditure as suggested, while the family still affords or even 
-  suffers a lot since high-quality education is expensive in some regions.
-</b-card>
-
+<p> (Note: HK* is Hong Kong, China; UAE* is United Arab Emirates; China* is mainland, China)</p>
 </div>
 </template>
 
@@ -177,7 +165,7 @@ export default {
               },
             },
             xaxis: {
-              categories: ['HK', 'UAE','Singapore','USA','China','Australia','Malaysia','UK','Mexico','Canada','India',
+              categories: ['HK*', 'UAE*','Singapore','USA','China*','Australia','Malaysia','UK','Mexico','Canada','India',
               'Indonesia','Egypt','France'
               ],
               title: {

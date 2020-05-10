@@ -3,10 +3,10 @@
     <!-- Statement1 -->
     <Statement1/>
     <!-- Questions -->
-    <blockquote class="blockquote normal-text block">
+    <blockquote class="blockquote normal-text block startquote">
       Education is essential as a life-long experience. One of the most important parts is the school education.
       In this atlas, we will go through the current situation, possible reasons behind, and future trends of education.
-      First of all, let us explore together the current situation of education from two aspects of <b>global accessibility</b> and <b>gender accessibility</b>.
+      First of all, let us explore together the current situation of education from two aspects of <mark><b>global accessibility</b></mark> and <mark><b>gender accessibility</b></mark>.
     </blockquote>
     
     <b-card class="title-text" id="p1">
@@ -26,9 +26,9 @@
     >
       <v-col class="text-center" cols="12">
         <h4 class="subheading subtitle-text">
-          <b>Accessibility to school education is different by country,<br/>
-          by educational level,<br/>
-          by gender.<br/>
+          <b>Accessibility to education is imbalanced <br/>
+            by country<br/>
+          by gender<br/>
           </b></h4>
       </v-col>
     </v-row>
@@ -36,58 +36,55 @@
     
 
     <!-- Global Map1 -->
-    <h2 class="subheader-text"><b>Global Accessibility</b></h2>
-    <blockquote class="blockquote normal-text block">
-      Gross Enrollment Ratio (GER) is chosen to assess global accessibility. It is defined as the total enrollment within a country in a specific level of education, regardless of age, 
+    <h2 class="subheader-text"><b>Education Accessibility in Different Countries</b></h2>
+    <b-card class="normal-text block startquote">
+      <mark><b>Gross Enrollment Ratio (GER)</b></mark> is chosen to assess global accessibility. It is defined as the total enrollment within a country in a specific level of education, regardless of age, 
       expressed as a percentage of the population in the official age group corresponding to this level of education. The choropleth maps from 2014 to 2018 at four educational
-      levels, primary, lower secondary, upper secondary and tertiary are created to show the situation of global accessibility.
-    </blockquote>
+      levels, primary, lower secondary, upper secondary and tertiary shown below demonstatre the situation of global accessibility.
+    </b-card>
     <smart-widget class="globalmap">
     <div class="layout-center">
       <GlobalMap1/>
     </div>
     </smart-widget>
-    <blockquote class="blockquote normal-text block">
+    <b-card class="normal-text block startquote">
       <p>We consider GER around 100% (95% - 105%) to be the optimal cases. A low GER means inadequate opportunities to be enrolled in school education. GER can be over 100% 
       as it includes students who exceed the official age group. For instance, students repeating a grade will be enrolled late and students who advance quickly will be younger than their classmates.
       Since the latter case is a low-possibility event. We consider a high GER happens when students are enrolled late. </p>
-      <p>As shown in the map, in specific regions of South America and Africa, GER is either much lower than 95% or much higher than 105%. It shows that 
-        educational opportunities are low there, further proves the unequal education worldwide. Also, it is found that the performance is quite different among different levels. The enrollment ratio at the tertiary level is obviously lower than 
+      <p>As shown in the map, in specific regions of South America and Africa, GER is either much lower than 95% or much higher than 105%.It shows that 
+        educational opportunities are low there, further proves the unequal education worldwid. Also, it is found that the performance is quite different among different levels. The enrollment ratio at the tertiary level is obviously lower than 
         the other three levels almost for all countries.</p>
-    </blockquote>
+    </b-card>
 
     <!-- Global Map2 -->
-    <h2 class="subheader-text"><b>Gender Accessibility</b></h2>
-    <blockquote class="blockquote normal-text block">
-      Gender Parity Index (GPI) is used to evaluate gender accessibility. It is calculated as the quotient of the number 
+    <h2 class="subheader-text"><b>Education Accessibility of Different Genders</b></h2>
+    <b-card class="normal-text block startquote">
+      <mark><b>Gender Parity Index (GPI)</b></mark> is used to evaluate gender accessibility. It is calculated as the quotient of the number 
       of females by the number of males enrolled in a given stage of education. A GPI equal to 1 indicates parity between females and males. 
       GPI value &lt; 1 indicates a disparity in favor of males and a value &gt; 1 in favor of females. Similarly, the choropleth maps from 2014 to 2018 
       at four educational levels are created to show the situation of gender accessibility.
-    </blockquote>
+    </b-card>
     <smart-widget class="globalmap">
     <div class="layout-center">
       <GlobalMap2/>
     </div>
     </smart-widget>
-    <blockquote class="blockquote normal-text block">
+    <b-card class="normal-text block startquote">
     <p>A GPI between 0.97 and 1.03 indicates parity between the genders by UNESCO. A GPI below 0.97 indicates a disparity in favor of males. 
       A GPI above 1.03 indicates a disparity in favor of females.</p>
     <p>From the overviews at four levels, we can see most countries reach gender parity at the primary level while least countries reach
       equality at the tertiary level. Although primary level performs best worldwide, some countries in Arica still do not reach gender parity. 
       Plus, at the tertiary level, most countries are in favor of females.</p>
-    <p>In the second part, three chosen perspectives, <b>the educational expenditure by nation and by family</b>, 
-    <b>educational resources distribution</b>, <b>relationship between the adolescent birth rate and GPI</b>
-    are presented to explore the possible reasons behind unequal education.
-    </p>
-  </blockquote>
+  </b-card>
 
-
+    <v-divider/>
     <!-- Reasons -->
     <blockquote class="blockquote normal-text block">
       In the second part, three chosen perspectives, <b>the educational expenditure by nation and by family</b>, 
       <b>educational resources distribution</b>, <b>relationship between the adolescent birth rate and GPI</b>
       are presented to explore the possible reasons behind unequal education.
   </blockquote>
+   <v-divider/>
     <b-card class="title-text" id="p2">
       <b-card-header>
         <h2><b> What are the reasons behind the education inequality?</b></h2>
@@ -107,8 +104,8 @@
       <v-col class="text-center" cols="12">
         <h4 class="subheading subtitle-text"><b>There are three possible reasons:<br/><br/>
           Education is expensive <br/>
-          Young girls devote to family at an early stage <br/>
           Imbalanced education resources in different regions <br/>
+          Young girls devote to family at an early stage <br/>
           </b></h4>
       </v-col>
     </v-row>
@@ -116,35 +113,42 @@
 
  
     <h2 class="subheader-text"><b>Expensive Education</b></h2>
-    <!-- <blockquote class="blockquote normal-text block">
-      The proportion of Gross Dometic Product (GDP) devoted to education in 2016 is used to create the choropleth map for chosen countries.
-       The benchmark is suggested by the UN to allocate 4% to 6% of GDP to education. Further, the family expenditure on education from 
-       pre-primary to tertiary education (对吗 with respect to the yearly (对吗 average salary is plotted.
-    </blockquote> -->
-    <smart-widget>
+    <b-card class="normal-text block">
+      <mark><b>The investment of education is mainly from the national investmant and familay investment.</b></mark> In the following choropleth maps, 
+      the proportion of Gross Dometic Product (GDP) devoted to education in 2016 is used to show education investment in Western Europe and
+      Eastern Asia. The benchmark is suggested by the United Nation (UN) to allocate 4% to 6% of GDP to education. <br/>
+      <br/>
+      Further, the annual family expenditure of one parent on education (including
+       pre-primary to tertiary level) for one child is ploted against the average annual salary in this country.
+    </b-card>
+    <b-card>
     <div class="layout-center">
       <Reason1/>
     </div>
-    </smart-widget>
-    <!-- <blockquote class="blockquote normal-text block">
-        According to the suggested benchmark, most of the chosen countries reach the given educational commitment. Besides, countries in North
-        Europe performs quite well with around 7% GDP's devotion or even higher. While looking from the plot, the education is quite costly
-        in some chosen countries/regions, especially when compared with the average salary. 工资是年平均工资吗 再总结一下哪些国家对教育的投入是
-        年平均工资的几倍 To conclude, the nation has devoted the expenditure as suggested, while the family still affords or even 
+    </b-card>
+    <b-card class="normal-text block">
+        While looking at the plot of family expenditure, the education is quite costly
+        in some chosen countries, especially when compared with the average salary. Comparing famialy expenditure
+        and average salary proves education can be a burden for normal family. One typical example is China, 
+        a country with low average salary but devotes a lot on education. The large variance between countries also
+        depends on different situations and policies.<br/>
+        <br/>
+        To conclude, the nation has devoted the expenditure as suggested, while the family still affords or even 
         suffers a lot since high-quality education is expensive in some regions.
-  </blockquote> -->
+    </b-card>
 
 
     <h2 class="subheader-text"><b>Imbalanced Education Resources</b></h2>
-    <!-- <blockquote class="blockquote normal-text block">
-      Tertiary education in Switzerland and China is focused here. The entrance rate to top 200 universities given by Times in 2020 are 
-      given on the figure. The GER at the tertiary level between 2013 and 2017 is plotted.
-    </blockquote> -->
-    <smart-widget>
+    <b-card class="normal-text block">
+      <mark><b>Tertiary education in Switzerland and China is focused here.</b></mark>The GER at the tertiary level of both countries 
+      between 2013 and 2017 is plotted to show imbalance. Besides, the entrance rate to top 200 universities given 
+      by Times in 2020 are given for more insight.
+    </b-card>
+    <b-card>
     <div class="layout-center">
       <Reason2/>
     </div>
-    </smart-widget>
+    </b-card>
 
 
     <h2 class="subheader-text"><b>Gender Inequality</b></h2>
@@ -272,7 +276,6 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import Statement1 from '../components/Statements/Statement1'
-//import Questions from '../components/Statements/Questions'
 import GlobalMap1 from '../components/GlobalMap/GlobalMap1'
 import GlobalMap2 from '../components/GlobalMap/GlobalMap2'
 import Reason1 from '../components/Reasons/Reason1'
@@ -287,14 +290,11 @@ Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
 
-// let p2 = document.body.getElementById("p2");
-
 
 export default {
   name: 'Home',
   components: {
     Statement1,
-    // Questions,
     GlobalMap1,
     GlobalMap2,
     Reason1,
@@ -349,6 +349,9 @@ export default {
 </script>
 
 <style scoped>
+.startquote{
+  padding:20px;
+}
 .globalmap{
   height: 600px;
 }

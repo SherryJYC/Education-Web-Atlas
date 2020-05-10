@@ -1,9 +1,5 @@
 <template>
 <div>
-  <b-card class="text-left">
-      Tertiary education in Switzerland and China is focused here. The GER at the tertiary level between 2013 and 2017 is plotted.
-      Plus, the entrance rate to top 200 universities given by Times in 2020 are given later. 
-  </b-card>
 
   <b-card>
     <!-- Chart of tertiary GER of Switzerland and China -->
@@ -15,7 +11,7 @@
     especially in China. While to compare with the absolute value, the GER in Switzerland is at least 10% higher than in China. 
     Internationally acknowledged that higher education is divided into three stages based on GER:
     GER below 15% is elite education stage; 15% - 50% is the popularization stage; More than 50% is universalization stage.
-    In this way, Switzerland already entered into the third stage of universalization in 2013; China is very close to the entry
+    In this way, Switzerland already entered into the third stage of universalization in 2013 while China is very close to the entry
     point of this stage in 2017. 
   </b-card>
 
@@ -34,10 +30,10 @@
       <p>The entrance rate to the top 200 universities is calculated by the division of the top 200 universities's capacity provided by
       Times and school age population at the tertiary level provided by UN. Same for both countries, seven universities are ranked 
       as Top 200 in 2020. The capacity of them in China is two times of that in Switzerland. However, due to the large
-      candidates in China, the admission rate 100 times less than in Switzerland. In China, a twelfth-grade student has to be 
-      the top 3 our of 1000 colleagues to be admitted to eminent universities. </p>
+      candidates in China, the admission rate in China is only 1% of that in Switzerland. In China, a student has to be 
+      the top 3 of 1000 colleagues to be admitted to eminent universities. </p>
       <p>The high family expenditure and low admission rate has altogether made the college entrance examination in China 
-        a high-risk investment. Want to learn more about it? Have a look at the following videos.</p>
+        a heavy but unavoidable burden for family. Want to learn more about Gaokao (China College Entrance Exam)? Have a look at the following videos.</p>
 
   </b-card>
 
