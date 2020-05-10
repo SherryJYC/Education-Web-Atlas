@@ -79,7 +79,7 @@ export default {
       titleSetting: {
         text: 'Gender Parity Index in Primary Level'
       },
-      colorScale: ['rgb(153,51,51)','rgb(204,0,0)','rgb(204,153,48)','rgb(255,204,102)'],//["#FFC300","#FF5733","#C70039","#900C3F"],
+      colorScale: ['rgb(255,204,102)','rgb(204,153,48)','rgb(204,0,0)','rgb(153,51,51)',],//["#FFC300","#FF5733","#C70039","#900C3F"],
       value: {
         key: "invest",
         metric: "% GDP"
