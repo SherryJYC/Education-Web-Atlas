@@ -37,39 +37,39 @@
 
     <!-- Global Map1 -->
     <h2 class="subheader-text"><b>Global Accessibility</b></h2>
-    <!-- <blockquote class="blockquote normal-text block">
+    <blockquote class="blockquote normal-text block">
       Gross Enrollment Ratio (GER) is chosen to assess global accessibility. It is defined as the total enrollment within a country in a specific level of education, regardless of age, 
       expressed as a percentage of the population in the official age group corresponding to this level of education. The choropleth maps from 2014 to 2018 at four educational
       levels, primary, lower secondary, upper secondary and tertiary are created to show the situation of global accessibility.
-    </blockquote> -->
+    </blockquote>
     <smart-widget class="globalmap">
     <div class="layout-center">
       <GlobalMap1/>
     </div>
     </smart-widget>
-    <!-- <blockquote class="blockquote normal-text block">
+    <blockquote class="blockquote normal-text block">
       <p>We consider GER around 100% (95% - 105%) to be the optimal cases. A low GER means inadequate opportunities to be enrolled in school education. GER can be over 100% 
       as it includes students who exceed the official age group. For instance, students repeating a grade will be enrolled late and students who advance quickly will be younger than their classmates.
       Since the latter case is a low-possibility event. We consider a high GER happens when students are enrolled late. </p>
       <p>As shown in the map, in specific regions of South America and Africa, GER is either much lower than 95% or much higher than 105%. It shows that 
         educational opportunities are low there, further proves the unequal education worldwide. Also, it is found that the performance is quite different among different levels. The enrollment ratio at the tertiary level is obviously lower than 
         the other three levels almost for all countries.</p>
-    </blockquote> -->
+    </blockquote>
 
     <!-- Global Map2 -->
     <h2 class="subheader-text"><b>Gender Accessibility</b></h2>
-    <!-- <blockquote class="blockquote normal-text block">
+    <blockquote class="blockquote normal-text block">
       Gender Parity Index (GPI) is used to evaluate gender accessibility. It is calculated as the quotient of the number 
       of females by the number of males enrolled in a given stage of education. A GPI equal to 1 indicates parity between females and males. 
       GPI value &lt; 1 indicates a disparity in favor of males and a value &gt; 1 in favor of females. Similarly, the choropleth maps from 2014 to 2018 
       at four educational levels are created to show the situation of gender accessibility.
-    </blockquote> -->
+    </blockquote>
     <smart-widget class="globalmap">
     <div class="layout-center">
       <GlobalMap2/>
     </div>
     </smart-widget>
-    <!-- <blockquote class="blockquote normal-text block">
+    <blockquote class="blockquote normal-text block">
     <p>A GPI between 0.97 and 1.03 indicates parity between the genders by UNESCO. A GPI below 0.97 indicates a disparity in favor of males. 
       A GPI above 1.03 indicates a disparity in favor of females.</p>
     <p>From the overviews at four levels, we can see most countries reach gender parity at the primary level while least countries reach
@@ -79,7 +79,7 @@
     <b>educational resources distribution</b>, <b>relationship between the adolescent birth rate and GPI</b>
     are presented to explore the possible reasons behind unequal education.
     </p>
-  </blockquote> -->
+  </blockquote>
 
 
     <!-- Reasons -->

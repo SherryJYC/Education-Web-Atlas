@@ -5,15 +5,6 @@
       Plus, the entrance rate to top 200 universities given by Times in 2020 are given later. 
   </b-card>
 
-  <!-- <v-container>
-      <v-row
-          align="center"
-          justify="center"
-        >
-      <h4> Uneven educational resources </h4>
-      </v-row>
-  </v-container> -->
-
   <b-card>
     <!-- Chart of tertiary GER of Switzerland and China -->
     <apexchart type="bar" height="350" :options="chartOptions" :series="series"></apexchart>
@@ -30,24 +21,12 @@
 
   <b-card-group deck>
     <b-card title="Entrance Rate to Top 200 Universities">
-      <img src="../../assets/img/reason2_ch.png" style="width:300px">
-      <!-- <b-card-text>
-        Top 200 by US ranking
-      </b-card-text> -->
+      <b-card-text>20.56% = 103,797 / 504,706</b-card-text>
+      <img src="../../assets/img/reason2_ch.png" style="width:300px;margin-top:30px">
     </b-card> 
-    <b-card>
+    <b-card title="Entrance Rate to Top 200 Universities">
+       <b-card-text>0.26% = 233,989 / 88,796,896</b-card-text>
       <img src="../../assets/img/reason2_cn.png" style="width:300px">
-    </b-card>
-  </b-card-group>
-
-  <b-card-group deck>
-    <b-card
-    title="20.56% = 103,797 / 504,706"
-       class="text-center">
-    </b-card>
-    <b-card
-    title="0.26% = 233,989 / 88,796,896"
-       class="text-center">
     </b-card>
   </b-card-group>
 
@@ -62,32 +41,16 @@
 
   </b-card>
 
-  <b-card title="What is GAOKAO?">
+  <b-card-group deck>
+  <b-card title="What is Gaokao?">
         <youtube :video-id="videoId2" ref="youtube" @playing="playing"></youtube>
   </b-card>
 
-  <b-card title="Documentary Film of Colledge Entrance Examination in China">
+  <b-card title="A Documentary for Gaokao in China">
         <youtube :video-id="videoId" ref="youtube" @playing="playing"></youtube>
   </b-card>
+  </b-card-group>
 
-    <!-- <b-card
-    title="Chinese College Entrance Exam"
-       class="text-left">
-       <b-card-text>
-      Chinese College Entrance Exam is balabala,
-      many students balaba, very competive
-    </b-card-text>
-    </b-card> -->
-
-  <!-- <b-card>
-    <b-card-text class="text-left">
-        Accordingly, some special phenomena appears. The school district houses is a concept of the property and real estate in school district area in China.
-        According to the regulations of the Education Administration Department or the school, on the basis of the principle of free admission to the nearest school, 
-        the school (mainly the key primary and secondary schools) recruits students within the designated geographical area. Students in this area can enjoy compulsory 
-        education and enter the nearest school without exams. People call this area "the school district". Accordingly, the property and real estate in this area are called “school district houses”.
-        Since the 1990s, the outstanding educational benefits of key schools have attracted a lot of parents to pay a large sum of money or use social resources to send their children to these schools.
-    </b-card-text>
-  </b-card> -->
 
 </div>
 </template>
@@ -173,4 +136,8 @@ export default {
 </script>
 
 <style>
+iframe {
+  width: 100%;
+  max-width: 600px; /* Also helpful. Optional. */
+}
 </style>

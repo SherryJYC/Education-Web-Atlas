@@ -1,16 +1,6 @@
 <template>
 <div>
 
-<b-card-group deck>
-    <b-card class="text-left">
-        <b-card-text>
-        Gross Enrollment Ratio (GER) is chosen to assess global accessibility. It is defined as the total enrollment within a country in a specific level of education, regardless of age, 
-        expressed as a percentage of the population in the official age group corresponding to this level of education. The choropleth maps from 2014 to 2018 at four educational
-        levels, primary, lower secondary, upper secondary and tertiary are created to show the situation of global accessibility.
-        </b-card-text>
-    </b-card>
-</b-card-group>
-
 <div>
     <b-tabs
         active-nav-item-class="font-weight-bold text-dark" justified        
@@ -46,18 +36,6 @@
     </div>
 </div>
 
-<b-card-group deck>
-    <b-card class="text-left">
-        <b-card-text>
-        <p>We consider GER around 100% (95% - 105%) to be the optimal cases. A low GER means inadequate opportunities to be enrolled in school education. GER can be over 100% 
-        as it includes students who exceed the official age group. For instance, students repeating a grade will be enrolled late and students who advance quickly will be younger than their classmates.
-        Since the latter case is a low-possibility event. We consider a high GER happens when students are enrolled late. </p>
-        <p>As shown in the map, in specific regions of South America and Africa, GER is either much lower than 95% or much higher than 105%. It shows that 
-            educational opportunities are low there, further proves the unequal education worldwide. Also, it is found that the performance is quite different among different levels. The enrollment ratio at the tertiary level is obviously lower than 
-            the other three levels almost for all countries.</p>
-        </b-card-text>
-    </b-card>
-</b-card-group>
 
 </div>
 </template>
@@ -143,12 +121,7 @@ export default {
                                 // Loading array declared in the breaks variable 
                                 stops: breaks,
                                 },
-                            'fill-opacity': [
-                                'case',
-                                ['boolean', ['feature-state', 'hover'], false],
-                                1,
-                                0.5
-                            ]
+                            'fill-opacity': 0.6
                         }    
                     });            
 

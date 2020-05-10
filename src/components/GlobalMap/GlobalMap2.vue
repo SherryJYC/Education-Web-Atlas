@@ -1,16 +1,6 @@
 <template>
 <div>
 
-<b-card-group deck>
-    <b-card class="text-left">
-        <b-card-text>
-            Gender Parity Index (GPI) is used to evaluate gender accessibility. It is calculated as the quotient of the number 
-            of females by the number of males enrolled in a given stage of education. A GPI equal to 1 indicates parity between females and males. 
-            GPI value &lt; 1 indicates a disparity in favor of males and a value &gt; 1 in favor of females. Similarly, the choropleth maps from 2014 to 2018 
-            at four educational levels are created to show the situation of gender accessibility.
-        </b-card-text>
-    </b-card>
-</b-card-group>
 
 <div>
     <b-tabs
@@ -47,17 +37,6 @@
     </div>
 </div>
 
-<b-card-group deck>
-    <b-card class="text-left">
-        <b-card-text>
-            <p>A GPI between 0.97 and 1.03 indicates parity between the genders by UNESCO. A GPI below 0.97 indicates a disparity in favor of males. 
-            A GPI above 1.03 indicates a disparity in favor of females.</p>
-            <p>From the overviews at four levels, we can see most countries reach gender parity at the primary level while least countries reach
-            equality at the tertiary level. Although primary level performs best worldwide, some countries in Arica still do not reach gender parity. 
-            Plus, at the tertiary level, most countries are in favor of females.</p>
-        </b-card-text>
-    </b-card>
-</b-card-group>
 
 </div>
 </template>
@@ -139,12 +118,7 @@ export default {
                                 // Loading array declared in the breaks variable 
                                 stops: breaks,
                                 },
-                            'fill-opacity': [
-                                'case',
-                                ['boolean', ['feature-state', 'hover'], false],
-                                1,
-                                0.5
-                            ]
+                            'fill-opacity': 0.6
                         }    
                     });            
 
