@@ -190,10 +190,10 @@
   </v-parallax>
 
     <!-- Trend1 -->
-    <h2 class="subheader-text"><b>Education: the Focus of Market</b></h2>
+    <h2 class="subheader-text"><b>Online Education: the Focus of Market</b></h2>
     <b-card class="normal-text block">
-      The fundings to the EdTech Unicorns from 2014 to 2019 are plotted as the stacked bar graph to show the changes along
-      time. Plus, the exact companies in 2019 are given by country in the donut chart to learn the types of EdTech companies. 
+      The fundings to the EdTech Unicorns from 2014 to 2019 are plotted below to show the changes along
+      time. Plus, the exact EdTch companies in 2019 are given by country in the donut chart to show details of companies. 
     </b-card>
     <smart-widget>
     <div class="layout-center">
@@ -205,7 +205,7 @@
     <h2 class="subheader-text"><b>Increasing Female Enrollment</b></h2>
     <b-card class="normal-text block">
       To learn the performances on female education worldwide, the percentage of global average female enrollment at different levels
-      in 2017 is plotted using the line chart. Switzerland and China are further chosen to make comparisons by the radar chart and the 
+      in 2017 is plotted below. Switzerland and China are further chosen to make comparisons by the radar chart and the 
       time series line chart.
     </b-card>
     <smart-widget>
@@ -213,20 +213,23 @@
       <Trend2/>
     </div>
     </smart-widget>
-    <v-divider/>
 
-  <blockquote class="blockquote normal-text block">
+
+  <b-card title="Summary" class="blockquote normal-text block">
+    <br/>
     In this atlas, we first explored the current situation of global and gender accessibility. Education is unevenly distributed 
-    by country and by gender from the overview. Then, the possible reasons behind the phenomena are analyzed from 
+    by country and by gender from the overview. <br/>
+    <br/>
+    Then, the possible reasons behind the phenomena are analyzed from 
     three aspects of nation vs. family expenditure, educational resources, and the adolescent 
-    birth ratio to females. We concluded that education is quite expensive and meanwhile, the resources are sparse in some 
-    regions. Eventually, the future trends of education are looked into from the aspects of online learning and female 
+    birth ratio to females. We concluded that education is quite expensive and education resources are sparse in some 
+    regions. <br/>
+    <br/>
+    Eventually, the future trends of education are analyzed from the aspects of online learning and female 
     enrollments. The prosperity of online learning shows us a bright future to reach equality education on one day. For 
-    the developments of gender parity, since primary and secondary levels are suggested to be compulsory while multiple
-      effects may result in other levels, we conclude that females should be given more encourages still at the primary and 
-      secondary levels, and due to the apparently small enrollment ratio at the Ph.D. level, females should also be given 
-      more emphasis at this level in the future. Thanks for your notice!
-  </blockquote>
+    the developments of gender parity, although there are more female students enrolled in tertiary education,
+    enrollment ratio at the Ph.D. level is quite low. Females should also be given more emphasis at this level in the future. 
+  </b-card>
 
     <!-- Summary -->
     <Summary/>

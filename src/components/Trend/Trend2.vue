@@ -8,12 +8,11 @@
     </b-card-group>
 
     <b-card class="text-left">
-        As from the line chart, fewer females are enrolled at the primary, secondary and phd levels. In contrast, more females 
-        devote to bachelor and master levels. It is approximately half and a half at the short-cycle tertiary level. To further check the 
-        gender parity, GPI is returned for each level as <mark>0.94, 0.95, 1.04, 1.13, 1.12, 0.81</mark>. Observed from GPI, the world is 
-        close to the gender parity at the short-cycle tertiary level in 2017. Female is obviously more engaged in the school education at 
-        the bachelor and master level; however, it sharply decreases at the Ph.D. level. Speaking of the primary and secondary level, 
+        As from the line chart, fewer females are enrolled at the primary, secondary and Ph.D levels. In contrast, more females 
+        devote to bachelor and master levels.  Speaking of the primary and secondary level, 
         which are provisioned to be free, publicly funded, and equitable quality by SDG 4, the world is more in favor of males on average.
+        Besides, although females are obviously more engaged in the school education at 
+        the bachelor and master level, the ratio sharply decreases at the Ph.D. level. 
     </b-card>
 
     <b-card-group deck>
@@ -51,15 +50,13 @@
     </b-card-group>
 
     <b-card class="text-left">
-        From the graph, first, at the primary and secondary levels, both countries do not show obvious changes within the five years, 
-        and they still do not reach gender parity at these two stages. Second, the same that no noticeable changes in Switzerland at 
-        the bachelor and master levels, but they distribute around 50%. At the Ph.D. level, it rises to 46.32% in 2017 by around 1% 
-        increase within the five years. For these three levels in China, they all increase by around 2% within five years. The bachelor 
+        From the graph, firstly, at the primary and secondary levels, both countries do not show obvious changes within the five years.
+         Secondly, there is no noticeable changes in Switzerland at bachelor and master levels. For these three levels in China, they all
+          increase by around 2% within five years. The bachelor 
         level in China is more in favor of females in 2017. However, the female enrollment ratio begins to decrease at the master level 
         to 47%. It continues to decrease to 37% at the Ph.D. level. Thirdly, Switzerland is more in favor of females at the short-cycle 
-        tertiary level already in 2013 with the ratio of 58% and this trend continues to increase within five years to 64% in 2017. 
-        But meanwhile, there is no obvious change at the bachelor level. So we can not conclude there are certain relationships between 
-        the short-cycle tertiary level and bachelor level. In the other sentence, although more females enter the short-cycle tertiary 
+        tertiary level in 2013 with the ratio of 58% and this trend continues to increase within five years to 64% in 2017. 
+        However, there is no obvious change at the bachelor level. In other words, although more females enter the short-cycle tertiary 
         level, which is practically based, occupationally-specific and prepare students to enter the labor market and may also provide 
         a pathway to other tertiary education programs, it does not affect females to enter the bachelor level.
     </b-card>

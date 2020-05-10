@@ -11,14 +11,17 @@
       </b-card>
   </b-card-group>
   <b-card  class="text-left">
-    As shown in the left stacked bar graph, the fundings to the EdTech unicorns rapidly increasing in the last five years.
-    And the EdTech Unicorns are centered in three countries, China, United States and India. It shows that there are a large
-    group of potential customers in these three countries possibly due to the large population base and also the value to the 
-    importance of education.<br/>
+    A unicorn company is a private company with a valuation over $1 billion. 
+    As of January 2020, there are 14 EdTech Unicorns around the world who have collectively raised over $6.6 billion of total funding 
+    in the last decade.<br/>
+    <br/>
+    As shown in the left bar graph, the fundings to EdTech unicorns were increasing rapidly in the last five years.
+    EdTech Unicorns are centered in three countries, China, United States and India. It shows that there are a large
+    group of potential customers in these three countries possibly due to the large population base and also the emphasis on education.<br/>
     <br/>To further look at the companies, the names of the EdTech Unicorns in 2019 are given in the right donut chart by country.
-    As we searched online, almost all of them focus on online learning education services. It gives an insight e-learning is 
-    increasingly popular these days. With the assumption that online education could help to promote equality education, we can 
-    conclude we are approaching equality education.
+    As you can see, almost all of them focus on online learning education services. It gives an insight that e-learning is 
+    increasingly popular these days. With the assumption that online education could help to promote equality education, e-learning can
+    provide diverse learning resources and step towards equal education.
   </b-card>
   </div>
 </template>

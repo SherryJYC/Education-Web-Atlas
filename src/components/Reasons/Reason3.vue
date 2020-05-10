@@ -6,14 +6,17 @@
       </b-card> 
       <b-card class="text-left">
       <b-card-text>
-      To learn the possible reasons behind gender inequality, the adolescent birth rate is adopted to find if it has certain 
-        relationships with GPI by scatterplot. The rate is defined as the number of births to women ages 15–19 per 1,000 women.
-         If there is a general negative trend that the higher the adolescent birth rate, the lower the GPI (more in 
-        favor of male), then we can conclude young ladies devote to the family so as to quit school education at an early stage.<br/>
+      To learn the possible reasons behind gender inequality, the <mark><b>Adolescent Birth Rate (ABR)</b></mark> is adopted to find if it has certain 
+        relationships with GPI. <br/>
+        <br/>
+        The ABR is defined as the number of births given by 1,000 women aged 15–19.
+         If there is a general negative trend: the higher the adolescent birth rate, the lower the GPI (more in 
+        favor of male), then we can conclude young ladies devote to the family at an early stage tend to quit school education<br/>
+        <!-- <br/>
       While after observation of either all levels or especially upper secondary level, there is no such obvious negative trend
         between the adolescent birth rate and GPI. It is indeed for some countries, they have a low GPI and a high adolescent birth 
         rate meanwhile, but we can not conclude such trends worldwide. So there is no definite relationship between adolescent birth
-        rate and GPI.
+        rate and GPI. -->
       </b-card-text>
       </b-card>
     </b-card-group>

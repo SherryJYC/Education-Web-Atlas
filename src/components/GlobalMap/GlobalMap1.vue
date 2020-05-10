@@ -58,6 +58,7 @@ export default {
     }),
     created(){
         this.map = null;
+        add_legend = 1;
     },
     methods:{
         showNewMap(idx){

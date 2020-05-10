@@ -28,7 +28,7 @@
 
 export default {
   data: () => ({
-      title: "Equality Education"
+      title: "E   quality Education"
     })
 }
 </script>

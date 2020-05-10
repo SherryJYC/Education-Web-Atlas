@@ -31,7 +31,7 @@
     <b-card-group>
     <b-card title="Course Description">
       <b-card-text  class="text">
-        This is a course project for Multimedia Cartography in Master program of Geomatics in ETHz 2020.
+        This is a course project for Multimedia Cartography in Master program of Geomatics in ETH Zurich 2020.
       </b-card-text>
       <template v-slot:footer>
         <small class="text-muted">{{last_update}}</small>
@@ -41,7 +41,7 @@
     <b-card title="Porject Objective" >
       <b-card-text  class="text">
         This project is based on Atlas of Sustaianble Development Goal of United Nation. Its objective is to 
-        provide visualization of statistics for users and help user understand the current inequality of education.
+        provide visualization of statistics for users and help understand the current inequality of education.
       </b-card-text>
       <template v-slot:footer>
         <small class="text-muted">{{last_update}}</small>

@@ -120,7 +120,7 @@
 
       <v-stepper-content step="4">
          <b-card
-       title="Part 3 - Possible Trend of Futrue Education"
+       title="Part 3 - Possible Trends of Futrue Education"
        class="text-left"
       >
       <b-card-text>      
