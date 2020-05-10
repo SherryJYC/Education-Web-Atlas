@@ -4,15 +4,16 @@
       <b-card>
        <apexchart type="scatter" height="350" :options="chartOptions" :series="series"></apexchart>
       </b-card> 
-      <b-card
-       title="Definition"
-       class="text-left"
-      >
+      <b-card class="text-left">
       <b-card-text>
-      Adolescent birth rate: number of live births to adolescent women per 1,000 adolescent women
-      </b-card-text>
-      <b-card-text>
-      Gender parity index: female / male enrollment rate
+      To learn the possible reasons behind gender inequality, the adolescent birth rate is adopted to find if it has certain 
+        relationships with GPI by scatterplot. The rate is defined as the number of births to women ages 15–19 per 1,000 women.
+         If there is a general negative trend that the higher the adolescent birth rate, the lower the GPI (more in 
+        favor of male), then we can conclude young ladies devote to the family so as to quit school education at an early stage.<br/>
+      While after observation of either all levels or especially upper secondary level, there is no such obvious negative trend
+        between the adolescent birth rate and GPI. It is indeed for some countries, they have a low GPI and a high adolescent birth 
+        rate meanwhile, but we can not conclude such trends worldwide. So there is no definite relationship between adolescent birth
+        rate and GPI.
       </b-card-text>
       </b-card>
     </b-card-group>

@@ -27,14 +27,14 @@
   </b-card-group>
 
   <b-card class="text-left">
-      <p>The entrance rate to the top 200 universities is calculated by the division of the top 200 universities's capacity provided by
+      The entrance rate to the top 200 universities is calculated by the division of the top 200 universities's capacity provided by
       Times and school age population at the tertiary level provided by UN. Same for both countries, seven universities are ranked 
       as Top 200 in 2020. The capacity of them in China is two times of that in Switzerland. However, due to the large
       candidates in China, the admission rate in China is only 1% of that in Switzerland. In China, a student has to be 
-      the top 3 of 1000 colleagues to be admitted to eminent universities. </p>
-      <p>The high family expenditure and low admission rate has altogether made the college entrance examination in China 
-        a heavy but unavoidable burden for family. Want to learn more about Gaokao (China College Entrance Exam)? Have a look at the following videos.</p>
-
+      the top 3 of 1000 colleagues to be admitted to eminent universities. <br/>
+      <br/>The high family expenditure and low admission rate has altogether made the college entrance examination in China 
+        a heavy but unavoidable burden for family. Want to learn more about Gaokao (China College Entrance Exam)? 
+        Have a look at the following videos.
   </b-card>
 
   <b-card-group deck>

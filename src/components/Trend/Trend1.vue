@@ -9,8 +9,17 @@
         <!-- chart of EdTech in 2019 -->
         <apexchart type="donut" height="350" :options="chartOptions1" :series="series1"></apexchart>
       </b-card>
-    </b-card-group>
-    <b-card>SUMMARY PLACEHOLDER</b-card>
+  </b-card-group>
+  <b-card  class="text-left">
+    As shown in the left stacked bar graph, the fundings to the EdTech unicorns rapidly increasing in the last five years.
+    And the EdTech Unicorns are centered in three countries, China, United States and India. It shows that there are a large
+    group of potential customers in these three countries possibly due to the large population base and also the value to the 
+    importance of education.<br/>
+    <br/>To further look at the companies, the names of the EdTech Unicorns in 2019 are given in the right donut chart by country.
+    As we searched online, almost all of them focus on online learning education services. It gives an insight e-learning is 
+    increasingly popular these days. With the assumption that online education could help to promote equality education, we can 
+    conclude we are approaching equality education.
+  </b-card>
   </div>
 </template>
 

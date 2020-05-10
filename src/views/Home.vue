@@ -26,7 +26,7 @@
     >
       <v-col class="text-center" cols="12">
         <h4 class="subheading subtitle-text">
-          <b>Accessibility to education is imbalanced <br/>
+          <b>Accessibility to education is imbalanced <br/><br/>
             by country<br/>
           by gender<br/>
           </b></h4>
@@ -48,12 +48,12 @@
     </div>
     </smart-widget>
     <b-card class="normal-text block startquote">
-      <p>We consider GER around 100% (95% - 105%) to be the optimal cases. A low GER means inadequate opportunities to be enrolled in school education. GER can be over 100% 
+      We consider GER around 100% (95% - 105%) to be the optimal cases. A low GER means inadequate opportunities to be enrolled in school education. GER can be over 100% 
       as it includes students who exceed the official age group. For instance, students repeating a grade will be enrolled late and students who advance quickly will be younger than their classmates.
-      Since the latter case is a low-possibility event. We consider a high GER happens when students are enrolled late. </p>
-      <p>As shown in the map, in specific regions of South America and Africa, GER is either much lower than 95% or much higher than 105%.It shows that 
+      Since the latter case is a low-possibility event. We consider a high GER happens when students are enrolled late. <br/>
+      <br/>As shown in the map, in specific regions of South America and Africa, GER is either much lower than 95% or much higher than 105%. It shows that 
         educational opportunities are low there, further proves the unequal education worldwid. Also, it is found that the performance is quite different among different levels. The enrollment ratio at the tertiary level is obviously lower than 
-        the other three levels almost for all countries.</p>
+        the other three levels almost for all countries.
     </b-card>
 
     <!-- Global Map2 -->
@@ -70,16 +70,17 @@
     </div>
     </smart-widget>
     <b-card class="normal-text block startquote">
-    <p>A GPI between 0.97 and 1.03 indicates parity between the genders by UNESCO. A GPI below 0.97 indicates a disparity in favor of males. 
-      A GPI above 1.03 indicates a disparity in favor of females.</p>
-    <p>From the overviews at four levels, we can see most countries reach gender parity at the primary level while least countries reach
+      A GPI between 0.97 and 1.03 indicates parity between the genders by UNESCO. A GPI below 0.97 indicates a disparity in favor of males. 
+      A GPI above 1.03 indicates a disparity in favor of females.<br/>
+    <br/>From the overviews at four levels, we can see most countries reach gender parity at the primary level while least countries reach
       equality at the tertiary level. Although primary level performs best worldwide, some countries in Arica still do not reach gender parity. 
-      Plus, at the tertiary level, most countries are in favor of females.</p>
+      Plus, at the tertiary level, most countries are in favor of females.
   </b-card>
 
     <v-divider/>
     <!-- Reasons -->
     <blockquote class="blockquote normal-text block">
+      After exploration about the current situation, it raises our interest why this would happen.
       In the second part, three chosen perspectives, <b>the educational expenditure by nation and by family</b>, 
       <b>educational resources distribution</b>, <b>relationship between the adolescent birth rate and GPI</b>
       are presented to explore the possible reasons behind unequal education.
@@ -102,10 +103,9 @@
       justify="center"
     >
       <v-col class="text-center" cols="12">
-        <h4 class="subheading subtitle-text"><b>There are three possible reasons:<br/><br/>
-          Education is expensive <br/>
-          Imbalanced education resources in different regions <br/>
-          Young girls devote to family at an early stage <br/>
+        <h4 class="subheading subtitle-text"><b>Education is expensive and a heavy burden to a family in some regions.<br/>
+          High-quality education resources are distribued unevenly worldwide.<br/><br/>
+          The above altogether make the competitions in some regions much more severe than others. <br/>
           </b></h4>
       </v-col>
     </v-row>
@@ -116,9 +116,8 @@
     <b-card class="normal-text block">
       <mark><b>The investment of education is mainly from the national investmant and familay investment.</b></mark> In the following choropleth maps, 
       the proportion of Gross Dometic Product (GDP) devoted to education in 2016 is used to show education investment in Western Europe and
-      Eastern Asia. The benchmark is suggested by the United Nation (UN) to allocate 4% to 6% of GDP to education. <br/>
-      <br/>
-      Further, the annual family expenditure of one parent on education (including
+      Eastern Asia. The benchmark is suggested by UN to allocate 4% to 6% of GDP to education. <br/>
+      <br/>Further, the annual family expenditure of one parent on education (including
        pre-primary to tertiary level) for one child is ploted against the average annual salary in this country.
     </b-card>
     <b-card>
@@ -127,13 +126,12 @@
     </div>
     </b-card>
     <b-card class="normal-text block">
-        While looking at the plot of family expenditure, the education is quite costly
-        in some chosen countries, especially when compared with the average salary. Comparing famialy expenditure
-        and average salary proves education can be a burden for normal family. One typical example is China, 
-        a country with low average salary but devotes a lot on education. The large variance between countries also
-        depends on different situations and policies.<br/>
-        <br/>
-        To conclude, the nation has devoted the expenditure as suggested, while the family still affords or even 
+        While looking at the plot of family expenditure, education is quite costly
+        in some chosen regions, especially when compared with the average salary. Comparing family expenditure
+        and average salary proves education can be a burden for a normal family. For instance, in China, 
+        the family does not have a high average salary compared to other regions, but they devote a lot to education. 
+        The large variance between regions also depends on different contexts.<br/>
+        <br/>To conclude, the nation has devoted the expenditure as suggested, while the family still affords or even 
         suffers a lot since high-quality education is expensive in some regions.
     </b-card>
 
@@ -158,6 +156,14 @@
     </div>
     </smart-widget>
 
+    <v-divider/>
+    <!-- Reasons -->
+    <blockquote class="blockquote normal-text block">
+      Last but not least, we are interested in how equality education would evolve in the future, and if the 
+      future trends would help to achieve equality education. We will explore the future trends of education
+       in the third part from the aspects of <b>online learning</b> and <b>female performances</b>.
+  </blockquote>
+   <v-divider/>
    <b-card class="title-text" id="p3">
       <b-card-header>
         <h2><b> What are the future trends of education?</b></h2>
@@ -175,9 +181,9 @@
       justify="center"
     >
       <v-col class="text-center" cols="12">
-        <h4 class="subheading subtitle-text"><b>Possible future trends of education:<br/><br/>
-          Education becomes the focus of market <br/>
-          More females have enrolled in education <br/>
+        <h4 class="subheading subtitle-text"><b>
+          Online education is prospering and will continue to this trend in the future.<br/><br/>
+          Gender parity is not reached yet at most of the levels worldwide. <br/>
           </b></h4>
       </v-col>
     </v-row>
@@ -185,6 +191,10 @@
 
     <!-- Trend1 -->
     <h2 class="subheader-text"><b>Education: the Focus of Market</b></h2>
+    <b-card class="normal-text block">
+      The fundings to the EdTech Unicorns from 2014 to 2019 are plotted as the stacked bar graph to show the changes along
+      time. Plus, the exact companies in 2019 are given by country in the donut chart to learn the types of EdTech companies. 
+    </b-card>
     <smart-widget>
     <div class="layout-center">
       <Trend1/>
@@ -193,13 +203,31 @@
 
     <!-- Trend2 -->
     <h2 class="subheader-text"><b>Increasing Female Enrollment</b></h2>
+    <b-card class="normal-text block">
+      To learn the performances on female education worldwide, the percentage of global average female enrollment at different levels
+      in 2017 is plotted using the line chart. Switzerland and China are further chosen to make comparisons by the radar chart and the 
+      time series line chart.
+    </b-card>
     <smart-widget>
     <div class="layout-center">
       <Trend2/>
     </div>
     </smart-widget>
     <v-divider/>
-    
+
+  <blockquote class="blockquote normal-text block">
+    In this atlas, we first explored the current situation of global and gender accessibility. Education is unevenly distributed 
+    by country and by gender from the overview. Then, the possible reasons behind the phenomena are analyzed from 
+    three aspects of nation vs. family expenditure, educational resources, and the adolescent 
+    birth ratio to females. We concluded that education is quite expensive and meanwhile, the resources are sparse in some 
+    regions. Eventually, the future trends of education are looked into from the aspects of online learning and female 
+    enrollments. The prosperity of online learning shows us a bright future to reach equality education on one day. For 
+    the developments of gender parity, since primary and secondary levels are suggested to be compulsory while multiple
+      effects may result in other levels, we conclude that females should be given more encourages still at the primary and 
+      secondary levels, and due to the apparently small enrollment ratio at the Ph.D. level, females should also be given 
+      more emphasis at this level in the future. Thanks for your notice!
+  </blockquote>
+
     <!-- Summary -->
     <Summary/>
 

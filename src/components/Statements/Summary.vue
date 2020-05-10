@@ -9,7 +9,11 @@
       justify="center"
     >
       <v-col class="text-center" cols="12">
-        <h4 class="subheading sum"><b>There is still a long way to reach education equality worldwide.</b></h4>
+        <h4 class="subheading sum">
+          <b>Although there is still a way to reach equality 
+             education worldwide, we do believe that more and more effort is devoting to promoting this goal and we are approaching it right now.
+          </b>
+        </h4>
       </v-col>
     </v-row>
   </v-parallax>

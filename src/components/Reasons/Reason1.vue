@@ -50,7 +50,7 @@
 
 <!-- chart of average salary VS family expenditure on education -->
 <apexchart type="bar" height="440" :options="chartOptions" :series="series"></apexchart>
-<p> (Note: HK* is Hong Kong, China; UAE* is United Arab Emirates; China* is mainland, China)</p>
+<br/>(Note: HK* is Hong Kong, China; UAE* is United Arab Emirates; China* is mainland, China)
 </div>
 </template>
 

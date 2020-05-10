@@ -45,7 +45,7 @@
       >
       <br/>
       <b-card-text>
-        Quality education is Goal 4 of the Sustainable Development Goals, adopted by all United Nations Member States in 2015 
+        Quality education is Goal 4 of the Sustainable Development Goals (SDG 4), adopted by all United Nations Member States in 2015 
         as a universal call to action to end poverty, protect the planet and ensure that all people enjoy peace and prosperity by 2030. 
         In this atlas, we focus on the equality of education. Briefly speaking, we aim to give an overview of the current situation of 
         global education from the equality aspect, and then explore the possible reasons behind, and finally take a look at future trends.
@@ -68,9 +68,9 @@
       >
       <b-card-text>
         To present the current situation of global education, the Global Enrollment Ratio (GER) and Gender Parity Index (GPI) 
-        are leveraged to generate the global maps from 2014 to 2018 in four education levels. 
-        It helps to learn the overall performance and performance by gender, which proves that 
-        the education is unequally distributed worldwide.
+        are leveraged to generate global maps from 2014 to 2018 in four education levels. 
+        It helps to learn global and gender accessibility, which proves that 
+        the education is unequally distributed worldwide by country and by gender.
         <br/><br/>
       </b-card-text>
       </b-card>
@@ -95,7 +95,11 @@
        class="text-left"
       >
       <b-card-text>
-     To explore the possible reasons behind unequal education, firstly, the national investment and family expenditure of chosen countries are used to create the map and the chart. It shows different levels of commitment from the national side and the family side by country. Secondly, the admission rate and the gross enrollment rate to the tertiary level in Switzerland and China are presented to show the unequal distribution of educational resources between the two countries. Thirdly, the scatter plot between Adolescent Birth Rate and Gender Parity Index is made to show the possible reason behind low female performance in education.
+     To explore the possible reasons behind unequal education, national investment vs. family expenditure of chosen 
+     countries are firstly used to create the map and the chart. It shows different levels of commitment from both sides by country. 
+     Secondly, the gross enrollment rate and the admission rate at the tertiary level in Switzerland and 
+     China are presented to show the unequal distribution of educational resources. Thirdly, the scatter 
+     plot between Adolescent Birth Rate and Gender Parity Index is made to show the possible relationships.
       </b-card-text>
       </b-card>
 
@@ -120,7 +124,11 @@
        class="text-left"
       >
       <b-card-text>      
-        Two aspects, development of the education method and the female performance, are chosen to show the future trends of education. First, unicorns in the EdTech fields are plotted. It tells that online education is increasingly popular these days. Second, female enrollment worldwide, and in Switzerland and China in 2017 are plotted to learn the performance at different levels. The female enrollment from 2013 to 2017 in Switzerland and China are further created to show the changes in these two countries.
+        Two aspects, development of online education and the performance on female education, are chosen to 
+        show the future trends of education. First, unicorns in the EdTech fields are plotted. It tells that online education 
+        is increasingly popular these days. Second, female enrollment situations worldwide, and in Switzerland and China in 2017 
+        are plotted to learn the performance at different levels. The female enrollment from 2013 to 2017 in Switzerland and China 
+        are further created to show the changes in these two countries.
       </b-card-text>
       </b-card>
 
