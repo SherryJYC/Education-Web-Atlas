@@ -3,11 +3,11 @@
 ## TODO List:clipboard:
 ### Vue Component
 - [x] Statement
-- [ ] Global Map 1
-- [ ] Global Map 2
+- [x] Global Map 1
+- [x] Global Map 2
 - [x] Reason 1
 - [x] Reason 2
-- [ ] Reason 3
+- [x] Reason 3
 - [x] Trend 1
 - [x] Trend 2
 - [ ] Summary
@@ -20,7 +20,7 @@
 ## Text Fillin
 - [ ] Text in Home (Content)
 - [x] Text in Imprint
-- [ ] Text in Welcome
+- [x] Text in Welcome
 
 # education_atlas
 
