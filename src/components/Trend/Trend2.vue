@@ -3,7 +3,7 @@
     <b-card-group deck>
       <b-card border-variant="light" >
         <!-- chart of global female enrollment 2017  -->
-        <apexchart type="line" height="350" :options="chartOptions1" :series="series1"></apexchart>
+        <apexchart type="line" height="500" :options="chartOptions1" :series="series1"></apexchart>
       </b-card>
     </b-card-group>
 
@@ -15,16 +15,16 @@
         the bachelor and master level, the ratio sharply decreases at the Ph.D. level. 
     </b-card>
 
-    <b-card-group deck>
-      <b-card border-variant="light" >
+    <!-- <b-card-group deck>
+      <b-card border-variant="light" > -->
         <!-- radar chart of Swiss female enrollment 2017  -->
-        <apexchart type="radar" height="400" :options="chartOptions_swiss1" :series="series_swiss1"></apexchart>
+        <!-- <apexchart type="radar" height="400" :options="chartOptions_swiss1" :series="series_swiss1"></apexchart>
       </b-card>
-      <b-card border-variant="light" >
+      <b-card border-variant="light" > -->
         <!-- radar chart of China female enrollment 2017  -->
-        <apexchart type="radar" height="400" :options="chartOptions_china1" :series="series_china1"></apexchart>
+        <!-- <apexchart type="radar" height="400" :options="chartOptions_china1" :series="series_china1"></apexchart>
       </b-card> 
-    </b-card-group>
+    </b-card-group> -->
 
     <b-card border-variant="light" class="text-left">
         Switzerland and China are further chosen to make comparisons with the global average female enrollment percentage 
@@ -83,10 +83,18 @@ export default {
             {
               name: "Global Average",
               data: global_avg
+            },
+             {
+              name: "Switzerland",
+              data: swiss_2017
+            },
+             {
+              name: "China",
+              data: china_2017
             }
           ],
           chartOptions1: {
-            colors: ["#A8322D"],
+            colors: ["#6F6F6E","#A8322D", "#FFC300"],
             chart: {
               height: 350,
               type: 'line',
@@ -107,7 +115,7 @@ export default {
               }
             },
             dataLabels: {
-              enabled: true,
+              enabled: false,
             },
             stroke: {
               curve: 'smooth'
@@ -139,8 +147,8 @@ export default {
               title: {
                 text: 'Percent (%)'
               },
-              min: 40,
-              max: 60
+              min: 35,
+              max: 65
             },
 
           },

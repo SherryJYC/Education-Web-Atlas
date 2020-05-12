@@ -73,6 +73,7 @@ export default {
                 container: 'map',
                 style: 'mapbox://styles/mapbox/light-v10',
                 zoom: 1.5,
+                maxZoom: 2.5,
                 center: [20, 15],
             });
         
@@ -111,7 +112,6 @@ export default {
                     map.addLayer({
                         'id': 'ger-primary',
                         'minzoom': 0,
-                        'maxzoom': 10,
                         'type': 'fill',
                         'source': 'GERprimary',
                         'source-layer': sourcelayer,

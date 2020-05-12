@@ -74,6 +74,7 @@ export default {
                 container: 'map2',
                 style: 'mapbox://styles/mapbox/light-v10',
                 zoom: 1.5,
+                maxZoom: 2.5,
                 center: [20, 15],
             });
         
