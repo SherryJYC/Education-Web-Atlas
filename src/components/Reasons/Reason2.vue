@@ -17,12 +17,102 @@
 
   <b-card-group deck>
     <b-card border-variant="light" title="Entrance Rate to Top 200 Universities">
-      <b-card-text>20.56% = 103,797 / 504,706</b-card-text>
-      <img src="../../assets/img/reason2_ch.png" style="width:300px;margin-top:30px">
+      <b-card-text><h3><b>20.56%</b></h3></b-card-text>
+
+      <b-list-group>
+      <b-list-group-item class="list_item d-flex justify-content-between align-items-center">
+        <img src="../../assets/img/eth.png" class="uni_img">
+        <h5 class="uni_title">ETH Zurich</h5>
+        <b-badge variant="danger" pill>13</b-badge>
+      </b-list-group-item>
+
+      <b-list-group-item class="list_item d-flex justify-content-between align-items-center">
+        <img src="../../assets/img/epfl.png" class="uni_img">
+        <h5 class="uni_title">École polytechnique fédérale de Lausanne</h5>
+        <b-badge variant="danger" pill>38</b-badge>
+      </b-list-group-item>
+
+     <b-list-group-item class="list_item d-flex justify-content-between align-items-center">
+        <img src="../../assets/img/uzh.png" class="uni_img">
+        <h5 class="uni_title">University of Zurich</h5>
+        <b-badge variant="danger" pill>90</b-badge>
+      </b-list-group-item>
+
+      <b-list-group-item class="list_item d-flex justify-content-between align-items-center">
+        <img src="../../assets/img/basel.png" class="uni_img">
+        <h5 class="uni_title">University of Basel</h5>
+        <b-badge variant="danger" pill>94</b-badge>
+      </b-list-group-item>
+
+      <b-list-group-item class="list_item d-flex justify-content-between align-items-center">
+        <img src="../../assets/img/bern.png" class="uni_img2">
+        <h5 class="uni_title">University of Bern</h5>
+        <b-badge variant="danger" pill>113</b-badge>
+      </b-list-group-item>
+
+      <b-list-group-item class="list_item d-flex justify-content-between align-items-center">
+        <img src="../../assets/img/geneava.svg" class="uni_img">
+        <h5 class="uni_title">Univeristy of Geneva</h5>
+        <b-badge variant="danger" pill>144</b-badge>
+      </b-list-group-item>
+
+      <b-list-group-item class="list_item d-flex justify-content-between align-items-center">
+        <img src="../../assets/img/lausanne.png" class="uni_img">
+        <h5 class="uni_title">University of Lausanne</h5>
+        <b-badge variant="danger" pill>198</b-badge>
+      </b-list-group-item>
+
+    </b-list-group>
+
     </b-card> 
     <b-card border-variant="light"  title="Entrance Rate to Top 200 Universities">
-       <b-card-text>0.26% = 233,989 / 88,796,896</b-card-text>
-      <img src="../../assets/img/reason2_cn.png" style="width:300px">
+       <b-card-text><h3><b>0.26%</b></h3></b-card-text>
+
+      <b-list-group>
+      <b-list-group-item class="list_item d-flex justify-content-between align-items-center">
+        <img src="../../assets/img/thu.png" class="uni_img2">
+        <h5 class="uni_title">Tsinghua University</h5>
+        <b-badge variant="danger" pill>23</b-badge>
+      </b-list-group-item>
+
+      <b-list-group-item class="list_item d-flex justify-content-between align-items-center">
+        <img src="../../assets/img/pku.svg" class="uni_img2">
+        <h5 class="uni_title">Peking University</h5>
+        <b-badge variant="danger" pill>24</b-badge>
+      </b-list-group-item>
+
+     <b-list-group-item class="list_item d-flex justify-content-between align-items-center">
+        <img src="../../assets/img/stuc.png" class="uni_img2">
+        <h5 class="uni_title">University of Science and Technology of China</h5>
+        <b-badge variant="danger" pill>80</b-badge>
+      </b-list-group-item>
+
+      <b-list-group-item class="list_item d-flex justify-content-between align-items-center">
+        <img src="../../assets/img/zju.png" class="uni_img2">
+        <h5 class="uni_title">Zhejiang University</h5>
+        <b-badge variant="danger" pill>107</b-badge>
+      </b-list-group-item>
+
+      <b-list-group-item class="list_item d-flex justify-content-between align-items-center">
+        <img src="../../assets/img/fudan.png" class="uni_img2">
+        <h5 class="uni_title">Fudan University</h5>
+        <b-badge variant="danger" pill>109</b-badge>
+      </b-list-group-item>
+
+      <b-list-group-item class="list_item d-flex justify-content-between align-items-center">
+        <img src="../../assets/img/nju.png" class="uni_img2">
+        <h5 class="uni_title">Nanjing University</h5>
+        <b-badge variant="danger" pill>144</b-badge>
+      </b-list-group-item>
+
+      <b-list-group-item class="list_item d-flex justify-content-between align-items-center">
+        <img src="../../assets/img/shjtu.png" class="uni_img2">
+        <h5 class="uni_title">Shanghai Jiao Tong University</h5>
+        <b-badge variant="danger" pill>157</b-badge>
+      </b-list-group-item>
+
+    </b-list-group>
+
     </b-card>
   </b-card-group>
 
@@ -135,6 +225,22 @@ export default {
 </script>
 
 <style>
+.uni_title{
+  color: gray;
+}
+.list_item {
+  height: 80px;
+}
+/* for swiss uni */
+.uni_img{
+  width: 110px;
+  height: 40px;
+}
+/* for china uni */
+.uni_img2{
+  width: 70px;
+  height: 60px;
+}
 iframe {
   width: 100%;
   max-width: 600px; /* Also helpful. Optional. */
