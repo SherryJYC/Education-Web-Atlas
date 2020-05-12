@@ -31,17 +31,16 @@
     <b-card-group>
     <b-card title="Course Description">
       <b-card-text  class="text">
-        This is a course project for Multimedia Cartography in Master program of Geomatics in ETH Zurich 2020.
-      </b-card-text>
+       This is a course project for the Multimedia Cartography of Geomatics Master program in ETH Zurich 2020.      </b-card-text>
       <template v-slot:footer>
         <small class="text-muted">{{last_update}}</small>
       </template>
     </b-card>
 
-    <b-card title="Porject Objective" >
+    <b-card title="Project Objective" >
       <b-card-text  class="text">
-        This project is based on Atlas of Sustaianble Development Goal of United Nation. Its objective is to 
-        provide visualization of statistics for users and help understand the current inequality of education.
+       This project is based on the sustainable Development Goal 4 of the United Nations. Its objective is to provide users 
+       a vision of education equality using the map and statistical charts. 
       </b-card-text>
       <template v-slot:footer>
         <small class="text-muted">{{last_update}}</small>
@@ -50,8 +49,8 @@
 
     <b-card title="Software Dependency">
       <b-card-text  class="text">
-        This project is developed based on Vue.js framework. <br/><br/>
-        Main packages used include Vuetify, Mapbox, Apex and Bootstrap.
+        This project is developed based on the Vue.js framework. <br/><br/>
+        Used packages include Vuetify, Mapbox, Apex and Bootstrap.
       </b-card-text>
       <template v-slot:footer>
         <small class="text-muted">{{last_update}}</small>
@@ -75,22 +74,22 @@
       <v-img src="../assets/img/person.png" height="210" contain alt="person_img" />
         <b-card-text class="text">
           <b>Yuchang Jiang </b><br/> 
-          a Master student in ETHz, majored in Geomatics <br/>
-          I am interested in front-end design, include but not limited to <br/>
-          web page design, data visualization and movie editing
+          A Master student in ETH Zurich, majored in Geomatics <br/>
+          Interested in front-end design, include but not limited to <br/>
+          web page design, data visualization and movie editing.
         </b-card-text>
-        <b-button class="btn_red" href="https://github.com/SherryJYC">Personal Homepage</b-button>
+        <b-button class="btn_red" href="https://github.com/SherryJYC">Github</b-button>
       </b-card>
 
       <b-card>
       <v-img src="../assets/img/person.png" height="210" contain alt="person_img" />
         <b-card-text class="text">
           <b> Haojun Cai </b><br/>
-          a Master student in ETHz, majored in Geomatics <br/>
-          I am interested in social data science, include but limited to <br/>
-          education and physcology
+          A Master student in ETH Zurich, majored in Geomatics <br/>
+          Interested in social data science, include but limited to <br/>
+          education and physcology.
         </b-card-text>
-        <b-button class="btn_red" href="https://github.com/HaojunCai">Personal Homepage</b-button>
+        <b-button class="btn_red" href="https://github.com/HaojunCai">Github</b-button>
       </b-card>
     </b-card-group>
 
@@ -112,7 +111,7 @@
         </b-card-text>
         <v-row>
           <b-button class="btn_red" href="http://data.uis.unesco.org/" >
-          Database of Sustainable Development Goals</b-button>
+          Database of Sustainable Development Goal 4</b-button>
         </v-row>
         <v-row>
           <b-button class="btn_red" href="http://www.gov.cn/xinwen/2017-10/26/content_5234507.htm" >

@@ -1,22 +1,25 @@
 <template>
 <div>
 
-  <b-card border-variant="light" >
-    <!-- Chart of tertiary GER of Switzerland and China -->
-    <apexchart type="bar" height="350" :options="chartOptions" :series="series"></apexchart>
-  </b-card>
+  <b-card-group deck>
+    <b-card border-variant="light" class="text-left">
+      As shown from 2013 to 2017, the GER at the tertiary level is increasing in both countries,
+      especially in China. While to compare with the absolute value, the GER in Switzerland is at least 10% higher than in China
+      within the five years.<br/>
+      <br/>Internationally acknowledged that higher education is divided into three stages based on GER:
+      GER below 15% is elite education stage; 15% - 50% is the popularization stage; More than 50% is universalization stage.
+      In this way, Switzerland already entered into the third stage of universalization in 2013 while China is very close to the entry
+      point of this stage in 2017.
+    </b-card>
+    <b-card border-variant="light" >
+      <!-- Chart of tertiary GER of Switzerland and China -->
+      <apexchart type="bar" height="350" :options="chartOptions" :series="series"></apexchart>
+    </b-card>
+  </b-card-group>
 
-  <b-card border-variant="light" class="text-left">
-    As shown in the plot, from 2013 to 2017, the GER at the tertiary level is increasing in both countries,
-    especially in China. While to compare with the absolute value, the GER in Switzerland is at least 10% higher than in China. 
-    Internationally acknowledged that higher education is divided into three stages based on GER:
-    GER below 15% is elite education stage; 15% - 50% is the popularization stage; More than 50% is universalization stage.
-    In this way, Switzerland already entered into the third stage of universalization in 2013 while China is very close to the entry
-    point of this stage in 2017. 
-  </b-card>
 
   <b-card-group deck>
-    <b-card border-variant="light" title="Entrance Rate to Top 200 Universities">
+    <b-card border-variant="light" title="Entrance Rate to Top 200 in Switzerland">
       <b-card-text><h3><b>20.56%</b></h3></b-card-text>
 
       <b-list-group>
@@ -65,7 +68,7 @@
     </b-list-group>
 
     </b-card> 
-    <b-card border-variant="light"  title="Entrance Rate to Top 200 Universities">
+    <b-card border-variant="light"  title="Entrance Rate to Top 200 in China">
        <b-card-text><h3><b>0.26%</b></h3></b-card-text>
 
       <b-list-group>
@@ -117,13 +120,14 @@
   </b-card-group>
 
   <b-card border-variant="light" class="text-left">
-      The entrance rate to the top 200 universities is calculated by the division of the top 200 universities's capacity provided by
-      Times and school age population at the tertiary level provided by UN. Same for both countries, seven universities are ranked 
-      as Top 200 in 2020. The capacity of them in China is two times of that in Switzerland. However, due to the large
-      candidates in China, the admission rate in China is only 1% of that in Switzerland. In China, a student has to be 
-      the top 3 of 1000 colleagues to be admitted to eminent universities. <br/>
-      <br/>The high family expenditure and low admission rate has altogether made the college entrance examination in China 
-        a heavy but unavoidable burden for family. Want to learn more about Gaokao (China College Entrance Exam)? 
+      The entrance rate to the top 200 universities is calculated by the division of the top 200 universities' capacity provided by
+      Times and the school-age population at the tertiary level provided by UN (Switzerland: 20.56% = 103,797 / 504,706; 
+      China: 0.26% = 233,989 / 88,796,896). As shown above, the same for both countries, seven universities are 
+      ranked as Top 200 in 2020. The capacity in China is two times of that in Switzerland. 
+      However, due to large candidates in China, <b>the admission rate in China is only 1% of that in Switzerland</b>. 
+      In China, <b>a student has to be the top 3 of 1000 colleagues to be admitted to eminent universities</b>.<br/>
+      <br/>The high family expenditure and low admission rate have altogether made the college entrance examination in China 
+      a heavy but unavoidable burden for the family. Want to learn more about the Swiss and the Chinese college entrance examination?
         Have a look at the following videos.
   </b-card>
 
@@ -173,11 +177,51 @@ export default {
         chart: {
             type: 'bar'
         },
-        dataLabels: {
-              enabled: false
+       dataLabels: {
+          enabled: false
+        },
+        annotations: {
+          yaxis: [
+            {
+              y: 50,
+              borderColor: '#1E8449 ',
+              label: {
+                borderColor: '#1E8449 ',
+                style: {
+                  color: '#fff',
+                  background: '#1E8449 '
+                },
+                text: 'Universalization Stage'
+              }
+            },
+            {
+              y: 15,
+              borderColor: '#27AE60',
+              label: {
+                borderColor: '#27AE60',
+                style: {
+                  color: '#fff',
+                  background: '#27AE60'
+                },
+                text: 'Popularization Stage'
+              }
+            },
+            {
+              y: 0,
+              borderColor: '#7DCEA0',
+              label: {
+                borderColor: '#7DCEA0',
+                style: {
+                  color: '#fff',
+                  background: '#7DCEA0'
+                },
+                text: 'Elite Stage'
+              }
+            },
+          ],
         },
         title: {
-            text: '2013-2017 Tertiary Gross Enrollment Ratio Comparison between Switzerland and China',
+            text: '2013-2017 Tertiary GER in Switzerland and China',
             style: {
                 fontSize: '15px'
               },

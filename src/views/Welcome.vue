@@ -45,10 +45,11 @@
       >
       <br/>
       <b-card-text>
-        Quality education is Goal 4 of the Sustainable Development Goals (SDG 4), adopted by all United Nations Member States in 2015 
-        as a universal call to action to end poverty, protect the planet and ensure that all people enjoy peace and prosperity by 2030. 
-        In this atlas, we focus on the equality of education. Briefly speaking, we aim to give an overview of the current situation of 
-        global education from the equality aspect, and then explore the possible reasons behind, and finally take a look at future trends.
+        Sustainable Development Goals (SDG) were adopted by all UN Member States in 2015 as a universal call to action to
+      end poverty, protect the planet and ensure that all people enjoy peace and prosperity by 2030. Quality Education is Goal 4 (SDG 4)
+      among all 17 goals to ensure inclusive and equitable quality education and promote lifelong learning opportunities for all.
+      In this atlas, we focus on Equality Education. Briefly speaking, we will give an overview of the nowaday global
+      education from the equality aspect, then explore the reasons behind and finally take a look at future trends.
       </b-card-text>
       </b-card>
 
@@ -68,7 +69,7 @@
       >
       <b-card-text>
         To present the current situation of global education, the Global Enrollment Ratio (GER) and Gender Parity Index (GPI) 
-        are leveraged to generate global maps from 2014 to 2018 in four education levels. 
+        are leveraged to generate global maps from 2014 to 2018 at four education levels. 
         It helps to learn global and gender accessibility, which proves that 
         the education is unequally distributed worldwide by country and by gender.
         <br/><br/>
@@ -95,11 +96,11 @@
        class="text-left"
       >
       <b-card-text>
-     To explore the possible reasons behind unequal education, national investment vs. family expenditure of chosen 
-     countries are firstly used to create the map and the chart. It shows different levels of commitment from both sides by country. 
-     Secondly, the gross enrollment rate and the admission rate at the tertiary level in Switzerland and 
-     China are presented to show the unequal distribution of educational resources. Thirdly, the scatter 
-     plot between Adolescent Birth Rate and Gender Parity Index is made to show the possible relationships.
+    To explore the possible reasons behind unequal education, we firstly use the national investment vs. family expenditure of 
+    chosen countries. It shows different levels of commitment from both sides by country. 
+     Secondly, the gross enrollment rate and the admission rate at the tertiary level in Switzerland and China are 
+     presented to show the unequal distribution of educational resources. Thirdly, the relationship 
+     between Adolescent Birth Rate and Gender Parity Index is explored.
       </b-card-text>
       </b-card>
 
@@ -120,15 +121,15 @@
 
       <v-stepper-content step="4">
          <b-card
-       title="Part 3 - Possible Trends of Futrue Education"
+       title="Part 3 - Possible Trends in Future Education"
        class="text-left"
       >
       <b-card-text>      
-        Two aspects, development of online education and the performance on female education, are chosen to 
-        show the future trends of education. First, unicorns in the EdTech fields are plotted. It tells that online education 
-        is increasingly popular these days. Second, female enrollment situations worldwide, and in Switzerland and China in 2017 
-        are plotted to learn the performance at different levels. The female enrollment from 2013 to 2017 in Switzerland and China 
-        are further created to show the changes in these two countries.
+        Two aspects, development of online education and the performance of female education, are chosen to show the 
+        future trends of equality education. First, unicorns in the EdTech fields are given. It tells that online 
+        education is increasingly popular these days. Second, female enrollment ratio worldwide, and in Switzerland 
+        and China in 2017 are plotted to learn the performance at different levels. The time series from 2013 
+        to 2017 in Switzerland and China are further shown to show the changes in these two countries.
       </b-card-text>
       </b-card>
 

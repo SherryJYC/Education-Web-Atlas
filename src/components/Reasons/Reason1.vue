@@ -6,7 +6,7 @@
           align="center"
           justify="center"
         >
-      <h4>National Investment in Education (% GDP) </h4>
+      <h4>National Investment in Education in 2016 (% GDP) </h4>
       </v-row>
   </v-container>
 
@@ -50,7 +50,8 @@
 
 <!-- chart of average salary VS family expenditure on education -->
 <apexchart type="bar" height="440" :options="chartOptions" :series="series"></apexchart>
-<br/>(Note: HK* is Hong Kong, China; UAE* is United Arab Emirates; China* is mainland, China)
+<br/>Note: 1) HK* is Hong Kong, China; UAE* is United Arab Emirates; China* is mainland, China.
+<br/>2) Family expenditure covers from the pre-primary to the tertiary level.
 </div>
 </template>
 
@@ -76,9 +77,6 @@ export default {
       nationalInvestData,
       family_exp,
       avg_salary,
-      titleSetting: {
-        text: 'Gender Parity Index in Primary Level'
-      },
       colorScale: ['rgb(255,204,102)','rgb(204,153,48)','rgb(204,0,0)','rgb(153,51,51)',],//["#FFC300","#FF5733","#C70039","#900C3F"],
       value: {
         key: "invest",
@@ -159,7 +157,7 @@ export default {
               }
             },
             title: {
-              text: 'Family Expenditure on Education VS Average Salary',
+              text: 'Family Expenditure on Education VS Yearly Average Salary',
               style: {
                 fontSize: '15px'
               },
