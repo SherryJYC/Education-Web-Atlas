@@ -285,7 +285,7 @@ export default {
         padding: 10px 20px;
         background-color: white;
         bottom:20px;
-        z-index:10000;
+         z-index:2;
     }
 
     #console hr {
