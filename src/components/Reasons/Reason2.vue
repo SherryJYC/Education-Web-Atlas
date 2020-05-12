@@ -83,6 +83,9 @@ export default {
         chart: {
             type: 'bar'
         },
+        dataLabels: {
+              enabled: false
+        },
         title: {
             text: '2013-2017 Tertiary Gross Enrollment Ratio Comparison between Switzerland and China',
             style: {
