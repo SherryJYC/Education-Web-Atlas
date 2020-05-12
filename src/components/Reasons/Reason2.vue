@@ -28,7 +28,7 @@
 
       <b-list-group-item class="list_item d-flex justify-content-between align-items-center">
         <img src="../../assets/img/epfl.png" class="uni_img">
-        <h5 class="uni_title">Swiss Federal Institute of Technology Lausanne</h5>
+        <h5 class="uni_title">Swiss Federal Institute of Technology in Lausanne</h5>
         <b-badge variant="danger" pill>38</b-badge>
       </b-list-group-item>
 
