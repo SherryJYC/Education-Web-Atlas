@@ -20,7 +20,9 @@
         <label class="control-label">Year&nbsp; :&nbsp; </label>
         <input type="text"  id="yearCount" readonly>
         <br>
-        <input id="slider" type="range" min="0" max="4" step="1" value="0" />
+        <p>
+        2014&nbsp; <input id="slider" type="range" min="0" max="4" step="1" value="0" />&nbsp; 2018
+        </p>
 </div>
 
 <div class='legend-container'>
