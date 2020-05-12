@@ -67,6 +67,8 @@ export default {
             this.addContent(this.map,idx);
         },
         addContent(map,idx){
+            var current_idx = $( "#slider" ).val();
+            var set_year = years[current_idx];
             var data_url = this.ger_source_url[idx];
             var sourcelayer = this.ger_sourcelayer[idx];
             map = new mapboxgl.Map({
@@ -115,7 +117,7 @@ export default {
                         'type': 'fill',
                         'source': 'GERprimary',
                         'source-layer': sourcelayer,
-                        'filter': ['==', 'Time', 2014], 
+                        'filter': ['==', 'Time', set_year], 
                         'paint': {
                             'fill-color': {
                                 // Set polygon fill color based on attribute for population density CDPOPDENS
@@ -192,9 +194,9 @@ export default {
                         add_legend = 0;
                     }
             }); 
-            // set year 2014 as default
-            $( "#yearCount" ).val(years[0]);
-            $( "#slider" ).val(0);
+            // set year 
+            $( "#yearCount" ).val(set_year);
+            $( "#slider" ).val(current_idx);
 
             $( "#slider" ).change(function(e) {
                     var year = parseInt(e.target.value, 5);

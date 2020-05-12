@@ -14,7 +14,7 @@
       justify="center"
     >
       <v-col class="text-center" cols="12">
-        <h1 class="display-1 font-weight-thin mb-4">Quality Education</h1>
+        <h1 class="display-1 font-weight-thin mb-4">Equality Education</h1>
         <h4 class="subheading sub-h4"><b>Welcome to this Atlas of Education</b></h4>
       </v-col>
     </v-row>
