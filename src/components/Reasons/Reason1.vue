@@ -42,7 +42,7 @@
     </l-choropleth-layer>
 </l-map>
 
-<b-card  class="text-left">
+<b-card  border-variant="light" class="text-left">
   According to the suggested benchmark, most of the chosen countries reach the given educational commitment. Besides, countries in 
   North Europe performs quite well with around 7% GDP's devotion or even higher. 
 </b-card>

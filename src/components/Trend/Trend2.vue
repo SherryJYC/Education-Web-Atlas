@@ -1,13 +1,13 @@
 <template>
   <div>
     <b-card-group deck>
-      <b-card>
+      <b-card border-variant="light" >
         <!-- chart of global female enrollment 2017  -->
         <apexchart type="line" height="350" :options="chartOptions1" :series="series1"></apexchart>
       </b-card>
     </b-card-group>
 
-    <b-card class="text-left">
+    <b-card border-variant="light" class="text-left">
         As from the line chart, fewer females are enrolled at the primary, secondary and Ph.D levels. In contrast, more females 
         devote to bachelor and master levels.  Speaking of the primary and secondary level, 
         which are provisioned to be free, publicly funded, and equitable quality by SDG 4, the world is more in favor of males on average.
@@ -16,17 +16,17 @@
     </b-card>
 
     <b-card-group deck>
-      <b-card>
+      <b-card border-variant="light" >
         <!-- radar chart of Swiss female enrollment 2017  -->
         <apexchart type="radar" height="400" :options="chartOptions_swiss1" :series="series_swiss1"></apexchart>
       </b-card>
-      <b-card>
+      <b-card border-variant="light" >
         <!-- radar chart of China female enrollment 2017  -->
         <apexchart type="radar" height="400" :options="chartOptions_china1" :series="series_china1"></apexchart>
       </b-card> 
     </b-card-group>
 
-    <b-card class="text-left">
+    <b-card border-variant="light" class="text-left">
         Switzerland and China are further chosen to make comparisons with the global average female enrollment percentage 
         at different levels in 2017. From the radar chart, Switzerland has reached or is very close to the global average value 
         for females at the primary, secondary, master, and Ph.D. levels. The female enrollment rate is slightly far from the 
@@ -39,17 +39,17 @@
     </b-card>
 
     <b-card-group deck>
-      <b-card>
+      <b-card border-variant="light" >
         <!-- chart of Swiss female enrollment 2013-2017 timeseris -->
         <apexchart type="line" height="350" :options="chartOptions_swiss2" :series="series_swiss2"></apexchart>
       </b-card>
-      <b-card>
+      <b-card border-variant="light" >
         <!-- chart of China female enrollment 2013-2017 timeseris  -->
         <apexchart type="line" height="350" :options="chartOptions_china2" :series="series_china2"></apexchart>
       </b-card> 
     </b-card-group>
 
-    <b-card class="text-left">
+    <b-card border-variant="light" class="text-left">
         From the graph, firstly, at the primary and secondary levels, both countries do not show obvious changes within the five years.
          Secondly, there is no noticeable changes in Switzerland at bachelor and master levels. For these three levels in China, they all
           increase by around 2% within five years. The bachelor 

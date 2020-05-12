@@ -1,12 +1,12 @@
 <template>
 <div>
 
-  <b-card>
+  <b-card border-variant="light" >
     <!-- Chart of tertiary GER of Switzerland and China -->
     <apexchart type="bar" height="350" :options="chartOptions" :series="series"></apexchart>
   </b-card>
 
-  <b-card class="text-left">
+  <b-card border-variant="light" class="text-left">
     As shown in the plot, from 2013 to 2017, the GER at the tertiary level is increasing in both countries,
     especially in China. While to compare with the absolute value, the GER in Switzerland is at least 10% higher than in China. 
     Internationally acknowledged that higher education is divided into three stages based on GER:
@@ -16,17 +16,17 @@
   </b-card>
 
   <b-card-group deck>
-    <b-card title="Entrance Rate to Top 200 Universities">
+    <b-card border-variant="light" title="Entrance Rate to Top 200 Universities">
       <b-card-text>20.56% = 103,797 / 504,706</b-card-text>
       <img src="../../assets/img/reason2_ch.png" style="width:300px;margin-top:30px">
     </b-card> 
-    <b-card title="Entrance Rate to Top 200 Universities">
+    <b-card border-variant="light"  title="Entrance Rate to Top 200 Universities">
        <b-card-text>0.26% = 233,989 / 88,796,896</b-card-text>
       <img src="../../assets/img/reason2_cn.png" style="width:300px">
     </b-card>
   </b-card-group>
 
-  <b-card class="text-left">
+  <b-card border-variant="light" class="text-left">
       The entrance rate to the top 200 universities is calculated by the division of the top 200 universities's capacity provided by
       Times and school age population at the tertiary level provided by UN. Same for both countries, seven universities are ranked 
       as Top 200 in 2020. The capacity of them in China is two times of that in Switzerland. However, due to the large
@@ -38,11 +38,11 @@
   </b-card>
 
   <b-card-group deck>
-  <b-card title="What is Gaokao?">
+  <b-card border-variant="light" title="What is Gaokao?">
         <youtube :video-id="videoId2" ref="youtube" @playing="playing"></youtube>
   </b-card>
 
-  <b-card title="A Documentary for Gaokao in China">
+  <b-card border-variant="light" title="A Documentary for Gaokao in China">
         <youtube :video-id="videoId" ref="youtube" @playing="playing"></youtube>
   </b-card>
   </b-card-group>

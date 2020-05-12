@@ -70,8 +70,8 @@ export default {
             map = new mapboxgl.Map({
                 container: 'map',
                 style: 'mapbox://styles/mapbox/light-v10',
-                zoom: 2,
-                center: [60, 15],
+                zoom: 1.5,
+                center: [20, 15],
             });
         
             // arrays that will be used to style the layer division 
@@ -236,7 +236,7 @@ export default {
 </script>
 
 <style>
-#map { position: absolute; top: 100px; bottom: 0; width: 100%; height:100%;}
+#map { position: absolute; top: 100px; bottom: 0; width: 100%; height:80%;}
 
     .map-overlay {
         font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -281,6 +281,7 @@ export default {
         position: absolute;
         width: 420px;
         margin: 10px;
+        margin-bottom: 3%;
         padding: 10px 20px;
         background-color: white;
         bottom:20px;

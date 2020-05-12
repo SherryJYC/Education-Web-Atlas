@@ -1,10 +1,10 @@
 <template>
 <div>
     <b-card-group deck>
-      <b-card>
+      <b-card border-variant="light" >
        <apexchart type="scatter" height="350" :options="chartOptions" :series="series"></apexchart>
       </b-card> 
-      <b-card class="text-left">
+      <b-card border-variant="light" class="text-left">
       <b-card-text>
       To learn the possible reasons behind gender inequality, the <mark><b>Adolescent Birth Rate (ABR)</b></mark> is adopted to find if it has certain 
         relationships with GPI. <br/>

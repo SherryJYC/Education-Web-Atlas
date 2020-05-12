@@ -1,16 +1,16 @@
 <template>
   <div>
     <b-card-group deck>
-      <b-card>
+      <b-card border-variant="light" >
         <!-- chart of EdTech Funding  -->
        <apexchart type="bar" height="350" :options="chartOptions" :series="series"></apexchart>
       </b-card> 
-      <b-card>
+      <b-card border-variant="light" >
         <!-- chart of EdTech in 2019 -->
         <apexchart type="donut" height="350" :options="chartOptions1" :series="series1"></apexchart>
       </b-card>
   </b-card-group>
-  <b-card  class="text-left">
+  <b-card border-variant="light"  class="text-left">
     A unicorn company is a private company with a valuation over $1 billion. 
     As of January 2020, there are 14 EdTech Unicorns around the world who have collectively raised over $6.6 billion of total funding 
     in the last decade.<br/>

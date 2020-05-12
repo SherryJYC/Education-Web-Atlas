@@ -37,17 +37,17 @@
 
     <!-- Global Map1 -->
     <h2 class="subheader-text"><b>Education Accessibility in Different Countries</b></h2>
-    <b-card class="normal-text block startquote">
+    <b-card border-variant="light" class="normal-text block startquote">
       <mark><b>Gross Enrollment Ratio (GER)</b></mark> is chosen to assess global accessibility. It is defined as the total enrollment within a country in a specific level of education, regardless of age, 
       expressed as a percentage of the population in the official age group corresponding to this level of education. The choropleth maps from 2014 to 2018 at four educational
       levels, primary, lower secondary, upper secondary and tertiary shown below demonstatre the situation of global accessibility.
     </b-card>
-    <smart-widget class="globalmap">
+    <b-card border-variant="light" class="globalmap">
     <div class="layout-center">
       <GlobalMap1/>
     </div>
-    </smart-widget>
-    <b-card class="normal-text block startquote">
+    </b-card>
+    <b-card border-variant="light" class="normal-text block startquote">
       We consider GER around 100% (95% - 105%) to be the optimal cases. A low GER means inadequate opportunities to be enrolled in school education. GER can be over 100% 
       as it includes students who exceed the official age group. For instance, students repeating a grade will be enrolled late and students who advance quickly will be younger than their classmates.
       Since the latter case is a low-possibility event. We consider a high GER happens when students are enrolled late. <br/>
@@ -58,18 +58,18 @@
 
     <!-- Global Map2 -->
     <h2 class="subheader-text"><b>Education Accessibility of Different Genders</b></h2>
-    <b-card class="normal-text block startquote">
+    <b-card border-variant="light" class="normal-text block startquote">
       <mark><b>Gender Parity Index (GPI)</b></mark> is used to evaluate gender accessibility. It is calculated as the quotient of the number 
       of females by the number of males enrolled in a given stage of education. A GPI equal to 1 indicates parity between females and males. 
       GPI value &lt; 1 indicates a disparity in favor of males and a value &gt; 1 in favor of females. Similarly, the choropleth maps from 2014 to 2018 
       at four educational levels are created to show the situation of gender accessibility.
     </b-card>
-    <smart-widget class="globalmap">
+    <b-card border-variant="light" class="globalmap">
     <div class="layout-center">
       <GlobalMap2/>
     </div>
-    </smart-widget>
-    <b-card class="normal-text block startquote">
+    </b-card>
+    <b-card border-variant="light" class="normal-text block startquote">
       A GPI between 0.97 and 1.03 indicates parity between the genders by UNESCO. A GPI below 0.97 indicates a disparity in favor of males. 
       A GPI above 1.03 indicates a disparity in favor of females.<br/>
     <br/>From the overviews at four levels, we can see most countries reach gender parity at the primary level while least countries reach
@@ -113,19 +113,19 @@
 
  
     <h2 class="subheader-text"><b>Expensive Education</b></h2>
-    <b-card class="normal-text block">
+    <b-card border-variant="light" class="normal-text block">
       <mark><b>The investment of education is mainly from the national investmant and familay investment.</b></mark> In the following choropleth maps, 
       the proportion of Gross Dometic Product (GDP) devoted to education in 2016 is used to show education investment in Western Europe and
       Eastern Asia. The benchmark is suggested by UN to allocate 4% to 6% of GDP to education. <br/>
       <br/>Further, the annual family expenditure of one parent on education (including
        pre-primary to tertiary level) for one child is ploted against the average annual salary in this country.
     </b-card>
-    <b-card>
+    <b-card border-variant="light" >
     <div class="layout-center">
       <Reason1/>
     </div>
     </b-card>
-    <b-card class="normal-text block">
+    <b-card border-variant="light" class="normal-text block">
         While looking at the plot of family expenditure, education is quite costly
         in some chosen regions, especially when compared with the average salary. Comparing family expenditure
         and average salary proves education can be a burden for a normal family. For instance, in China, 
@@ -137,12 +137,12 @@
 
 
     <h2 class="subheader-text"><b>Imbalanced Education Resources</b></h2>
-    <b-card class="normal-text block">
+    <b-card border-variant="light" class="normal-text block">
       <mark><b>Tertiary education in Switzerland and China is focused here.</b></mark>The GER at the tertiary level of both countries 
       between 2013 and 2017 is plotted to show imbalance. Besides, the entrance rate to top 200 universities given 
       by Times in 2020 are given for more insight.
     </b-card>
-    <b-card>
+    <b-card border-variant="light" >
     <div class="layout-center">
       <Reason2/>
     </div>
@@ -150,11 +150,11 @@
 
 
     <h2 class="subheader-text"><b>Gender Inequality</b></h2>
-    <smart-widget>
+    <b-card border-variant="light" >
     <div class="layout-center">
       <Reason3/>
     </div>
-    </smart-widget>
+    </b-card>
 
     <v-divider/>
     <!-- Reasons -->
@@ -191,28 +191,28 @@
 
     <!-- Trend1 -->
     <h2 class="subheader-text"><b>Online Education: the Focus of Market</b></h2>
-    <b-card class="normal-text block">
+    <b-card border-variant="light" class="normal-text block">
       The fundings to the EdTech Unicorns from 2014 to 2019 are plotted below to show the changes along
       time. Plus, the exact EdTch companies in 2019 are given by country in the donut chart to show details of companies. 
     </b-card>
-    <smart-widget>
+    <b-card border-variant="light" >
     <div class="layout-center">
       <Trend1/>
     </div>
-    </smart-widget>
+    </b-card>
 
     <!-- Trend2 -->
     <h2 class="subheader-text"><b>Increasing Female Enrollment</b></h2>
-    <b-card class="normal-text block">
+    <b-card border-variant="light" class="normal-text block">
       To learn the performances on female education worldwide, the percentage of global average female enrollment at different levels
       in 2017 is plotted below. Switzerland and China are further chosen to make comparisons by the radar chart and the 
       time series line chart.
     </b-card>
-    <smart-widget>
+    <b-card border-variant="light" >
     <div class="layout-center">
       <Trend2/>
     </div>
-    </smart-widget>
+    </b-card>
 
 
   <b-card title="Summary" class="blockquote normal-text block">
