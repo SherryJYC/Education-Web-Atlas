@@ -134,9 +134,18 @@ export default {
                         closeButton: false,
                         closeOnClick: false
                     });
+                            
+                    map.on('mouseleave', 'ger-primary', function() {
+                        map.getCanvas().style.cursor = '';
 
-                    // When the user moves their mouse over the layer, show information of country
-                    map.on('mousemove', 'ger-primary', function(e) {
+                    });
+                    // Change the cursor to a pointer when the mouse is over a country
+                    map.on('mouseenter', 'ger-primary', function() {
+                        map.getCanvas().style.cursor = 'pointer';
+                    });
+
+                    // when user click layer, show info window
+                    map.on('click', 'ger-primary', function(e) {
                         if (e.features.length > 0) {
                             var propObj = e.features[0].properties;
                             var line1 = '<strong>'+propObj.CNTRY_NAME+'</strong><br/>';
@@ -148,17 +157,8 @@ export default {
                             .setHTML(line1+line2)
                             .addTo(map);
                         }
-                        
                     });
-                            
-                    map.on('mouseleave', 'ger-primary', function() {
-                        map.getCanvas().style.cursor = '';
 
-                    });
-                    // Change the cursor to a pointer when the mouse is over a country
-                    map.on('mouseenter', 'ger-primary', function() {
-                        map.getCanvas().style.cursor = 'pointer';
-                    });
                     // add legends during initial stage
                     if (add_legend == 1){
                         breaksRev.forEach(function(layer, i){

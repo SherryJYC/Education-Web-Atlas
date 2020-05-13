@@ -28,7 +28,7 @@
 
 <div class='legend-container2'>
         <div class='legend2' id='legend2' >
-            <h2 class="legend2">Gross Enrollment Ratio (%)</h2> 
+            <h2 class="legend2">Gender Parity Index</h2> 
             <hr/>
             
             <!-- Div where the dynamic legend is created  -->	
@@ -133,8 +133,8 @@ export default {
                         closeOnClick: false
                     });
 
-                    // When the user moves their mouse over the layer, show information of country
-                    map.on('mousemove', 'ger-primary', function(e) {
+                    // When the user click the layer, show information of country
+                    map.on('click', 'ger-primary', function(e) {
                         if (e.features.length > 0) {
                             var propObj = e.features[0].properties;
                             var line1 = '<strong>'+propObj.CNTRY_NAME+'</strong><br/>';
@@ -146,7 +146,6 @@ export default {
                             .setHTML(line1+line2)
                             .addTo(map);
                         }
-                        
                     });
                             
                     map.on('mouseleave', 'ger-primary', function() {
