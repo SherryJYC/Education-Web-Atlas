@@ -58,7 +58,7 @@ export default {
               height: 350,
               type: 'scatter',
               toolbar: {
-                show: true             
+                show: false             
               }
             },
             xaxis: {
