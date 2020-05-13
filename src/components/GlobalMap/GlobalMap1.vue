@@ -5,10 +5,10 @@
     <b-tabs
         active-nav-item-class="font-weight-bold text-dark" justified        
     >
-        <b-tab title-link-class="text-dark" title="Primary" active @click="showNewMap(0)">Global Enrollment Ratio in Primary Education</b-tab>
-        <b-tab title-link-class="text-dark" title="Lower Secondary" @click="showNewMap(1)">Global Enrollment Ratio in Lower Secondary Education</b-tab>
-        <b-tab title-link-class="text-dark" title="Upper Secondary" @click="showNewMap(2)">Global Enrollment Ratio in Upper secondary Education</b-tab>
-        <b-tab title-link-class="text-dark" title="Tertiary" @click="showNewMap(3)">Global Enrollment Ratio in Tertiary Education</b-tab>
+        <b-tab title-link-class="text-dark" title="Primary" active @click="showNewMap(0)"></b-tab>
+        <b-tab title-link-class="text-dark" title="Lower Secondary" @click="showNewMap(1)"></b-tab>
+        <b-tab title-link-class="text-dark" title="Upper Secondary" @click="showNewMap(2)"></b-tab>
+        <b-tab title-link-class="text-dark" title="Tertiary" @click="showNewMap(3)"></b-tab>
     </b-tabs>
 </div>
 
@@ -49,6 +49,10 @@ import JQuery from 'jquery';
 let $ = JQuery;
 let years = [2014,2015,2016,2017,2018];
 let add_legend = 1;
+let popup = new mapboxgl.Popup({
+                        closeButton: false,
+                        closeOnClick: false
+                    });
 
 export default {
     data: () => ({
@@ -129,11 +133,6 @@ export default {
                             'fill-opacity': 0.6
                         }    
                     });            
-
-                    var popup = new mapboxgl.Popup({
-                        closeButton: false,
-                        closeOnClick: false
-                    });
                             
                     map.on('mouseleave', 'ger-primary', function() {
                         map.getCanvas().style.cursor = '';
@@ -149,7 +148,7 @@ export default {
                         if (e.features.length > 0) {
                             var propObj = e.features[0].properties;
                             var line1 = '<strong>'+propObj.CNTRY_NAME+'</strong><br/>';
-                            var line2 = '<p>'+propObj.Value+' % </p>';
+                            var line2 = '<p>'+propObj.Value.toFixed(2)+' % </p>';
                             popup.remove();
                             // show popup
                             popup
@@ -199,6 +198,7 @@ export default {
             $( "#slider" ).val(current_idx);
 
             $( "#slider" ).change(function(e) {
+                    popup.remove();
                     var year = parseInt(e.target.value, 5);
                     var filters = ['==', 'Time', years[year]];
                     // runs filter query on Mapbox layer based on the location/value of the handle on the slider
@@ -289,7 +289,8 @@ export default {
         padding: 10px 20px;
         background-color: white;
         bottom:20px;
-         z-index:2;
+        z-index:2;
+        opacity: 0.7;
     }
 
     #console hr {
@@ -307,6 +308,7 @@ export default {
         font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
         background-color: white; 
         padding: 10px;
+        opacity: 0.9;
     }
 
     #cd-legend {
