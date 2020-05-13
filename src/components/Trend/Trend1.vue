@@ -53,7 +53,7 @@ export default {
               height: 350,
               stacked: true,
               toolbar: {
-                show: true
+                show: false
               },
               zoom: {
                 enabled: true
@@ -126,7 +126,7 @@ export default {
               height: 350,
               type: 'donut',
               toolbar: {
-                show: true 
+                show: false 
               }
             },
             plotOptions: {

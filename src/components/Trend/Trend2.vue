@@ -96,7 +96,7 @@ export default {
                 opacity: 0.2
               },
               toolbar: {
-                show: true
+                show: false
               }
             },
             dataLabels: {
@@ -157,7 +157,7 @@ export default {
                 top: 1
               },
               toolbar: {
-                show: true 
+                show: false 
               }
             },
             title: {
@@ -217,7 +217,7 @@ export default {
                 enabled: true
               },
               toolbar: {
-                show: true 
+                show: false 
               }
             },
             dataLabels: {
@@ -302,7 +302,7 @@ export default {
                 top: 1
               },
               toolbar: {
-                show: true 
+                show: false 
               }
             },
             title: {
@@ -361,7 +361,7 @@ export default {
                 enabled: true
               },
               toolbar: {
-                show: true 
+                show: false 
               }
             },
             dataLabels: {
