@@ -109,8 +109,7 @@ export default {
               height: 440,
               stacked: true,
               toolbar: {
-                show: true
-
+                show: false
               }
             },
             colors: ["#6F6F6E", "#FFC300"],

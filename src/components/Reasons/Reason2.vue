@@ -175,7 +175,10 @@ export default {
       ],
       chartOptions: {
         chart: {
-            type: 'bar'
+            type: 'bar',
+            toolbar: {
+                show: false
+              }
         },
        dataLabels: {
           enabled: false
