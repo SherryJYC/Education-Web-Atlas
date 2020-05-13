@@ -2,18 +2,18 @@
 <div>
 
   <b-card-group deck>
+    <b-card border-variant="light" >
+      <!-- Chart of tertiary GER of Switzerland and China -->
+      <apexchart type="bar" height="350" :options="chartOptions" :series="series"></apexchart>
+    </b-card>
     <b-card border-variant="light" class="text-left">
       As shown from 2013 to 2017, the GER at the tertiary level is increasing in both countries,
-      especially in China. While to compare with the absolute value, the GER in Switzerland is at least 10% higher than in China
+      especially in China. While comparing the absolute value, the GER in Switzerland is at least 10% higher than in China
       within the five years.<br/>
       <br/>Internationally acknowledged that higher education is divided into three stages based on GER:
       GER below 15% is elite education stage; 15% - 50% is the popularization stage; More than 50% is universalization stage.
       In this way, Switzerland already entered into the third stage of universalization in 2013 while China is very close to the entry
       point of this stage in 2017.
-    </b-card>
-    <b-card border-variant="light" >
-      <!-- Chart of tertiary GER of Switzerland and China -->
-      <apexchart type="bar" height="350" :options="chartOptions" :series="series"></apexchart>
     </b-card>
   </b-card-group>
 
@@ -124,7 +124,7 @@
       Times and the school-age population at the tertiary level provided by UN (Switzerland: 20.56% = 103,797 / 504,706; 
       China: 0.26% = 233,989 / 88,796,896). As shown above, the same for both countries, seven universities are 
       ranked as Top 200 in 2020. The capacity in China is two times of that in Switzerland. 
-      However, due to large candidates in China, <b>the admission rate in China is only 1% of that in Switzerland</b>. 
+      However, due to large number of candidates in China, <b>the admission rate in China is only 1% of that in Switzerland</b>. 
       In China, <b>a student has to be the top 3 of 1000 colleagues to be admitted to eminent universities</b>.<br/>
       <br/>The high family expenditure and low admission rate have altogether made the college entrance examination in China 
       a heavy but unavoidable burden for the family. Want to learn more about the Swiss and the Chinese college entrance examination?

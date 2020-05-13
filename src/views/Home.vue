@@ -2,7 +2,9 @@
   <div class="home">
     <!-- Statement1 -->
     <Statement1/>
-    <!-- Questions -->
+    
+    <Menu/>
+
     <blockquote class="blockquote normal-text block startquote">
       Education is essential as a life-long experience. One of the most important parts is the school education.
       In this atlas, we will go through the current situation, possible reasons behind, and future trends of equality school education.
@@ -12,7 +14,7 @@
     
     <b-card class="title-text" id="p1">
       <b-card-header>
-        <h2><b> How is the global situation of education?</b></h2>
+        <h2><b> Part 1 - How is the global situation of education?</b></h2>
       </b-card-header>
     </b-card>
     <v-parallax
@@ -97,7 +99,7 @@
    <v-divider/>
     <b-card class="title-text" id="p2">
       <b-card-header>
-        <h2><b> What are the reasons behind the education inequality?</b></h2>
+        <h2><b> Part 2 - What are the reasons behind the education inequality?</b></h2>
       </b-card-header>
     </b-card>
 
@@ -125,12 +127,8 @@
     <b-card border-variant="light" class="normal-text block">
       The investment of education is mainly from the national investment and family investment.
       These two aspects in chosen regions and countries are depicted by GDP devotion and family expenditure on education.
-      The benchmark for state GDP devotion on education is suggested by UN to allocate <mark>4% to 6% of GDP to education</mark>.
-      <!-- In the following choropleth maps, 
-      the proportion of Gross Dometic Product (GDP) devoted to education in 2016 is used to show education investment in Western Europe and
-      Eastern Asia. The benchmark is suggested by UN to allocate 4% to 6% of GDP to education. <br/>
-      <br/>Further, the annual family expenditure of one parent on education (including
-       pre-primary to tertiary level) for one child is ploted against the average annual salary in this country. -->
+      The benchmark for state GDP devotion on education is <mark>4% to 6% of GDP, suggested by UN.</mark>.
+     
     </b-card>
     <b-card border-variant="light" >
     <div class="layout-center">
@@ -176,7 +174,7 @@
    <v-divider/>
    <b-card class="title-text" id="p3">
       <b-card-header>
-        <h2><b> What are the future trends in education?</b></h2>
+        <h2><b> Part 3 - What are the future trends in education?</b></h2>
       </b-card-header>
     </b-card>
 
@@ -325,6 +323,7 @@ import Reason3 from '../components/Reasons/Reason3'
 import Trend1 from '../components/Trend/Trend1'
 import Trend2 from '../components/Trend/Trend2'
 import Summary from '../components/Statements/Summary'
+import Menu from '../components/Menu'
 
 // Install BootstrapVue
 Vue.use(BootstrapVue)
@@ -344,6 +343,7 @@ export default {
     Trend1,
     Trend2,
     Summary,
+    Menu
   },
   data: () => ({
       direction: 'top',

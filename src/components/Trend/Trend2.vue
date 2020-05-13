@@ -102,34 +102,6 @@ export default {
             dataLabels: {
               enabled: false,
             },        
-            annotations: {
-              yaxis: [
-              {
-                y: 49.24,
-                borderColor: '#1E8449 ',
-                label: {
-                  borderColor: '#1E8449 ',
-                  style: {
-                    color: '#fff',
-                    background: '#1E8449 '
-                  },
-                  text: 'Percent=49.24, GPI≈0.97'
-                },
-              },
-              {             
-                y: 50.74,
-                borderColor: '#1E8449 ',
-                label: {
-                  borderColor: '#1E8449 ',
-                  style: {
-                    color: '#fff',
-                    background: '#1E8449 '
-                  },
-                  text: 'Percent=50.74, GPI≈1.03'
-                }
-              }
-            ],
-          },
             stroke: {
               curve: 'smooth'
             },

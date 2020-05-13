@@ -1,6 +1,5 @@
 <template>
   <div>
-    <v-divider/>
     
   <!-- TODO: adjust statements and images -->
 <v-parallax
