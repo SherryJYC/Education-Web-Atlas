@@ -45,6 +45,7 @@ export default {
 #banner{
   background-color: #A8322D;
   color:white;
+  height:10%;
 }
 #text{
   color: white;

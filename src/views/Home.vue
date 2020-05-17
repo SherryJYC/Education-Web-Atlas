@@ -48,7 +48,7 @@
       levels, primary, lower secondary, upper secondary and tertiary shown below demonstatre the situation of global accessibility. -->
     </b-card>
     <b-card border-variant="light" class="globalmap">
-    <div class="layout-center">
+    <div>
       <GlobalMap1/>
     </div>
     </b-card>
@@ -74,7 +74,7 @@
       <!-- Similarly, the choropleth maps from 2014 to 2018 at four educational levels are created to show the situation of gender accessibility. -->
     </b-card>
     <b-card border-variant="light" class="globalmap">
-    <div class="layout-center">
+    <div>
       <GlobalMap2/>
     </div>
     </b-card>
@@ -131,8 +131,8 @@
      
     </b-card>
     <b-card border-variant="light" >
-    <div class="layout-center">
-      <Reason1/>
+    <div>
+      <Reason1 class="region"/>
     </div>
     </b-card>
     <b-card border-variant="light" class="normal-text block">
@@ -151,16 +151,16 @@
       universities are given for more insight.
     </b-card>
     <b-card border-variant="light" >
-    <div class="layout-center">
-      <Reason2/>
+    <div>
+      <Reason2 class="region"/>
     </div>
     </b-card>
 
 
     <h2 class="subheader-text"><b>Gender Inequality</b></h2>
     <b-card border-variant="light" >
-    <div class="layout-center">
-      <Reason3/>
+    <div>
+      <Reason3 class="region"/>
     </div>
     </b-card>
 
@@ -204,8 +204,8 @@
       time. Plus, the exact EdTch companies in 2019 are given by country. 
     </b-card>
     <b-card border-variant="light" >
-    <div class="layout-center">
-      <Trend1/>
+    <div>
+      <Trend1 class="region"/>
     </div>
     </b-card>
 
@@ -217,13 +217,13 @@
     developments along with the time.
     </b-card>
     <b-card border-variant="light" >
-    <div class="layout-center">
-      <Trend2/>
+    <div>
+      <Trend2 class="region"/>
     </div>
     </b-card>
 
-
-  <b-card title="Summary" class="blockquote normal-text block">
+  <div class="region">
+  <b-card title="Summary" class="blockquote block">
     <br/>
     In this atlas, we first explore the current situation of global and gender accessibility. Education is unevenly distributed 
     by country and by gender from the overview. <br/>
@@ -238,6 +238,7 @@
     more devotion to females is required at the primary and secondary levels due to their importance. Also, females should 
     be given more emphasis at the Ph.D. level in the future.
   </b-card>
+  </div>
 
     <!-- Summary -->
     <Summary/>
@@ -395,6 +396,12 @@ export default {
 }
 .globalmap{
   height: 600px;
+  width: 85%;
+  margin:auto;
+}
+.region{
+  width: 85%;
+  margin:auto;
 }
 .normal-text {
   text-align: left;
@@ -418,6 +425,7 @@ border-radius: 25px;
 }
 .block{
  margin: 10px;
+ text-align: left;
 }
 #float_btn {
   position: fixed;

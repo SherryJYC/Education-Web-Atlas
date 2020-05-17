@@ -7,7 +7,7 @@
       </b-card>
     </b-card-group>
 
-    <b-card border-variant="light" class="text-left normal-text">
+    <b-card border-variant="light" class="text-left">
         <br/>In a sentence, the world almost reaches the gender parity at the short-cycle tertiary level in 2017, 
         is close to it at primary and secondary levels, but still far at bachelor, master, and especially Ph.D. level. 
         To compare with the global average, Switzerland has better performances on gender equality at the primary, bachelor,
@@ -38,7 +38,7 @@
       </b-card> 
     </b-card-group>
 
-    <b-card border-variant="light" class="text-left normal-text">
+    <b-card border-variant="light" class="text-left">
         From the graph, firstly, at the primary and secondary levels, both countries do not show apparent changes within the five years.
          Secondly, there are no noticeable changes in Switzerland at bachelor and master levels. For these three levels in China, they 
          all increase by around 2% within five years. The bachelor level in China is more in favor of females in 2017. Thirdly, 
@@ -430,9 +430,5 @@ export default {
 </script>
 
 <style>
-.normal-text{
-  text-align: left;
-  padding-left: 10%;
-  max-width: 90%;
-}
+
 </style>

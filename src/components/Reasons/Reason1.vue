@@ -11,7 +11,7 @@
   </v-container>
 
 <!-- choropleth map of national investment in education (compare western europe and eastern asia)-->
-  <l-map 
+  <l-map
   :center="[50.8182, 40.2275]" 
   :zoom="3" 
   :maxZoom="4"
@@ -44,7 +44,7 @@
     </l-choropleth-layer>
 </l-map>
 
-<b-card  border-variant="light" class="text-left normal-text">
+<b-card  border-variant="light" class="text-left">
   According to the suggested benchmark, most of the chosen countries reach the given educational commitment. Besides, countries in 
   North Europe performs quite well with around 7% GDP's devotion or even higher. 
 </b-card>
@@ -185,10 +185,5 @@ export default {
 
 
 <style>
-.normal-text{
-  text-align: left;
-  padding-left: 10%;
-  max-width: 90%;
-}
 
 </style>

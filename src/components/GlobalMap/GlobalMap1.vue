@@ -240,7 +240,7 @@ export default {
 </script>
 
 <style>
-#map { position: absolute; top: 100px; bottom: 0; width: 100%; height:80%;}
+#map { position: absolute; top: 100px; bottom: 0; width: 96%; height:80%;}
 
     .map-overlay {
         font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;

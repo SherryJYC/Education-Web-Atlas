@@ -51,6 +51,7 @@
        border-variant="light" 
       >
       <b-card-text>
+        <br/>
         To present the current situation of global education, the Global Enrollment Ratio (GER) and Gender Parity Index (GPI) 
         are leveraged to generate global maps from 2014 to 2018 at four education levels. 
         It helps to learn global and gender accessibility, which proves that 
@@ -79,6 +80,7 @@
        border-variant="light" 
       >
       <b-card-text>
+        <br/>
     To explore the possible reasons behind unequal education, we firstly use the national investment vs. family expenditure of 
     chosen countries. It shows different levels of commitment from both sides by country. 
      Secondly, the gross enrollment rate and the admission rate at the tertiary level in Switzerland and China are 
@@ -109,7 +111,8 @@
        class="text-left menu-content"
        border-variant="light" 
       >
-      <b-card-text>      
+      <b-card-text>     
+        <br/> 
         Two aspects, development of online education and the performance of female education, are chosen to show the 
         future trends of equality education. First, unicorns in the EdTech fields are given. It tells that online 
         education is increasingly popular these days. Second, female enrollment ratio worldwide, and in Switzerland 
@@ -154,6 +157,8 @@
 <style>
 .menu-content{
     height:250px;
+    width:80%;
+    margin:auto;
 }
 .btn{
   margin: 10px;

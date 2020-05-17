@@ -29,7 +29,8 @@ export default {
 .summary{
  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -2px 2px 0 #000, 1px 1px 0 #000;
  text-align: left;
- padding: 5%;
+ width:85%;
+ margin:auto;
 }
 
 </style>
