@@ -121,9 +121,9 @@
 
   <b-card border-variant="light" class="text-left">
       The entrance rate to the top 200 universities is calculated by the division of the top 200 universities' capacity provided by 
-      Times 
+      <b-link href="https://www.timeshighereducation.com/world-university-rankings/2020/world-ranking#!/page/0/length/25/sort_by/rank/sort_order/asc/cols/stats">Times</b-link>
       and the school-age population at the tertiary level provided by
-      UN 
+      <b-link href="http://data.uis.unesco.org/index.aspx?queryid=216&lang=en">UN</b-link>
       (Switzerland: 20.56% = 103,797 / 504,706; 
       China: 0.26% = 233,989 / 88,796,896). As shown above, the same for both countries, seven universities are 
       ranked as Top 200 in 2020. The capacity in China is two times of that in Switzerland. 
