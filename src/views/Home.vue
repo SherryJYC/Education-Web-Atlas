@@ -79,7 +79,8 @@
     </div>
     </b-card>
     <b-card border-variant="light" class="normal-text block startquote">
-      A GPI between <mark> 0.97 and 1.03 indicates gender parity </mark> by UNESCO. A GPI below 0.97 indicates a 
+      A GPI between <mark>0.97 and 1.03 indicates gender parity</mark> by the United Nations Educational, Scientific and 
+      Cultural Organization (UNESCO). A GPI below 0.97 indicates a 
       disparity in favor of males. A GPI above 1.03 indicates a disparity in favor of females. From the overviews at four 
       levels, we can see countries perform best at the primary level 
     while worst at the tertiary level. Although the primary level performs best worldwide, 
@@ -127,7 +128,7 @@
     <b-card border-variant="light" class="normal-text block">
       The investment of education is mainly from the national investment and family investment.
       These two aspects in chosen regions and countries are depicted by GDP devotion and family expenditure on education.
-      The benchmark for state GDP devotion on education is <mark>4% to 6% of GDP, suggested by UN.</mark>.
+      The benchmark for state GDP devotion on education is <mark>4% to 6% of GDP</mark> suggested by UN.
      
     </b-card>
     <b-card border-variant="light" >

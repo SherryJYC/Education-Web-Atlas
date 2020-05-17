@@ -58,7 +58,17 @@ export default {
               height: 350,
               type: 'scatter',
               toolbar: {
-                show: false             
+                show: true,
+                offsetX: 0,
+                offsetY: 30,
+                tools: {
+                  download: false,
+                  selection: true,
+                  zoom: true,
+                  zoomin: true,
+                  zoomout: true,
+                  pan: true,
+                },            
               }
             },
             xaxis: {

@@ -96,7 +96,17 @@ export default {
                 opacity: 0.2
               },
               toolbar: {
-                show: false
+                show: true,
+                offsetX: 0,
+                offsetY: 30,
+                tools: {
+                  download: false,
+                  selection: true,
+                  zoom: true,
+                  zoomin: true,
+                  zoomout: true,
+                  pan: true,
+                },            
               }
             },
             dataLabels: {
@@ -156,9 +166,9 @@ export default {
                 left: 1,
                 top: 1
               },
-              toolbar: {
-                show: false 
-              }
+              // toolbar: {
+              //   show: false 
+              // }
             },
             title: {
               text: 'Female Enrollment Rate in China (2017)',
@@ -217,7 +227,17 @@ export default {
                 enabled: true
               },
               toolbar: {
-                show: false 
+                show: true,
+                offsetX: 0,
+                offsetY: 30,
+                tools: {
+                  download: false,
+                  selection: true,
+                  zoom: true,
+                  zoomin: true,
+                  zoomout: true,
+                  pan: true,
+                },            
               }
             },
             dataLabels: {
@@ -301,9 +321,9 @@ export default {
                 left: 1,
                 top: 1
               },
-              toolbar: {
-                show: false 
-              }
+              // toolbar: {
+              //   show: false 
+              // }
             },
             title: {
               text: 'Female Enrollment Rate in Switzerland (2017)',
@@ -361,7 +381,17 @@ export default {
                 enabled: true
               },
               toolbar: {
-                show: false 
+                show: true,
+                offsetX: 0,
+                offsetY: 30,
+                tools: {
+                  download: false,
+                  selection: true,
+                  zoom: true,
+                  zoomin: true,
+                  zoomout: true,
+                  pan: true,
+                },            
               }
             },
             dataLabels: {
