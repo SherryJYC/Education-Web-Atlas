@@ -14,6 +14,8 @@
   <l-map 
   :center="[50.8182, 40.2275]" 
   :zoom="3" 
+  :maxZoom="4"
+  :minZoom="2.5"
   style="height: 500px;" 
   :options="mapOptions">
     <l-choropleth-layer 
@@ -42,7 +44,7 @@
     </l-choropleth-layer>
 </l-map>
 
-<b-card  border-variant="light" class="text-left">
+<b-card  border-variant="light" class="text-left normal-text">
   According to the suggested benchmark, most of the chosen countries reach the given educational commitment. Besides, countries in 
   North Europe performs quite well with around 7% GDP's devotion or even higher. 
 </b-card>
@@ -183,5 +185,10 @@ export default {
 
 
 <style>
+.normal-text{
+  text-align: left;
+  padding-left: 10%;
+  max-width: 90%;
+}
 
 </style>

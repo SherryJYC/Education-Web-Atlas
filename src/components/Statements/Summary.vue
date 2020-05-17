@@ -9,8 +9,8 @@
       justify="center"
     >
       <v-col class="text-center" cols="12">
-        <h4 class="subheading sum">
-          <b>Although there is still a way to reach equality 
+        <h4 class="subheading summary">
+          <b>Although it is still a long way to reach equality 
              education worldwide, we do believe that more and more effort is devoting to promoting this goal and we are approaching it right now.
           </b>
         </h4>
@@ -26,7 +26,10 @@ export default {
 </script>
 
 <style>
-.sum{
+.summary{
  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -2px 2px 0 #000, 1px 1px 0 #000;
+ text-align: left;
+ padding: 5%;
 }
+
 </style>

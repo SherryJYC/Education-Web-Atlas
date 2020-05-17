@@ -398,8 +398,8 @@ export default {
 }
 .normal-text {
   text-align: left;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 10%;
+  max-width: 90%;
 }
 .title-text {
   color: white;

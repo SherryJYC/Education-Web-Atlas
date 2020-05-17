@@ -10,7 +10,7 @@
         <apexchart type="donut" height="350" :options="chartOptions1" :series="series1"></apexchart>
       </b-card>
   </b-card-group>
-  <b-card border-variant="light"  class="text-left">
+  <b-card border-variant="light"  class="text-left normal-text">
     <mark>A unicorn company is a private company with a valuation of over $1 billion</mark>. 
     In January 2020, 14 EdTech Unicorns around the world have collectively raised over $6.6 billion of total funding 
     in the last decade. As shown in the left graph, the fundings to EdTech unicorns have been increasing 
@@ -149,5 +149,9 @@ export default {
 </script>
 
 <style>
-
+.normal-text{
+  text-align: left;
+  padding-left: 10%;
+  max-width: 90%;
+}
 </style>
