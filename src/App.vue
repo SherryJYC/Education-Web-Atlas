@@ -1,20 +1,20 @@
 <template>
 <div id="app">
 <!-- Banner -->
- <v-app-bar id="banner"
+ <!-- <v-app-bar id="banner"
       app
     >
       <v-toolbar-title id="text"
       >
       {{title}}
       </v-toolbar-title>
-      <v-spacer />
+      <v-spacer /> -->
         
           <!-- <v-btn class="button"><router-link class="link" to="/"><b>Welcome</b></router-link></v-btn>
           <v-btn class="button"><router-link class="link" to="/Content"><b>Content</b></router-link></v-btn>
           <v-btn class="button"><router-link class="link" to="/imprint"><b>Imprint</b></router-link></v-btn> -->
         
- </v-app-bar>
+ <!-- </v-app-bar> -->
 
 <!-- Content -->
     <router-view/>
