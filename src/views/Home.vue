@@ -241,7 +241,74 @@
   </b-card>
   </div>
 
-    <!-- Summary -->
+    <!-- Data Sources -->
+    <div class="region">
+      <b-button
+        id="data-btn"
+        :class="visible ? null : 'collapsed'"
+        :aria-expanded="visible ? 'true' : 'false'"
+        aria-controls="collapse-4"
+        @click="visible = !visible"
+      >
+        Data Sources
+      </b-button>
+      <b-collapse id="collapse-4" v-model="visible" class="mt-2">
+   <b-card-group deck>
+      <b-card>
+        <b-card-text >
+          Data References
+        </b-card-text>
+        <v-row>
+          <b-button class="btn_red" href="http://data.uis.unesco.org/" >
+          Database of Sustainable Development Goal 4</b-button>
+        </v-row>
+        <v-row>
+          <b-button class="btn_red" href="http://www.gov.cn/xinwen/2017-10/26/content_5234507.htm" >
+          Education Report of Chinese Government</b-button>
+        </v-row>
+        <v-row>
+          <b-button class="btn_red" href="https://www.hsbc.com.hk/content/dam/hsbc/hk/docs/premier/sc/education-report-sc.pdf" >
+          HSBC Education Report in 2017</b-button>
+        </v-row>
+        <v-row>
+          <b-button class="btn_red" href="https://www.worlddata.info/average-income.php" >
+          Data of World Average Wage</b-button>
+        </v-row>
+        <v-row>
+          <b-button class="btn_red" href="https://data.unicef.org/resources/data_explorer/unicef_f/" >
+          Database of Children and Women Situation</b-button>
+        </v-row>
+      </b-card>
+
+      <b-card>
+        <b-card-text>
+          Image References
+        </b-card-text>
+        <v-row>
+          <b-button class="btn_red" href="https://www.google.com/search?q=education&tbm=isch&ved=2ahUKEwjy55vP5v_oAhWVtqQKHX9lAt8Q2-cCegQIABAA&oq=education&gs_lcp=CgNpbWcQAzIECCMQJzIECAAQQzIECAAQQzIECAAQQzIECAAQQzIECAAQQzIECAAQQzICCAAyAggAMgIIAFDYllxY5p9cYNuiXGgAcAB4AIAB3gKIAaMSkgEDMy03mAEAoAEBqgELZ3dzLXdpei1pbWc&sclient=img&ei=KTKiXrKvE5XtkgX_yon4DQ&bih=798&biw=1387#imgrc=ahqorvlZQTx70M
+" >
+          Welcome Image</b-button>
+        </v-row>
+        <v-row>
+          <b-button class="btn_red" href="https://www.google.com/search?q=global+education+&tbm=isch&ved=2ahUKEwiso_PihoDpAhUFIMUKHWSmDywQ2-cCegQIABAA&oq=global+education+&gs_lcp=CgNpbWcQA1CXW1iXW2C9XWgAcAB4AIABAIgBAJIBAJgBAKABAaoBC2d3cy13aXotaW1n&sclient=img&ei=4FOiXqyzIIXAlAbkzL7gAg#imgrc=1Ww0BbW4RzkS6M" >
+          End Parallax Image</b-button>
+        </v-row>
+        <v-row>
+          <b-button class="btn_red" href="https://www.tecnoveste.com.br/por-tras-do-ensino-regular-do-brasil-ha-uma-verdade-que-nao-e-dita-diploma-nao-e-garantia-de-estabilidade-futura/" >
+          Title Image</b-button>
+        </v-row>
+        <v-row style="margin-left:1px;">
+           All university logos are from their official websites and wikipedia.
+        </v-row>
+        
+      </b-card>
+    </b-card-group>
+
+
+      </b-collapse>
+    </div>
+
+    <!-- Summary Parallax -->
     <Summary/>
 
     <v-speed-dial
@@ -358,6 +425,7 @@ export default {
       bottom: true,
       left: false,
       transition: 'slide-y-reverse-transition',
+      visible: false
     }),
     computed: {
       activeFab () {
@@ -434,5 +502,10 @@ border-radius: 25px;
 }
 .float_btn_item{
   color:white;
+}
+#data-btn{
+  width:80%;
+  margin: auto;
+  margin-bottom: 1em;
 }
 </style>>

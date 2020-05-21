@@ -30,7 +30,7 @@
         Sustainable Development Goals (SDG) were adopted by all UN Member States in 2015 as a universal call to action to
       end poverty, protect the planet and ensure that all people enjoy peace and prosperity by 2030. Quality Education is Goal 4 (SDG 4)
       among all 17 goals to ensure inclusive and equitable quality education and promote lifelong learning opportunities for all.
-      In this atlas, we focus on Equality Education. Briefly speaking, we will give an overview of the nowaday global
+      In this atlas, we focus on Equality Education. Briefly speaking, we will give an overview of the current global
       education from the equality aspect, then explore the reasons behind and finally take a look at future trends.<br/>
       <br/><i><b>To read this atlas efficiently, you can check out the floating menu at the bottom right corner.</b></i>
       </b-card-text>
