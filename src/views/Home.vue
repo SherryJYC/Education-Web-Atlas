@@ -224,7 +224,7 @@
     </b-card>
 
   <div class="region">
-  <b-card title="Summary" class="blockquote block">
+  <b-card border-variant="light" title="Summary" class="blockquote block">
     <br/>
     In this atlas, we first explore the current situation of global and gender accessibility. Education is unevenly distributed 
     by country and by gender from the overview. <br/>
@@ -298,7 +298,7 @@
           Title Image</b-button>
         </v-row>
         <v-row style="margin-left:1px;">
-           All university logos are from their official websites and wikipedia.
+           All university logos are from their official websites and wikipedia
         </v-row>
         
       </b-card>
