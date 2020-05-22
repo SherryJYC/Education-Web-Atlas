@@ -131,7 +131,9 @@
       In China, <b>a student has to be the top 3 of 1000 colleagues to be admitted to eminent universities</b>.<br/>
       <br/>The high family expenditure and low admission rate have altogether made the college entrance examination in China 
       a heavy but unavoidable burden for the family. Want to learn more about Swiss and Chinese situations?
-        Have a look at the following videos.
+        Have a look at the following videos. Since there are no college entrance examinations in Switzerland, 
+        we choose the first-year Bachelor exam at ETH Zurich. Considering its toughness, we regard it to the 
+        same level of difficulty as the Chinese college entrance examination.
   </b-card>
 
   <b-card-group deck>
@@ -144,19 +146,24 @@
   </b-card>
   </b-card-group>
 
+  <b-card border-variant="light" class="text-left">
+    Under this situation, one special phenomenon happens in China, school districts' apartments. It indicates that  
+    the apartments located near essential schools will have a much higher price than the others. 
+  </b-card>
 
 </div>
 </template>
 
 <script>
 import VueApexCharts from 'vue-apexcharts';
+// import VueYoutube from 'vue-youtube';
 import {swiss_ratio,china_ratio} from '../../assets/json/reason2';
-
 
 
 export default {
   components: {
     apexchart: VueApexCharts,
+    // youtube2: VueYoutube,
   },
 
   data() {
