@@ -156,8 +156,8 @@
 </script>
 <style>
 .menu-content{
-    height:250px;
-    width:80%;
+    height:260px;
+    width:85%;
     margin:auto;
 }
 .btn{

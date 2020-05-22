@@ -225,7 +225,7 @@ export default {
     },
 
     mounted(){
-        mapboxgl.accessToken = 'pk.eyJ1Ijoic2hlcnJ5anljIiwiYSI6ImNqb2pteTAzdjA2YmszdXBqanZ2YmNlM2wifQ.2_9XWJxI8fDvh4d_hLlrWA';
+         mapboxgl.accessToken = 'pk.eyJ1Ijoic2hlcnJ5anljIiwiYSI6ImNrYWhuNnUyaDBpMW8yeHQ5YmU5bjRxbmYifQ.rTKiRvlmkUa2IfJl9ToD9g';
 
         // initialize map content with primary education data
         var init_idx = 0;
