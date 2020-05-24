@@ -116,8 +116,9 @@
     >
       <v-col class="text-center" cols="12">
         <h4 class="subheading subtitle-text"><b>Education is expensive and a heavy burden to a family in some regions.<br/>
-          High-quality education resources are distribued unevenly worldwide.<br/><br/>
-          The above altogether make the competitions in some regions much more severe than others. <br/>
+          High-quality education resources are distribued unevenly worldwide.<br/>
+          A very weak relationship exists between female enrollment and adolescent birth rate.<br/>
+          <br/>The above altogether make the competitions in some regions much more severe than others. <br/>
           </b></h4>
       </v-col>
     </v-row>
@@ -232,7 +233,7 @@
     Then, the possible reasons behind the phenomena are analyzed from 
     three aspects of nation vs. family expenditure, educational resources, and the adolescent 
     birth ratio to females. We conclude that education is quite expensive and education resources are sparse in some 
-    regions. <br/>
+    regions. Possibly, females step into the family in the sacrifice of school education.<br/>
     <br/>
     Eventually, the future trends of education are analyzed from the aspects of online learning and female enrollments. 
     The prosperity of online learning shows a bright future to reach equality education on one day. For gender parity, 

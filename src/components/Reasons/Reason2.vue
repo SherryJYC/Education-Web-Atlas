@@ -145,12 +145,7 @@
         <youtube :video-id="videoId" ref="youtube" @playing="playing"></youtube>
   </b-card>
   </b-card-group>
-
-  <b-card border-variant="light" class="text-left">
-    Under this situation, one special phenomenon happens in China, school districts' apartments. It indicates that  
-    the apartments located near essential schools will have a much higher price than the others. 
-  </b-card>
-
+  
 </div>
 </template>
 

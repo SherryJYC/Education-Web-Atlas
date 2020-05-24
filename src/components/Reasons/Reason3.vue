@@ -12,7 +12,7 @@
         The ABR is defined as the number of births given by 1,000 women aged 15–19.
          If there is a general negative trend: the higher the adolescent birth rate, the lower the GPI (more in 
         favor of male), then we can conclude young ladies devote to the family at an early stage tend to quit school education.<br/>
-        <br/>While for either all levels or especially upper secondary level (cover mostly the age 15-19), there is no obvious negative 
+        <br/>While for either all levels or especially upper secondary level (cover mostly the age 15-19), there is very weak negative 
         trend between the ABR and GPI worldwide.
       </b-card-text>
       </b-card>
