@@ -278,6 +278,10 @@
           <b-button class="btn_red" href="https://data.unicef.org/resources/data_explorer/unicef_f/" >
           Database of Children and Women Situation</b-button>
         </v-row>
+        <v-row>
+          <b-button class="btn_red" href="https://www.holoniq.com/" >
+          Data of EdTech Unicorn Companies</b-button>
+        </v-row>
       </b-card>
 
       <b-card>
