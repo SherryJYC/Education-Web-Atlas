@@ -53,7 +53,7 @@
 import VueApexCharts from 'vue-apexcharts';
 import {global_avg, china_2017, china_2016,china_2015,china_2014,china_2013,
 swiss_2017,swiss_2016,swiss_2015,swiss_2014,swiss_2013} from '../../assets/json/trend2';
-var levels = ['Primary', 'Secondary', 'Short-cycle Tertiary', 'Bachelor', 'Master', 'Phd'];
+var levels = ['Primary', 'Secondary', 'Short-cycle', 'Bachelor', 'Master', 'Phd'];
 export default {
   components:{
     apexchart: VueApexCharts
