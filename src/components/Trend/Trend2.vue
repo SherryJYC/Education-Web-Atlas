@@ -336,7 +336,7 @@ export default {
                 {
                   title: {
                     formatter: function (val) {
-                      return val + " %"
+                      return val 
                     }
                   }
                 }
