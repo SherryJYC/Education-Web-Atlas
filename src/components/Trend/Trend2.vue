@@ -16,17 +16,6 @@
          levels in China.
     </b-card>
 
-    <!-- <b-card-group deck>
-      <b-card border-variant="light" > -->
-        <!-- radar chart of Swiss female enrollment 2017  -->
-        <!-- <apexchart type="radar" height="400" :options="chartOptions_swiss1" :series="series_swiss1"></apexchart>
-      </b-card>
-      <b-card border-variant="light" > -->
-        <!-- radar chart of China female enrollment 2017  -->
-        <!-- <apexchart type="radar" height="400" :options="chartOptions_china1" :series="series_china1"></apexchart>
-      </b-card> 
-    </b-card-group> -->
-
     <b-card-group deck>
       <b-card border-variant="light" >
         <!-- chart of Swiss female enrollment 2013-2017 timeseris -->
@@ -147,55 +136,7 @@ export default {
             },
 
           },
-          // China radar chart
-          series_china1: [{
-            name: 'Global Average',
-            data: global_avg
-          }, {
-            name: 'China',
-            data: china_2017
-          }],
-          chartOptions_china1: {
-            colors:["#FFC300","#A8322D"],
-            chart: {
-              height: 500,
-              type: 'radar',
-              dropShadow: {
-                enabled: true,
-                blur: 1,
-                left: 1,
-                top: 1
-              },
-              // toolbar: {
-              //   show: false 
-              // }
-            },
-            title: {
-              text: 'Female Enrollment Rate in China (2017)',
-              style: {
-                fontSize: '15px'
-              },
-            },
-            stroke: {
-              width: 2
-            },
-            fill: {
-              opacity: 0.1
-            },
-            markers: {
-              size: 1
-            },
-            xaxis: {
-              categories: levels,
-            },
-            yaxis: {
-              min: 0,
-              max: 80,
-              formatter: function(val) {
-                  return val
-                }
-            }
-          },
+          
           // China Timeseris chart
           series_china2: [{
               name: "2013",
@@ -257,7 +198,7 @@ export default {
             },
             legend: {
               tooltipHoverFormatter: function(val, opts) {
-                return val + ' - ' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + '%'
+                return val + ' - ' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + ''
               }
             },
             markers: {
@@ -278,7 +219,7 @@ export default {
             annotations: {
               xaxis: [
                 {
-                  x: 'Short-cycle Tertiary',
+                  x: 'Short-cycle',
                   x2: 'Phd',
                   fillColor: "#A8322D",
                   label: {
@@ -302,55 +243,7 @@ export default {
               borderColor: '#f1f1f1',
             }
           },
-          // Swiss radar chart
-          series_swiss1: [{
-            name: 'Global Average',
-            data: global_avg
-          }, {
-            name: 'Switzerland',
-            data: swiss_2017
-          }],
-          chartOptions_swiss1: {
-            colors:["#FFC300","#A8322D"],
-            chart: {
-              height: 500,
-              type: 'radar',
-              dropShadow: {
-                enabled: true,
-                blur: 1,
-                left: 1,
-                top: 1
-              },
-              // toolbar: {
-              //   show: false 
-              // }
-            },
-            title: {
-              text: 'Female Enrollment Rate in Switzerland (2017)',
-              style: {
-                fontSize: '15px'
-              },
-            },
-            stroke: {
-              width: 2
-            },
-            fill: {
-              opacity: 0.1
-            },
-            markers: {
-              size: 1
-            },
-            xaxis: {
-              categories: levels,
-            },
-            yaxis: {
-              min: 0,
-              max: 80,
-              formatter: function(val) {
-                  return val
-                }
-            }
-          },
+          
           // Swiss Timeseris chart
           series_swiss2: [{
               name: "2013",
