@@ -10,7 +10,7 @@
 - [x] Reason 3
 - [x] Trend 1
 - [x] Trend 2
-- [ ] Summary
+- [x] Summary
 
 ### UI Design
 - [x] View: Home (Content)
@@ -18,7 +18,7 @@
 - [x] View: Welcome
 
 ## Text Fillin
-- [ ] Text in Home (Content)
+- [x] Text in Home (Content)
 - [x] Text in Imprint
 - [x] Text in Welcome
 
