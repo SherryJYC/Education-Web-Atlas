@@ -283,6 +283,14 @@
           <b-button class="btn_red" href="https://www.holoniq.com/" >
           Data of EdTech Unicorn Companies</b-button>
         </v-row>
+         <v-row>
+          <b-button class="btn_red" href="https://github.com/datasets/geo-countries" >
+          Geojson of Global Map</b-button>
+        </v-row>
+        <v-row>
+          <b-button class="btn_red" href="https://hub.arcgis.com/datasets/a21fdb46d23e4ef896f31475217cbb08_1" >
+          Shapefile of Global Map</b-button>
+        </v-row>
       </b-card>
 
       <b-card>
