@@ -6,6 +6,8 @@ import Imprint from '../views/Imprint.vue'
 
 Vue.use(VueRouter)
 
+// based on this router, this atlas can have a complete framework, including welcome page and imprint page
+
 const routes = [
   {
     path: '/',
@@ -13,7 +15,7 @@ const routes = [
     component: Home
   },
   {
-    path: '/Content',
+    path: '/welcome',
     name: 'Welcome',
     component: Welcome
   },

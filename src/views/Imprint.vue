@@ -1,13 +1,11 @@
 <template>
 <div id="app">
-<!-- Content -->
- 
+  
   <v-parallax
     dark
     src="../assets/img/education_img.jpg"
     height="300"
   >
-  <v-row/>
     <v-row
       align="center"
       justify="center"

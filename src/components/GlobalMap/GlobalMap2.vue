@@ -15,18 +15,20 @@
 
 <div>
     <div id="map2"></div>
+
+     <!-- Time Slider -->
     <div id='console2'>
         <br>
-        <!-- Counter that updates as slider is changed to declare selected value -->
         <label class="control-label2">Year&nbsp; :&nbsp; </label>
         <input type="text"  id="yearCount2" readonly>
         <br>
         <p>
         2014&nbsp; <input id="slider2" type="range" min="0" max="4" step="1" value="0" />&nbsp; 2018
         </p>
-</div>
+    </div>
 
-<div class='legend-container2'>
+    <!-- Legend -->
+    <div class='legend-container2'>
         <div class='legend2' id='legend2' >
             <h2 class="legend2">Gender Parity Index</h2> 
             <hr/>
@@ -71,6 +73,7 @@ export default {
         showNewMap(idx){
             this.addContent(this.map,idx);
         },
+        // change map content for different education levels
         addContent(map,idx){
             var current_idx = $( "#slider2" ).val();
             var set_year = years[current_idx];
@@ -86,8 +89,6 @@ export default {
         
             // arrays that will be used to style the layer division 
             var breaks = [
-                        // stop domain values must appear in ascending order
-                        // Pop Dens threshold [0] Color [1]
                                 [0.00001, 'rgb(255,255,102)'],
                                 [0.97, 'rgb(204,153,48)'],
                                 [1.03, 'rgb(204,0,0)'],
@@ -105,10 +106,10 @@ export default {
             var legend2 = document.getElementById('cd-legend2'); 
     
             map.on('load', function() {
-
+                    // show map of primary level for default
                     map.addSource('GERprimary', {
                         'type': 'vector',
-                        'url': data_url,//'mapbox://haojun9612.8xb9cce3',
+                        'url': data_url,
                         'minzoom': 0,
                     });
                     
@@ -190,7 +191,7 @@ export default {
                         add_legend = 0;
                     }
             }); 
-            // set year 
+            // set year for time slider
             $( "#yearCount2" ).val(set_year);
             $( "#slider2" ).val(current_idx);
 

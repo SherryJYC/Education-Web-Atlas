@@ -2,13 +2,11 @@
   <div>
     <v-divider/>
     
-  <!-- TODO: adjust statements and images -->
-<v-parallax
+  <v-parallax
     dark
     src="../assets/img/education_img.jpg"
     height="300"
   >
-  <v-row/>
     <v-row
       align="center"
       justify="center"
@@ -20,6 +18,7 @@
     </v-row>
   </v-parallax>
 
+<!-- Overview  -->
 <v-stepper v-model="e1">
     <v-stepper-header>
       <v-stepper-step :complete="e1 > 1" step="1">Overview</v-stepper-step>
@@ -140,7 +139,6 @@
         </b-btn>
 
         <b-btn @click="goContent">Go to Content</b-btn>
-
 
       </v-stepper-content>
     </v-stepper-items>

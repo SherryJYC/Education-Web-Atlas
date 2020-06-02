@@ -75,11 +75,12 @@ export default {
   },
   data() {
     return {
-      geojson,
+      geojson, // polygon of countries
       nationalInvestData,
       family_exp,
       avg_salary,
-      colorScale: ['rgb(255,204,102)','rgb(204,153,48)','rgb(204,0,0)','rgb(153,51,51)',],//["#FFC300","#FF5733","#C70039","#900C3F"],
+      // settings for choropleth map
+      colorScale: ['rgb(255,204,102)','rgb(204,153,48)','rgb(204,0,0)','rgb(153,51,51)',],
       value: {
         key: "invest",
         metric: "% GDP"
@@ -96,6 +97,7 @@ export default {
       width: "100%",
       height: "100%",
       dataFormat: "json",
+      // settings for chart
       series: [{
             name: 'Family Expenditure',
             data: family_exp

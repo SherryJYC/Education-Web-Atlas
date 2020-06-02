@@ -52,7 +52,7 @@ export default {
       global_avg,
       china_2017,china_2016,china_2015,china_2014,china_2013,
       swiss_2017,swiss_2016,swiss_2015,swiss_2014,swiss_2013,
-      // global
+      // comparison of switerland, china and global average (line chart)
       series1: [
             {
               name: "Global Average",

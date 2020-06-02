@@ -14,18 +14,20 @@
 
 <div>
     <div id="map"></div>
+
+    <!-- Timeline Slider -->
     <div id='console'>
         <br>
-        <!-- Counter that updates as slider is changed to declare selected value -->
         <label class="control-label">Year&nbsp; :&nbsp; </label>
         <input type="text"  id="yearCount" readonly>
         <br>
         <p>
         2014&nbsp; <input id="slider" type="range" min="0" max="4" step="1" value="0" />&nbsp; 2018
         </p>
-</div>
+    </div>
 
-<div class='legend-container'>
+    <!-- Legend -->
+    <div class='legend-container'>
         <div class='legend' id='legend' >
             <h2 class="legend">Gross Enrollment Ratio (%)</h2> 
             <hr/>
@@ -70,6 +72,7 @@ export default {
         showNewMap(idx){
             this.addContent(this.map,idx);
         },
+        // change map content for different education level
         addContent(map,idx){
             var current_idx = $( "#slider" ).val();
             var set_year = years[current_idx];
@@ -85,8 +88,6 @@ export default {
         
             // arrays that will be used to style the layer division 
             var breaks = [
-                        // stop domain values must appear in ascending order
-                        // Pop Dens threshold [0] Color [1]  
                                 [0.0001, 'rgb(255,255,102)'],					
                                 [80.0, 'rgb(255,204,102)'],
                                 [95.0, 'rgb(204,153,48)'],
@@ -94,7 +95,7 @@ export default {
                                 [120.0, 'rgb(153,51,51)'],
             ];
             
-            // arrays that will be used to populate the legend 
+            // arrays that will be used for legend 
             var legendLabels = [
                         // Label text that will appear in the legend [0]
                                 ['< 80%'],
@@ -108,10 +109,10 @@ export default {
             var legend = document.getElementById('cd-legend'); 
     
             map.on('load', function() {
-
+                    // use map of primary education for default
                     map.addSource('GERprimary', {
                         'type': 'vector',
-                        'url': data_url,//'mapbox://haojun9612.8xb9cce3',
+                        'url': data_url,
                         'minzoom': 0,
                     });
 
@@ -193,7 +194,7 @@ export default {
                         add_legend = 0;
                     }
             }); 
-            // set year 
+            // set year of time slider 
             $( "#yearCount" ).val(set_year);
             $( "#slider" ).val(current_idx);
 

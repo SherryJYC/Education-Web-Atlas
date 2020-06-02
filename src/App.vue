@@ -1,5 +1,9 @@
 <template>
 <div id="app">
+<!-- 
+Notice: the following banner is commented to enable better integration into whole framework 
+-->
+
 <!-- Banner -->
  <!-- <v-app-bar id="banner"
       app

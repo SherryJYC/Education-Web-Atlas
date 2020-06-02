@@ -1,9 +1,10 @@
 <template>
+  <!-- Use Parallax at the End of Atlas -->
   <v-parallax
     dark
     src="../../assets/img/summary_img.jpg"
   >
-  <v-row/>
+    <v-row/>
     <v-row
       align="center"
       justify="center"

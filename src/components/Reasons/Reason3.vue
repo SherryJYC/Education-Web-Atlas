@@ -2,6 +2,7 @@
 <div>
     <b-card-group deck>
       <b-card border-variant="light" >
+        <!-- Scatter Plot of Adolescent Birth Rate -->
        <apexchart type="scatter" height="350" :options="chartOptions" :series="series"></apexchart>
       </b-card> 
       <b-card border-variant="light" class="text-left">
@@ -30,6 +31,7 @@ export default {
   },
   data() {
     return {
+      // settings of scatter plot
       series: [
         {
             name: "Bachelor",

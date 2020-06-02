@@ -1,12 +1,11 @@
 <template>
   <div>
-    
-  <!-- TODO: adjust statements and images -->
-<v-parallax
+    <!-- Use Parallax at the Start of Atlas -->
+  <v-parallax
     dark
     src="../../assets/img/education_img.jpg"
   >
-  <v-row/>
+    <v-row/>
     <v-row
       align="center"
       justify="center"

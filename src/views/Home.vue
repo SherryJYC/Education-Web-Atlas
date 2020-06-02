@@ -1,8 +1,9 @@
 <template>
   <div class="home">
-    <!-- Statement1 -->
+    <!-- Statement1 (Parallax at the Start of Atlas)-->
     <Statement1/>
     
+    <!-- Menu for Atlas -->
     <Menu/>
 
     <blockquote class="blockquote normal-text block startquote">
@@ -12,6 +13,7 @@
       and <b>gender accessibility</b>.
     </blockquote>
     
+    <!-- Part 1 - Global Maps -->
     <b-card class="title-text" id="p1">
       <b-card-header>
         <h2><b> Part 1 - How is the global situation of education?</b></h2>
@@ -90,7 +92,8 @@
   </b-card>
 
     <v-divider/>
-    <!-- Reasons -->
+
+    <!-- Part 2 - Reasons -->
     <blockquote class="blockquote normal-text block">
       It raises our interest in why inequality would happen on education.
       In the second part, three chosen perspectives, <b>the educational expenditure by nation and by family</b>, 
@@ -124,7 +127,7 @@
     </v-row>
   </v-parallax>
 
- 
+    <!-- Reason 1 -->
     <h2 class="subheader-text"><b>Expensive Education</b></h2>
     <b-card border-variant="light" class="normal-text block">
       The investment of education is mainly from the national investment and family investment.
@@ -146,7 +149,7 @@
         suffers a lot since high-quality education is expensive in some regions.</b>
     </b-card>
 
-
+    <!-- Reason 2 -->
     <h2 class="subheader-text"><b>Imbalanced Education Resources</b></h2>
     <b-card border-variant="light" class="normal-text block">
      Tertiary education in Switzerland and China is focused here. GER and the entrance rate to top 200 
@@ -158,7 +161,7 @@
     </div>
     </b-card>
 
-
+    <!-- Reason 3 -->
     <h2 class="subheader-text"><b>Gender Inequality</b></h2>
     <b-card border-variant="light" >
     <div>
@@ -167,7 +170,8 @@
     </b-card>
 
     <v-divider/>
-    <!-- Reasons -->
+    
+    <!-- Part 3 - Future Trends -->
     <blockquote class="blockquote normal-text block">
       Last but not least, we are interested in how equality education would evolve in the future, and if the 
       future trends would help to achieve equality education. We will explore the future trends of education
@@ -199,7 +203,7 @@
     </v-row>
   </v-parallax>
 
-    <!-- Trend1 -->
+    <!-- Trend 1 -->
     <h2 class="subheader-text"><b>Online Education: the Focus of Market</b></h2>
     <b-card border-variant="light" class="normal-text block">
       The fundings to the EdTech Unicorns from 2014 to 2019 are plotted below to show the changes along
@@ -211,7 +215,7 @@
     </div>
     </b-card>
 
-    <!-- Trend2 -->
+    <!-- Trend 2 -->
     <h2 class="subheader-text"><b>Increasing Female Enrollment</b></h2>
     <b-card border-variant="light" class="normal-text block">
     We use the female enrollment ratio to learn female education worldwide. 
@@ -224,6 +228,7 @@
     </div>
     </b-card>
 
+  <!-- Summary -->
   <div class="region">
   <b-card border-variant="light" title="Summary" class="blockquote block">
     <br/>
@@ -293,6 +298,7 @@
         </v-row>
       </b-card>
 
+      <!-- Image Sources -->
       <b-card>
         <b-card-text>
           Image References
@@ -324,6 +330,7 @@
     <!-- Summary Parallax -->
     <Summary/>
 
+    <!-- Floating Menu at Right Bottom Corner -->
     <v-speed-dial
       v-model="fab"
       :top="top"
@@ -386,9 +393,7 @@
 
     </v-speed-dial>
     
-  </div>
-
-  
+  </div> 
 </template>
 
 <script>
@@ -411,7 +416,6 @@ import Menu from '../components/Menu'
 Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
-
 
 export default {
   name: 'Home',

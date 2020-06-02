@@ -17,7 +17,7 @@
     </b-card>
   </b-card-group>
 
-
+  <!-- Ranking of World Top 200 Universities in Switzerland and China -->
   <b-card-group deck>
     <b-card border-variant="light" title="Entrance Rate to Top 200 in Switzerland">
       <b-card-text><h3><b>20.56%</b></h3></b-card-text>
@@ -136,6 +136,7 @@
         same level of difficulty as the Chinese college entrance examination.
   </b-card>
 
+  <!-- Videos of Switzerland and China -->
   <b-card-group deck>
   <b-card border-variant="light" title="How is the ETH's first-year exam?">
         <youtube :video-id="videoId2" ref="youtube" @playing="playing"></youtube>
@@ -151,14 +152,12 @@
 
 <script>
 import VueApexCharts from 'vue-apexcharts';
-// import VueYoutube from 'vue-youtube';
 import {swiss_ratio,china_ratio} from '../../assets/json/reason2';
 
 
 export default {
   components: {
     apexchart: VueApexCharts,
-    // youtube2: VueYoutube,
   },
 
   data() {
@@ -170,6 +169,7 @@ export default {
       playerVars: {
         autoplay: 1
       },
+      // settings for bar chart
       series: [{
         name: 'Switzerland',
         data: swiss_ratio

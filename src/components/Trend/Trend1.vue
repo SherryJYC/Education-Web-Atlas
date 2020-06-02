@@ -35,7 +35,8 @@ export default {
       china_years,
       usa_years,
       india_years,
-      country3_2019,
+      country3_2019, // data of three countries' EdTech in 2019
+      // settings for plot of EdTech fundings (bar chart)
       series: [{
             name: 'USA',
             data: usa_years
@@ -96,7 +97,7 @@ export default {
               opacity: 1
             }
           },
-          // pie chart
+          // plot of EdTech companies in 2019 (pie chart)
           series1: [21,14,65],
           chartOptions1: {
             labels: ['USA', 'India', 'China'],
