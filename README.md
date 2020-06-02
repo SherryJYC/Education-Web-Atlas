@@ -13,7 +13,7 @@ a vision of education equality using the map and statistical charts.
 > Notice: ETH VPN is required to access to this server! 
 * Screenshot of welcome page
 ![Screenshot of welcome page](https://github.com/SherryJYC/Multi-Media-Carto-Project-2020/blob/master/public/img/title_img.png)
-* Screen shot of one global map
+* Screenshot of one global map
 ![Screenshot of global map](https://github.com/SherryJYC/Multi-Media-Carto-Project-2020/blob/master/public/img/global.png) 
 * Screenshot of one chart
 ![Screenshot of one chart](https://github.com/SherryJYC/Multi-Media-Carto-Project-2020/blob/master/public/img/bar.png)
