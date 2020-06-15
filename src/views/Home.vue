@@ -304,16 +304,16 @@
           Image References
         </b-card-text>
         <v-row>
-          <b-button class="btn_red" href="https://www.google.com/search?q=education&tbm=isch&ved=2ahUKEwjy55vP5v_oAhWVtqQKHX9lAt8Q2-cCegQIABAA&oq=education&gs_lcp=CgNpbWcQAzIECCMQJzIECAAQQzIECAAQQzIECAAQQzIECAAQQzIECAAQQzIECAAQQzICCAAyAggAMgIIAFDYllxY5p9cYNuiXGgAcAB4AIAB3gKIAaMSkgEDMy03mAEAoAEBqgELZ3dzLXdpei1pbWc&sclient=img&ei=KTKiXrKvE5XtkgX_yon4DQ&bih=798&biw=1387#imgrc=ahqorvlZQTx70M
+          <b-button class="btn_red" href="https://www.shutterstock.com/de/image-photo/book-green-board-background-1086594527
 " >
           Welcome Image</b-button>
         </v-row>
         <v-row>
-          <b-button class="btn_red" href="https://www.google.com/search?q=global+education+&tbm=isch&ved=2ahUKEwiso_PihoDpAhUFIMUKHWSmDywQ2-cCegQIABAA&oq=global+education+&gs_lcp=CgNpbWcQA1CXW1iXW2C9XWgAcAB4AIABAIgBAJIBAJgBAKABAaoBC2d3cy13aXotaW1n&sclient=img&ei=4FOiXqyzIIXAlAbkzL7gAg#imgrc=1Ww0BbW4RzkS6M" >
+          <b-button class="btn_red" href="https://www.shutterstock.com/de/image-photo/world-global-ecology-international-meeting-unity-234370600" >
           End Parallax Image</b-button>
         </v-row>
         <v-row>
-          <b-button class="btn_red" href="https://www.tecnoveste.com.br/por-tras-do-ensino-regular-do-brasil-ha-uma-verdade-que-nao-e-dita-diploma-nao-e-garantia-de-estabilidade-futura/" >
+          <b-button class="btn_red" href="https://stock.adobe.com/de/images/group-of-graduates-holding-diploma/62328386" >
           Title Image</b-button>
         </v-row>
         <v-row style="margin-left:1px;">
