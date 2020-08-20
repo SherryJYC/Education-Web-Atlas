@@ -9,8 +9,8 @@ a vision of education equality using the map and statistical charts.
 * Main packages: Vue.js, Mapbox, Leaflet, Apex, Bootstrap
 
 ## Demo
-* [Link to Demo Website](http://mmcarto.ethz.ch/group2/)
-> Notice: ETH VPN is required to access to this server! 
+* [Link to Atlas Website](http://studymaps.ethz.ch/sustainability-atlas/equality-education)
+> Update: web link is accessible for public now ! 
 * Screenshot of welcome page
 ![Screenshot of welcome page](https://github.com/SherryJYC/Multi-Media-Carto-Project-2020/blob/master/public/img/title_img.png)
 * Screenshot of one global map
