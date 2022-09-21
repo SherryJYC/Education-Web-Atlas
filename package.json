@@ -29,7 +29,7 @@
     "vue-youtube": "^1.4.0",
     "vue-youtube-embed": "^2.2.2",
     "vue2-leaflet": "^2.5.2",
-    "vuetify": "^2.2.11"
+    "vuetify": "^2.6.10"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.2.0",
